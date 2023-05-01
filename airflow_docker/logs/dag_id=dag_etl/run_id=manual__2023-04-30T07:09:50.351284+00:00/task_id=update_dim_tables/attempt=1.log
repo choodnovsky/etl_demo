@@ -1,0 +1,64 @@
+[2023-04-30 07:11:11,626] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.update_dim_tables manual__2023-04-30T07:09:50.351284+00:00 [queued]>
+[2023-04-30 07:11:11,685] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.update_dim_tables manual__2023-04-30T07:09:50.351284+00:00 [queued]>
+[2023-04-30 07:11:11,686] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-30 07:11:11,687] {taskinstance.py:1357} INFO - Starting attempt 1 of 6
+[2023-04-30 07:11:11,688] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-30 07:11:11,772] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): update_dim_tables> on 2023-04-30 07:09:50.351284+00:00
+[2023-04-30 07:11:11,782] {standard_task_runner.py:52} INFO - Started process 1648 to run task
+[2023-04-30 07:11:11,792] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dag_etl', 'update_dim_tables', 'manual__2023-04-30T07:09:50.351284+00:00', '--job-id', '102', '--raw', '--subdir', 'DAGS_FOLDER/dag_etl_taskflow.py', '--cfg-path', '/tmp/tmp2w3ag64d', '--error-file', '/tmp/tmpzljg0hl4']
+[2023-04-30 07:11:11,794] {standard_task_runner.py:80} INFO - Job 102: Subtask update_dim_tables
+[2023-04-30 07:11:12,165] {task_command.py:370} INFO - Running <TaskInstance: dag_etl.update_dim_tables manual__2023-04-30T07:09:50.351284+00:00 [running]> on host 295d97741f96
+[2023-04-30 07:11:12,769] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Victor
+AIRFLOW_CTX_DAG_ID=dag_etl
+AIRFLOW_CTX_TASK_ID=update_dim_tables
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-30T07:09:50.351284+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-04-30T07:09:50.351284+00:00
+[2023-04-30 07:11:12,848] {base.py:68} INFO - Using connection ID 'postgres_conn' for task execution.
+[2023-04-30 07:11:12,899] {dbapi.py:213} INFO - Running statement: 
+            SET search_path TO nds;    
+            INSERT INTO dim_branch (branch)
+            (SELECT branch FROM stage.dim_branch WHERE branch NOT IN (SELECT branch FROM dim_branch));
+            INSERT INTO dim_city (city)
+            (SELECT city FROM stage.dim_city WHERE city NOT IN (SELECT city FROM dim_city));
+            INSERT INTO dim_customer_type (customer_type)
+            (SELECT customer_type FROM stage.dim_customer_type WHERE customer_type NOT IN (SELECT customer_type FROM dim_customer_type));
+            INSERT INTO dim_gender (gender)
+            (SELECT gender FROM stage.dim_gender WHERE gender NOT IN (SELECT gender FROM dim_gender));
+            INSERT INTO dim_product_line (product_line)
+            (SELECT product_line FROM stage.dim_product_line WHERE product_line NOT IN (SELECT product_line FROM dim_product_line));
+            INSERT INTO dim_payment (payment)
+            (SELECT payment FROM stage.dim_payment WHERE payment NOT IN (SELECT payment FROM dim_payment));
+            ALTER TABLE dim_date DROP CONSTRAINT IF EXISTS dim_date_pkey;
+            INSERT INTO dim_date (date, week_of_year, week_start, month_number, month_name, quarter, year, season)
+            SELECT (date, week_of_year, week_start, month_number, month_name, quarter, year, season) FROM stage.dim_date;
+            ALTER TABLE dim_date ADD PRIMARY KEY (date);
+            ALTER TABLE dim_time DROP CONSTRAINT IF EXISTS dim_time_pkey;
+            INSERT INTO dim_time (time, day_part)
+            SELECT * FROM stage.dim_time;
+            ALTER TABLE dim_time ADD PRIMARY KEY (time);                 
+            , parameters: None
+[2023-04-30 07:11:12,951] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 92, in execute
+    self.hook.run(self.sql, self.autocommit, parameters=self.parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/dbapi.py", line 193, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/dbapi.py", line 217, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.SyntaxError: INSERT has more target columns than expressions
+LINE 16:             INSERT INTO dim_date (date, week_of_year, week_s...
+                                                 ^
+HINT:  The insertion source is a row expression containing the same number of columns expected by the INSERT. Did you accidentally use extra parentheses?
+
+[2023-04-30 07:11:13,035] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=dag_etl, task_id=update_dim_tables, execution_date=20230430T070950, start_date=20230430T071111, end_date=20230430T071113
+[2023-04-30 07:11:13,110] {standard_task_runner.py:97} ERROR - Failed to execute job 102 for task update_dim_tables (INSERT has more target columns than expressions
+LINE 16:             INSERT INTO dim_date (date, week_of_year, week_s...
+                                                 ^
+HINT:  The insertion source is a row expression containing the same number of columns expected by the INSERT. Did you accidentally use extra parentheses?
+; 1648)
+[2023-04-30 07:11:13,141] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-04-30 07:11:13,691] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

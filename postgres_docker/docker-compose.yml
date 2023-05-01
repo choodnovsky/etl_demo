@@ -1,0 +1,27 @@
+---
+version: "3.9"
+services:
+  postgres:
+    image: postgres:13
+    build:
+      context: .
+    environment:
+      POSTGRES_DB: "postgres"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "22749863"
+    volumes:
+      - ./upload_data:/upload_data
+    ports:
+      - "5433:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U habrpguser -d habrdb"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 4G

@@ -1,0 +1,97 @@
+[2023-04-30 11:59:19,628] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.create_nds_tables_if_not_exists manual__2023-04-30T11:58:50.689561+00:00 [queued]>
+[2023-04-30 11:59:19,883] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.create_nds_tables_if_not_exists manual__2023-04-30T11:58:50.689561+00:00 [queued]>
+[2023-04-30 11:59:19,892] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-30 11:59:19,893] {taskinstance.py:1357} INFO - Starting attempt 1 of 6
+[2023-04-30 11:59:19,895] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-30 11:59:20,150] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): create_nds_tables_if_not_exists> on 2023-04-30 11:58:50.689561+00:00
+[2023-04-30 11:59:20,164] {standard_task_runner.py:52} INFO - Started process 515 to run task
+[2023-04-30 11:59:20,189] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dag_etl', 'create_nds_tables_if_not_exists', 'manual__2023-04-30T11:58:50.689561+00:00', '--job-id', '238', '--raw', '--subdir', 'DAGS_FOLDER/dag_etl_taskflow.py', '--cfg-path', '/tmp/tmpc56mb4nz', '--error-file', '/tmp/tmpcx_2saw1']
+[2023-04-30 11:59:20,194] {standard_task_runner.py:80} INFO - Job 238: Subtask create_nds_tables_if_not_exists
+[2023-04-30 11:59:21,220] {task_command.py:370} INFO - Running <TaskInstance: dag_etl.create_nds_tables_if_not_exists manual__2023-04-30T11:58:50.689561+00:00 [running]> on host 295d97741f96
+[2023-04-30 11:59:23,529] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Victor
+AIRFLOW_CTX_DAG_ID=dag_etl
+AIRFLOW_CTX_TASK_ID=create_nds_tables_if_not_exists
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-30T11:58:50.689561+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-04-30T11:58:50.689561+00:00
+[2023-04-30 11:59:23,705] {base.py:68} INFO - Using connection ID 'postgres_conn' for task execution.
+[2023-04-30 11:59:23,797] {dbapi.py:213} INFO - Running statement: 
+            CREATE SCHEMA IF NOT EXISTS nds;
+            CREATE SCHEMA IF NOT EXISTS stage;
+    
+            SET search_path TO nds;        
+            
+            --// создаем таблицу с ветками //--
+            CREATE TABLE IF NOT EXISTS dim_branch(
+            id SERIAL PRIMARY KEY,
+            branch VARCHAR(100) NOT NULL);
+            
+            --// создаем таблицу с городами //--
+            CREATE TABLE IF NOT EXISTS dim_city(
+            id SERIAL PRIMARY KEY,
+            city VARCHAR(100) NOT NULL);
+            
+            --// создаем таблицу с типами клиентов //--
+            CREATE TABLE IF NOT EXISTS dim_customer_type(
+            id SERIAL PRIMARY KEY,
+            customer_type VARCHAR(200) NOT NULL);
+            
+            --// создаем таблицу с гендерами //--
+            CREATE TABLE IF NOT EXISTS dim_gender(
+            id SERIAL PRIMARY KEY,
+            gender VARCHAR(200) NOT NULL);
+            
+            --// создаем таблицу с продуктовыми линейками //--
+            CREATE TABLE IF NOT EXISTS dim_product_line(
+            id SERIAL PRIMARY KEY,
+            product_line VARCHAR(200) NOT NULL);
+            
+            --// создаем таблицу с видами оплат //--
+            CREATE TABLE IF NOT EXISTS dim_payment(
+            id SERIAL PRIMARY KEY,
+            payment VARCHAR(100) NOT NULL);
+            
+            --// создаем таблицу с фактами //--       
+            CREATE TABLE IF NOT EXISTS fact_sales(
+            invoice_id VARCHAR(15) PRIMARY KEY,
+            branch INT NOT NULL REFERENCES dim_branch(id),
+            city INT NOT NULL REFERENCES dim_city(id),
+            customer_type INT NOT NULL REFERENCES dim_customer_type(id),
+            gender INT NOT NULL REFERENCES dim_gender(id),
+            product_line INT NOT NULL REFERENCES dim_product_line(id),
+            unit_price DOUBLE PRECISION,
+            quantity DOUBLE PRECISION,
+            "tax_5%" DOUBLE PRECISION,
+            total DOUBLE PRECISION,
+            date DATE NOT NULL,
+            time TIME NOT NULL,
+            payment INT NOT NULL REFERENCES dim_payment(id),
+            cogs DOUBLE PRECISION,
+            gross_margin_percentage DOUBLE PRECISION,
+            gross_income DOUBLE PRECISION,
+            rating DOUBLE PRECISION);        
+        , parameters: None
+[2023-04-30 11:59:23,825] {postgres.py:94} INFO - NOTICE:  schema "nds" already exists, skipping
+
+[2023-04-30 11:59:23,836] {postgres.py:94} INFO - NOTICE:  schema "stage" already exists, skipping
+
+[2023-04-30 11:59:23,837] {postgres.py:94} INFO - NOTICE:  relation "dim_branch" already exists, skipping
+
+[2023-04-30 11:59:23,838] {postgres.py:94} INFO - NOTICE:  relation "dim_city" already exists, skipping
+
+[2023-04-30 11:59:23,838] {postgres.py:94} INFO - NOTICE:  relation "dim_customer_type" already exists, skipping
+
+[2023-04-30 11:59:23,839] {postgres.py:94} INFO - NOTICE:  relation "dim_gender" already exists, skipping
+
+[2023-04-30 11:59:23,840] {postgres.py:94} INFO - NOTICE:  relation "dim_product_line" already exists, skipping
+
+[2023-04-30 11:59:23,840] {postgres.py:94} INFO - NOTICE:  relation "dim_payment" already exists, skipping
+
+[2023-04-30 11:59:23,841] {postgres.py:94} INFO - NOTICE:  relation "fact_sales" already exists, skipping
+
+[2023-04-30 11:59:24,207] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=dag_etl, task_id=create_nds_tables_if_not_exists, execution_date=20230430T115850, start_date=20230430T115919, end_date=20230430T115924
+[2023-04-30 11:59:24,491] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-04-30 11:59:26,001] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

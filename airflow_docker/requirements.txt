@@ -1,0 +1,5 @@
+telegram==0.0.1
+python-telegram-bot==13.14
+numpy==1.21.6
+s3fs==2023.1.0
+temp==2020.7.2

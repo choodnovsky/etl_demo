@@ -1,0 +1,25 @@
+[2023-04-30 08:18:11,842] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.delete_s3_obj manual__2023-04-30T08:17:21.945533+00:00 [queued]>
+[2023-04-30 08:18:12,486] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.delete_s3_obj manual__2023-04-30T08:17:21.945533+00:00 [queued]>
+[2023-04-30 08:18:12,503] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-30 08:18:12,504] {taskinstance.py:1357} INFO - Starting attempt 1 of 6
+[2023-04-30 08:18:12,505] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-30 08:18:13,106] {taskinstance.py:1377} INFO - Executing <Task(S3DeleteObjectsOperator): delete_s3_obj> on 2023-04-30 08:17:21.945533+00:00
+[2023-04-30 08:18:13,163] {standard_task_runner.py:52} INFO - Started process 732 to run task
+[2023-04-30 08:18:13,270] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dag_etl', 'delete_s3_obj', 'manual__2023-04-30T08:17:21.945533+00:00', '--job-id', '148', '--raw', '--subdir', 'DAGS_FOLDER/dag_etl_taskflow.py', '--cfg-path', '/tmp/tmpos2gi9n7', '--error-file', '/tmp/tmp4htcndoi']
+[2023-04-30 08:18:13,297] {standard_task_runner.py:80} INFO - Job 148: Subtask delete_s3_obj
+[2023-04-30 08:18:15,763] {task_command.py:370} INFO - Running <TaskInstance: dag_etl.delete_s3_obj manual__2023-04-30T08:17:21.945533+00:00 [running]> on host 295d97741f96
+[2023-04-30 08:18:18,670] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Victor
+AIRFLOW_CTX_DAG_ID=dag_etl
+AIRFLOW_CTX_TASK_ID=delete_s3_obj
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-30T08:17:21.945533+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-04-30T08:17:21.945533+00:00
+[2023-04-30 08:18:18,928] {base.py:68} INFO - Using connection ID 'minio_conn' for task execution.
+[2023-04-30 08:18:18,941] {base_aws.py:206} INFO - Credentials retrieved from login
+[2023-04-30 08:18:20,909] {s3.py:841} INFO - Deleted: ['supermarket_sales.csv']
+[2023-04-30 08:18:21,364] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=dag_etl, task_id=delete_s3_obj, execution_date=20230430T081721, start_date=20230430T081811, end_date=20230430T081821
+[2023-04-30 08:18:21,599] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-04-30 08:18:22,046] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

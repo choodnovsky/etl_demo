@@ -1,0 +1,36 @@
+[2023-04-30 12:03:15,466] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.sensor_s3_obj manual__2023-04-30T12:03:10.806501+00:00 [queued]>
+[2023-04-30 12:03:15,516] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.sensor_s3_obj manual__2023-04-30T12:03:10.806501+00:00 [queued]>
+[2023-04-30 12:03:15,517] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-30 12:03:15,518] {taskinstance.py:1357} INFO - Starting attempt 1 of 6
+[2023-04-30 12:03:15,518] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-30 12:03:15,604] {taskinstance.py:1377} INFO - Executing <Task(S3KeySensor): sensor_s3_obj> on 2023-04-30 12:03:10.806501+00:00
+[2023-04-30 12:03:15,614] {standard_task_runner.py:52} INFO - Started process 974 to run task
+[2023-04-30 12:03:15,622] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dag_etl', 'sensor_s3_obj', 'manual__2023-04-30T12:03:10.806501+00:00', '--job-id', '281', '--raw', '--subdir', 'DAGS_FOLDER/dag_etl_taskflow.py', '--cfg-path', '/tmp/tmp22eqe_8b', '--error-file', '/tmp/tmpimm4kr7x']
+[2023-04-30 12:03:15,624] {standard_task_runner.py:80} INFO - Job 281: Subtask sensor_s3_obj
+[2023-04-30 12:03:16,040] {task_command.py:370} INFO - Running <TaskInstance: dag_etl.sensor_s3_obj manual__2023-04-30T12:03:10.806501+00:00 [running]> on host 295d97741f96
+[2023-04-30 12:03:16,708] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Victor
+AIRFLOW_CTX_DAG_ID=dag_etl
+AIRFLOW_CTX_TASK_ID=sensor_s3_obj
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-30T12:03:10.806501+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-04-30T12:03:10.806501+00:00
+[2023-04-30 12:03:16,714] {s3.py:104} INFO - Poking for key : s3://raw/supermarket_sales.csv
+[2023-04-30 12:03:16,816] {base.py:68} INFO - Using connection ID 'minio_conn' for task execution.
+[2023-04-30 12:03:16,822] {base_aws.py:206} INFO - Credentials retrieved from login
+[2023-04-30 12:03:22,233] {s3.py:104} INFO - Poking for key : s3://raw/supermarket_sales.csv
+[2023-04-30 12:03:27,255] {s3.py:104} INFO - Poking for key : s3://raw/supermarket_sales.csv
+[2023-04-30 12:03:32,340] {s3.py:104} INFO - Poking for key : s3://raw/supermarket_sales.csv
+[2023-04-30 12:03:37,362] {s3.py:104} INFO - Poking for key : s3://raw/supermarket_sales.csv
+[2023-04-30 12:03:42,384] {s3.py:104} INFO - Poking for key : s3://raw/supermarket_sales.csv
+[2023-04-30 12:03:47,404] {s3.py:104} INFO - Poking for key : s3://raw/supermarket_sales.csv
+[2023-04-30 12:03:52,686] {s3.py:104} INFO - Poking for key : s3://raw/supermarket_sales.csv
+[2023-04-30 12:03:57,714] {s3.py:104} INFO - Poking for key : s3://raw/supermarket_sales.csv
+[2023-04-30 12:03:57,749] {base.py:301} INFO - Success criteria met. Exiting.
+[2023-04-30 12:03:58,037] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=dag_etl, task_id=sensor_s3_obj, execution_date=20230430T120310, start_date=20230430T120315, end_date=20230430T120358
+[2023-04-30 12:03:58,132] {local_task_job.py:221} WARNING - State of this instance has been externally set to success. Terminating instance.
+[2023-04-30 12:03:58,144] {process_utils.py:129} INFO - Sending Signals.SIGTERM to group 974. PIDs of all processes in the group: [974]
+[2023-04-30 12:03:58,146] {process_utils.py:80} INFO - Sending the signal Signals.SIGTERM to group 974
+[2023-04-30 12:03:58,152] {process_utils.py:75} INFO - Process psutil.Process(pid=974, status='terminated', exitcode=0, started='12:03:15') (974) terminated with exit code 0

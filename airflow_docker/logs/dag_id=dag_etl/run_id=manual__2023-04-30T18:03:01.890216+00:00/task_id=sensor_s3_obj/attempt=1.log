@@ -1,0 +1,26 @@
+[2023-04-30 18:03:12,098] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.sensor_s3_obj manual__2023-04-30T18:03:01.890216+00:00 [queued]>
+[2023-04-30 18:03:12,182] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.sensor_s3_obj manual__2023-04-30T18:03:01.890216+00:00 [queued]>
+[2023-04-30 18:03:12,184] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-30 18:03:12,186] {taskinstance.py:1357} INFO - Starting attempt 1 of 6
+[2023-04-30 18:03:12,187] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-30 18:03:12,324] {taskinstance.py:1377} INFO - Executing <Task(S3KeySensor): sensor_s3_obj> on 2023-04-30 18:03:01.890216+00:00
+[2023-04-30 18:03:12,337] {standard_task_runner.py:52} INFO - Started process 1423 to run task
+[2023-04-30 18:03:12,352] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dag_etl', 'sensor_s3_obj', 'manual__2023-04-30T18:03:01.890216+00:00', '--job-id', '352', '--raw', '--subdir', 'DAGS_FOLDER/dag_etl_taskflow.py', '--cfg-path', '/tmp/tmp2_2cjxl2', '--error-file', '/tmp/tmpzcix_n47']
+[2023-04-30 18:03:12,362] {standard_task_runner.py:80} INFO - Job 352: Subtask sensor_s3_obj
+[2023-04-30 18:03:12,938] {task_command.py:370} INFO - Running <TaskInstance: dag_etl.sensor_s3_obj manual__2023-04-30T18:03:01.890216+00:00 [running]> on host 295d97741f96
+[2023-04-30 18:03:14,318] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Victor
+AIRFLOW_CTX_DAG_ID=dag_etl
+AIRFLOW_CTX_TASK_ID=sensor_s3_obj
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-30T18:03:01.890216+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-04-30T18:03:01.890216+00:00
+[2023-04-30 18:03:14,324] {s3.py:104} INFO - Poking for key : s3://raw/supermarket_sales.csv
+[2023-04-30 18:03:14,703] {base.py:68} INFO - Using connection ID 'minio_conn' for task execution.
+[2023-04-30 18:03:14,748] {base_aws.py:206} INFO - Credentials retrieved from login
+[2023-04-30 18:03:16,063] {base.py:301} INFO - Success criteria met. Exiting.
+[2023-04-30 18:03:16,284] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=dag_etl, task_id=sensor_s3_obj, execution_date=20230430T180301, start_date=20230430T180312, end_date=20230430T180316
+[2023-04-30 18:03:16,883] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-04-30 18:03:19,364] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

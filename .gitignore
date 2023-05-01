@@ -1,0 +1,4 @@
+.idea
+airflow_docker/dags/__pycache__/
+venv/
+.DS_Store

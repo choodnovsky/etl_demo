@@ -1,0 +1,28 @@
+[2023-04-30 18:03:28,200] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.extract_from_s3 manual__2023-04-30T18:03:01.890216+00:00 [queued]>
+[2023-04-30 18:03:28,315] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.extract_from_s3 manual__2023-04-30T18:03:01.890216+00:00 [queued]>
+[2023-04-30 18:03:28,317] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-30 18:03:28,319] {taskinstance.py:1357} INFO - Starting attempt 1 of 6
+[2023-04-30 18:03:28,321] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-30 18:03:28,525] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): extract_from_s3> on 2023-04-30 18:03:01.890216+00:00
+[2023-04-30 18:03:28,549] {standard_task_runner.py:52} INFO - Started process 1449 to run task
+[2023-04-30 18:03:28,577] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dag_etl', 'extract_from_s3', 'manual__2023-04-30T18:03:01.890216+00:00', '--job-id', '354', '--raw', '--subdir', 'DAGS_FOLDER/dag_etl_taskflow.py', '--cfg-path', '/tmp/tmpzqa9j2hm', '--error-file', '/tmp/tmprw0v8dlh']
+[2023-04-30 18:03:28,582] {standard_task_runner.py:80} INFO - Job 354: Subtask extract_from_s3
+[2023-04-30 18:03:29,768] {task_command.py:370} INFO - Running <TaskInstance: dag_etl.extract_from_s3 manual__2023-04-30T18:03:01.890216+00:00 [running]> on host 295d97741f96
+[2023-04-30 18:03:31,140] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Victor
+AIRFLOW_CTX_DAG_ID=dag_etl
+AIRFLOW_CTX_TASK_ID=extract_from_s3
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-30T18:03:01.890216+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-04-30T18:03:01.890216+00:00
+[2023-04-30 18:03:31,149] {s3.py:861} INFO - Downloading source S3 file from Bucket raw with path supermarket_sales.csv
+[2023-04-30 18:03:31,361] {base.py:68} INFO - Using connection ID 'minio_conn' for task execution.
+[2023-04-30 18:03:31,372] {base_aws.py:206} INFO - Credentials retrieved from login
+[2023-04-30 18:03:33,159] {python.py:173} INFO - Done. Returned value was: /opt/***/data/***_tmp_wr0hnrf7
+[2023-04-30 18:03:34,168] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=dag_etl, task_id=extract_from_s3, execution_date=20230430T180301, start_date=20230430T180328, end_date=20230430T180334
+[2023-04-30 18:03:34,589] {local_task_job.py:221} WARNING - State of this instance has been externally set to success. Terminating instance.
+[2023-04-30 18:03:34,670] {process_utils.py:129} INFO - Sending Signals.SIGTERM to group 1449. PIDs of all processes in the group: [1449]
+[2023-04-30 18:03:34,677] {process_utils.py:80} INFO - Sending the signal Signals.SIGTERM to group 1449
+[2023-04-30 18:03:34,747] {process_utils.py:75} INFO - Process psutil.Process(pid=1449, status='terminated', exitcode=0, started='18:03:28') (1449) terminated with exit code 0

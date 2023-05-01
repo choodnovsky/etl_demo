@@ -1,0 +1,121 @@
+[2023-04-30 11:59:51,974] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.dim_time scheduled__2023-04-27T00:00:00+00:00 [queued]>
+[2023-04-30 11:59:52,515] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.dim_time scheduled__2023-04-27T00:00:00+00:00 [queued]>
+[2023-04-30 11:59:52,519] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-30 11:59:52,522] {taskinstance.py:1357} INFO - Starting attempt 1 of 6
+[2023-04-30 11:59:52,527] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-30 11:59:53,391] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): dim_time> on 2023-04-27 00:00:00+00:00
+[2023-04-30 11:59:53,505] {standard_task_runner.py:52} INFO - Started process 617 to run task
+[2023-04-30 11:59:53,655] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dag_etl', 'dim_time', 'scheduled__2023-04-27T00:00:00+00:00', '--job-id', '251', '--raw', '--subdir', 'DAGS_FOLDER/dag_etl_taskflow.py', '--cfg-path', '/tmp/tmp2n1fw45w', '--error-file', '/tmp/tmpitwjsnsd']
+[2023-04-30 11:59:53,723] {standard_task_runner.py:80} INFO - Job 251: Subtask dim_time
+[2023-04-30 11:59:57,228] {task_command.py:370} INFO - Running <TaskInstance: dag_etl.dim_time scheduled__2023-04-27T00:00:00+00:00 [running]> on host 295d97741f96
+[2023-04-30 12:00:01,235] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Victor
+AIRFLOW_CTX_DAG_ID=dag_etl
+AIRFLOW_CTX_TASK_ID=dim_time
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-27T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-27T00:00:00+00:00
+[2023-04-30 12:00:02,792] {base.py:68} INFO - Using connection ID 'postgres_conn' for task execution.
+[2023-04-30 12:00:04,093] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1706, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 716, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.DependentObjectsStillExist: cannot drop table nds.dim_time because other objects depend on it
+DETAIL:  view dns_sales depends on table nds.dim_time
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 179, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 240, in dim_time
+    dtype={'time': sqlalchemy.types.TIME()})
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 2882, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 728, in to_sql
+    **engine_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1758, in to_sql
+    dtype=dtype,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1650, in prep_table
+    table.create()
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 860, in create
+    self.pd_sql.drop_table(self.name, self.schema)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1810, in drop_table
+    self.get_table(table_name, schema).drop()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/schema.py", line 960, in drop
+    bind._run_ddl_visitor(ddl.SchemaDropper, self, checkfirst=checkfirst)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3008, in _run_ddl_visitor
+    conn._run_ddl_visitor(visitorcallable, element, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2016, in _run_ddl_visitor
+    visitorcallable(self.dialect, self, **kwargs).traverse_single(element)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/visitors.py", line 483, in traverse_single
+    return meth(obj, **kw)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/ddl.py", line 1097, in visit_table
+    self.connection.execute(DropTable(table))
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1200, in execute
+    return meth(self, multiparams, params, _EMPTY_EXECUTION_OPTS)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/ddl.py", line 78, in _execute_on_connection
+    self, multiparams, params, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1296, in _execute_ddl
+    compiled,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1749, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1930, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1706, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 716, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.DependentObjectsStillExist) cannot drop table nds.dim_time because other objects depend on it
+DETAIL:  view dns_sales depends on table nds.dim_time
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+
+[SQL: 
+DROP TABLE nds.dim_time]
+(Background on this error at: http://sqlalche.me/e/14/2j85)
+[2023-04-30 12:00:04,903] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=dag_etl, task_id=dim_time, execution_date=20230427T000000, start_date=20230430T115951, end_date=20230430T120004
+[2023-04-30 12:00:06,660] {standard_task_runner.py:97} ERROR - Failed to execute job 251 for task dim_time ((psycopg2.errors.DependentObjectsStillExist) cannot drop table nds.dim_time because other objects depend on it
+DETAIL:  view dns_sales depends on table nds.dim_time
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+
+[SQL: 
+DROP TABLE nds.dim_time]
+(Background on this error at: http://sqlalche.me/e/14/2j85); 617)
+[2023-04-30 12:00:06,942] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-04-30 12:00:08,861] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-04-30 15:50:09,933] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.dim_time scheduled__2023-04-27T00:00:00+00:00 [queued]>
+[2023-04-30 15:50:11,468] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.dim_time scheduled__2023-04-27T00:00:00+00:00 [queued]>
+[2023-04-30 15:50:11,508] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-30 15:50:11,530] {taskinstance.py:1357} INFO - Starting attempt 1 of 6
+[2023-04-30 15:50:11,534] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-30 15:50:14,314] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): dim_time> on 2023-04-27 00:00:00+00:00
+[2023-04-30 15:50:14,479] {standard_task_runner.py:52} INFO - Started process 1092 to run task
+[2023-04-30 15:50:14,680] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dag_etl', 'dim_time', 'scheduled__2023-04-27T00:00:00+00:00', '--job-id', '321', '--raw', '--subdir', 'DAGS_FOLDER/dag_etl_taskflow.py', '--cfg-path', '/tmp/tmpp_k_lngv', '--error-file', '/tmp/tmpsrh7ellw']
+[2023-04-30 15:50:14,725] {standard_task_runner.py:80} INFO - Job 321: Subtask dim_time
+[2023-04-30 15:50:17,733] {task_command.py:370} INFO - Running <TaskInstance: dag_etl.dim_time scheduled__2023-04-27T00:00:00+00:00 [running]> on host 295d97741f96
+[2023-04-30 15:50:24,476] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Victor
+AIRFLOW_CTX_DAG_ID=dag_etl
+AIRFLOW_CTX_TASK_ID=dim_time
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-27T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-27T00:00:00+00:00
+[2023-04-30 15:50:27,776] {base.py:68} INFO - Using connection ID 'postgres_conn' for task execution.
+[2023-04-30 15:50:31,773] {python.py:173} INFO - Done. Returned value was: None
+[2023-04-30 15:50:36,118] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=dag_etl, task_id=dim_time, execution_date=20230427T000000, start_date=20230430T155009, end_date=20230430T155036
+[2023-04-30 15:50:36,783] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-04-30 15:50:37,864] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
