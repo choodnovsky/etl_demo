@@ -77,6 +77,9 @@ ____
 16. После сохранения свежих фактов в слое nds удаляем файл csv из файловой системы airflow
 ________
 Схема ETL процесса (DAG) ![DAG](images/dag.png)  
+_____
+## [ТУТ !!! Python скрипт с DAG-ом !!! ТУТ](dag_etl_taskflow.py.pdf)  
+____
 
 ## BI superset
 Поскольку на территории РФ использование Tableau невозможно, а MS Power BI выпускается только для OS Windows будем использовать superset
