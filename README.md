@@ -78,7 +78,7 @@ ____
 ________
 Схема ETL процесса (DAG) ![DAG](images/dag.png)  
 _____
-## [ТУТ !!! Python скрипт с DAG-ом !!! ТУТ](dag_etl_taskflow.py.pdf)  
+## [ТУТ !!! Python скрипт с DAG-ом !!! ТУТ](airflow_docker/dags/dag_etl_taskflow.py)  
 ____
 
 ## BI superset
