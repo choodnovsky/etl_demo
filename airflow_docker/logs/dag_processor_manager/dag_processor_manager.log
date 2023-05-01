@@ -1663,3 +1663,60 @@ File Path                              PID    Runtime      # DAGs    # Errors  L
 -------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
 /opt/airflow/dags/dag_etl_taskflow.py                           1           0  6.65s           2023-04-30T18:07:45
 ================================================================================
+[2023-05-01 09:07:05,585] {manager.py:480} INFO - Processing files using up to 2 processes at a time 
+[2023-05-01 09:07:05,618] {manager.py:481} INFO - Process each file at most once every 30 seconds
+[2023-05-01 09:07:05,624] {manager.py:483} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2023-05-01 09:07:05,629] {manager.py:690} INFO - Searching for files in /opt/airflow/dags
+[2023-05-01 09:07:05,690] {manager.py:693} INFO - There are 1 files in /opt/airflow/dags
+[2023-05-01 09:07:11,805] {manager.py:809} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/dag_etl_taskflow.py    791  1.05s             0           0
+================================================================================
+[2023-05-01 09:07:42,017] {manager.py:809} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/dag_etl_taskflow.py    791  31.42s            0           0
+================================================================================
+[2023-05-01 09:08:11,837] {manager.py:511} INFO - DAG dag_etl is missing and will be deactivated.
+[2023-05-01 09:08:12,618] {manager.py:521} INFO - Deactivated 1 DAGs which are no longer present in file.
+[2023-05-01 09:08:12,885] {manager.py:809} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/dag_etl_taskflow.py                           0           1  35.21s          2023-05-01T09:07:45
+================================================================================
+[2023-05-01 09:08:43,309] {manager.py:809} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/dag_etl_taskflow.py    868  27.17s            0           1  35.21s          2023-05-01T09:07:45
+================================================================================
+[2023-05-01 09:09:14,424] {manager.py:809} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/dag_etl_taskflow.py                           0           1  38.44s          2023-05-01T09:08:54
+================================================================================
+[2023-05-01 09:09:45,079] {manager.py:809} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/dag_etl_taskflow.py    938  20.08s            0           1  38.44s          2023-05-01T09:08:54
+================================================================================
+[2023-05-01 09:09:50,417] {manager.py:462} INFO - Exiting gracefully upon receiving signal 15
+[2023-05-01 09:09:50,450] {manager.py:462} INFO - Exiting gracefully upon receiving signal 15
