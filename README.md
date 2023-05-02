@@ -366,8 +366,8 @@ dag_etl_taskflow.py</font>
 <a name="l273"><span class="ln">273  </span></a>                  <span class="s1">schema=</span><span class="s2">'nds'</span><span class="s0">,</span>
 <a name="l274"><span class="ln">274  </span></a>                  <span class="s1">if_exists=</span><span class="s2">'replace'</span><span class="s0">,</span>
 <a name="l275"><span class="ln">275  </span></a>                  <span class="s1">index=</span><span class="s0">False,</span>
-<a name="l276"><span class="ln">276  </span></a>                  <span class="s1">dtype={</span><span class="s2">'date'</span><span class="s1">: sqlalchemy.types.Date()</span><span class="s0">,</span>
-<a name="l277"><span class="ln">277  </span></a>                         <span class="s2">'week_start'</span><span class="s1">: sqlalchemy.types.Date()})</span>
+<a name="l276"><span class="ln">276  </span></a>                  <span class="s1">dtype={</span><span class="s2">'date'</span><span class="s1">: sqlalchemy.types.DATE()</span><span class="s0">,</span>
+<a name="l277"><span class="ln">277  </span></a>                         <span class="s2">'week_start'</span><span class="s1">: sqlalchemy.types.DATE()})</span>
 <a name="l278"><span class="ln">278  </span></a>
 <a name="l279"><span class="ln">279  </span></a>
 <a name="l280"><span class="ln">280  </span></a>    <span class="s1">@task</span>

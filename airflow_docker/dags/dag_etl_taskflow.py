@@ -16,7 +16,6 @@ raw_key = 'supermarket_sales.csv'
 raw_bucket = 'raw'
 raw_local_path = 'data'
 file_new_name = 'downloaded_from_minio.csv'
-postgres_hook = PostgresHook(postgres_conn_id='postgres_conn')
 default_args = {
     'owner': 'Victor',
     'retries': 5,
@@ -147,7 +146,7 @@ with DAG(
     )
     task_clear_data_directory = BashOperator(
         task_id='clear_data_directory',
-        bash_command='rm -rf ${pwd}data/*'
+        bash_command='rm -rf ${pwd}data/* | ❯ echo "приехали"'
     )
 
 
@@ -273,8 +272,8 @@ with DAG(
                   schema='nds',
                   if_exists='replace',
                   index=False,
-                  dtype={'date': sqlalchemy.types.Date(),
-                         'week_start': sqlalchemy.types.Date()})
+                  dtype={'date': sqlalchemy.types.DATE(),
+                         'week_start': sqlalchemy.types.DATE()})
 
 
     @task
