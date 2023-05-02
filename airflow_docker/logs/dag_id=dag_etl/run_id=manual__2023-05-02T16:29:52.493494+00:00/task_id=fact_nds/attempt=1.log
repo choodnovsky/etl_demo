@@ -1,0 +1,25 @@
+[2023-05-02 16:31:03,428] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.fact_nds manual__2023-05-02T16:29:52.493494+00:00 [queued]>
+[2023-05-02 16:31:03,489] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.fact_nds manual__2023-05-02T16:29:52.493494+00:00 [queued]>
+[2023-05-02 16:31:03,491] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-02 16:31:03,492] {taskinstance.py:1357} INFO - Starting attempt 1 of 6
+[2023-05-02 16:31:03,493] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-02 16:31:03,587] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): fact_nds> on 2023-05-02 16:29:52.493494+00:00
+[2023-05-02 16:31:03,597] {standard_task_runner.py:52} INFO - Started process 692 to run task
+[2023-05-02 16:31:03,608] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dag_etl', 'fact_nds', 'manual__2023-05-02T16:29:52.493494+00:00', '--job-id', '776', '--raw', '--subdir', 'DAGS_FOLDER/dag_etl_taskflow.py', '--cfg-path', '/tmp/tmpunxc6jst', '--error-file', '/tmp/tmpnnxb9rfv']
+[2023-05-02 16:31:03,610] {standard_task_runner.py:80} INFO - Job 776: Subtask fact_nds
+[2023-05-02 16:31:03,991] {task_command.py:370} INFO - Running <TaskInstance: dag_etl.fact_nds manual__2023-05-02T16:29:52.493494+00:00 [running]> on host 295d97741f96
+[2023-05-02 16:31:04,733] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Victor
+AIRFLOW_CTX_DAG_ID=dag_etl
+AIRFLOW_CTX_TASK_ID=fact_nds
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-02T16:29:52.493494+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-05-02T16:29:52.493494+00:00
+[2023-05-02 16:31:04,813] {base.py:68} INFO - Using connection ID 'postgres_conn' for task execution.
+[2023-05-02 16:31:05,110] {base.py:68} INFO - Using connection ID 'postgres_conn' for task execution.
+[2023-05-02 16:31:06,152] {python.py:173} INFO - Done. Returned value was: None
+[2023-05-02 16:31:06,289] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=dag_etl, task_id=fact_nds, execution_date=20230502T162952, start_date=20230502T163103, end_date=20230502T163106
+[2023-05-02 16:31:06,395] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-05-02 16:31:06,711] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,28 @@
+[2023-05-02 15:12:28,770] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl_date.clear_data_directory manual__2023-05-02T15:11:22.892155+00:00 [queued]>
+[2023-05-02 15:12:28,835] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl_date.clear_data_directory manual__2023-05-02T15:11:22.892155+00:00 [queued]>
+[2023-05-02 15:12:28,836] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-02 15:12:28,837] {taskinstance.py:1357} INFO - Starting attempt 1 of 6
+[2023-05-02 15:12:28,838] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-02 15:12:28,934] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): clear_data_directory> on 2023-05-02 15:11:22.892155+00:00
+[2023-05-02 15:12:28,944] {standard_task_runner.py:52} INFO - Started process 1484 to run task
+[2023-05-02 15:12:28,953] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dag_etl_date', 'clear_data_directory', 'manual__2023-05-02T15:11:22.892155+00:00', '--job-id', '683', '--raw', '--subdir', 'DAGS_FOLDER/dag_etl_taskflow_date.py', '--cfg-path', '/tmp/tmp3f5b4gkm', '--error-file', '/tmp/tmp1ii37zwu']
+[2023-05-02 15:12:28,956] {standard_task_runner.py:80} INFO - Job 683: Subtask clear_data_directory
+[2023-05-02 15:12:29,341] {task_command.py:370} INFO - Running <TaskInstance: dag_etl_date.clear_data_directory manual__2023-05-02T15:11:22.892155+00:00 [running]> on host 295d97741f96
+[2023-05-02 15:12:30,048] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Victor
+AIRFLOW_CTX_DAG_ID=dag_etl_date
+AIRFLOW_CTX_TASK_ID=clear_data_directory
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-02T15:11:22.892155+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-05-02T15:11:22.892155+00:00
+[2023-05-02 15:12:30,054] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2023-05-02 15:12:30,056] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'rm -rf ${pwd}data/* | echo "приехали"']
+[2023-05-02 15:12:30,076] {subprocess.py:85} INFO - Output:
+[2023-05-02 15:12:30,125] {subprocess.py:92} INFO - приехали
+[2023-05-02 15:12:30,161] {subprocess.py:96} INFO - Command exited with return code 0
+[2023-05-02 15:12:30,434] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=dag_etl_date, task_id=clear_data_directory, execution_date=20230502T151122, start_date=20230502T151228, end_date=20230502T151230
+[2023-05-02 15:12:30,557] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-05-02 15:12:30,827] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

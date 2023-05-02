@@ -1,7 +1,5 @@
 import os
-import sqlalchemy
 from datetime import datetime, timedelta
-import numpy as np
 import pandas as pd
 from airflow import DAG
 from airflow.decorators import task
@@ -41,7 +39,7 @@ with DAG(
         timeout=30 # Тут надо выставить 24*60*60 - т.е. все сутки, НО комп сильно устает
     )
     task_create_tables = PostgresOperator(
-        task_id='create_nds_tables_if_not_exists',
+        task_id='create_dds_tables_if_not_exists',
         postgres_conn_id='postgres_conn',
         sql=f"""
             CREATE SCHEMA IF NOT EXISTS {dds_layer};
@@ -56,48 +54,90 @@ with DAG(
             
             --// создаем таблицу с городами //--
             CREATE TABLE IF NOT EXISTS dim_city(
-            id SERIAL PRIMARY KEY,
-            city VARCHAR(100) NOT NULL);
+                id SERIAL PRIMARY KEY,
+                city VARCHAR(100) NOT NULL);
             
             --// создаем таблицу с типами клиентов //--
             CREATE TABLE IF NOT EXISTS dim_customer_type(
-            id SERIAL PRIMARY KEY,
-            customer_type VARCHAR(200) NOT NULL);
+                id SERIAL PRIMARY KEY,
+                customer_type VARCHAR(200) NOT NULL);
             
             --// создаем таблицу с гендерами //--
             CREATE TABLE IF NOT EXISTS dim_gender(
-            id SERIAL PRIMARY KEY,
-            gender VARCHAR(200) NOT NULL);
+                id SERIAL PRIMARY KEY,
+                gender VARCHAR(200) NOT NULL);
             
             --// создаем таблицу с продуктовыми линейками //--
             CREATE TABLE IF NOT EXISTS dim_product_line(
-            id SERIAL PRIMARY KEY,
-            product_line VARCHAR(200) NOT NULL);
+                id SERIAL PRIMARY KEY,
+                product_line VARCHAR(200) NOT NULL);
             
             --// создаем таблицу с видами оплат //--
             CREATE TABLE IF NOT EXISTS dim_payment(
-            id SERIAL PRIMARY KEY,
-            payment VARCHAR(100) NOT NULL);
+                id SERIAL PRIMARY KEY,
+                payment VARCHAR(100) NOT NULL);
             
+            --// создаем таблицу с датами //--
+            CREATE TABLE IF NOT EXISTS dim_date AS
+            WITH cte1 AS (
+                SELECT dd::date AS dt -- создаем серию из дат с интервалом в 1 день
+                FROM generate_series('2019-01-01'::timestamp,'2030-01-01'::timestamp,'1 day'::interval) dd)
+            SELECT
+                dt AS date,
+                date_part('week', dt)::int AS week_of_year,
+                date_trunc('week', dt)::date AS week_start,
+                date_part('isodow', dt)::int AS day_of_week,
+                date_part('month', dt)::int AS month_number,
+                to_char(dt::timestamp, 'Month') AS month_name,
+                extract(quarter from dt) AS quarter,
+                date_part('isoyear', dt)::int AS year
+            FROM cte1;
+            ALTER TABLE dim_date DROP CONSTRAINT IF EXISTS dim_date_pkey CASCADE;
+            ALTER TABLE dim_date ADD CONSTRAINT dim_date_pkey PRIMARY KEY (date);
+            
+            
+            --//  создаем таблицу с временем  //--
+            CREATE TABLE IF NOT EXISTS dim_time AS
+            WITH cte1 AS (
+                SELECT tt::time AS t -- создаем серию из дат с интервалом в 1 день
+                FROM generate_series(current_date, current_date + '1 day - 1 second'::interval,'1 minute') tt),
+            cte2 AS (SELECT
+                t AS time
+            FROM cte1 ORDER BY t)
+            SELECT time,
+                   case
+                       when (time >= '00:00:00'::time AND time < '06:00:00'::time) then 'ningt'
+                       when (time >= '06:00:00'::time AND time < '11:00:00'::time) then 'morning'
+                       when (time >= '11:00:00'::time AND time < '17:00:00'::time) then 'noon'
+                       when (time >= '17:00:00'::time AND time < '22:00:00'::time) then 'evening'
+                       when (time >= '22:00:00'::time AND time < '24:00:00'::time) then 'ningt'
+                   end AS date_part
+            from cte2;
+            ALTER TABLE dim_time DROP CONSTRAINT IF EXISTS dim_time_pkey CASCADE;
+            ALTER TABLE dim_time ADD CONSTRAINT dim_time_pkey PRIMARY KEY (time);
+            
+           
             --// создаем таблицу с фактами //--       
             CREATE TABLE IF NOT EXISTS fact_sales(
-            invoice_id VARCHAR(15) PRIMARY KEY,
-            branch INT NOT NULL REFERENCES dim_branch(id),
-            city INT NOT NULL REFERENCES dim_city(id),
-            customer_type INT NOT NULL REFERENCES dim_customer_type(id),
-            gender INT NOT NULL REFERENCES dim_gender(id),
-            product_line INT NOT NULL REFERENCES dim_product_line(id),
-            unit_price DOUBLE PRECISION,
-            quantity DOUBLE PRECISION,
-            "tax_5%" DOUBLE PRECISION,
-            total DOUBLE PRECISION,
-            date DATE NOT NULL,
-            time TIME NOT NULL,
-            payment INT NOT NULL REFERENCES dim_payment(id),
-            cogs DOUBLE PRECISION,
-            gross_margin_percentage DOUBLE PRECISION,
-            gross_income DOUBLE PRECISION,
-            rating DOUBLE PRECISION);        
+                invoice_id VARCHAR(15) PRIMARY KEY,
+                branch INT NOT NULL REFERENCES dim_branch(id),
+                city INT NOT NULL REFERENCES dim_city(id),
+                customer_type INT NOT NULL REFERENCES dim_customer_type(id),
+                gender INT NOT NULL REFERENCES dim_gender(id),
+                product_line INT NOT NULL REFERENCES dim_product_line(id),
+                unit_price DOUBLE PRECISION,
+                quantity DOUBLE PRECISION,
+                "tax_5%" DOUBLE PRECISION,
+                total DOUBLE PRECISION,
+                date DATE NOT NULL,
+                time TIME NOT NULL,
+                payment INT NOT NULL REFERENCES dim_payment(id),
+                cogs DOUBLE PRECISION,
+                gross_margin_percentage DOUBLE PRECISION,
+                gross_income DOUBLE PRECISION,
+                rating DOUBLE PRECISION);
+                ALTER TABLE fact_sales ADD CONSTRAINT fact_sales_date_fkey FOREIGN KEY (date) REFERENCES dim_date(date);
+                ALTER TABLE fact_sales ADD CONSTRAINT fact_sales_time_fkey FOREIGN KEY (time) REFERENCES dim_time(time);   
         """
     )
     task_update_dims = PostgresOperator(
@@ -227,58 +267,6 @@ with DAG(
 
 
     @task
-    def dim_time():
-        """
-        Создаем таблицу с временем и признаками времени
-        и заливаем сразу в nds
-        """
-        time_range = pd.date_range(start="00:00", end="23:59", freq="1min")
-        df = pd.DataFrame(pd.Series(time_range.strftime("%H:%M:%S"), name='time'))
-        day_part = 'day_part'
-        df.loc[(df['time'] >= '00:00:00') & (df['time'] < '06:00:00'), day_part] = 'night'
-        df.loc[(df['time'] >= '06:00:00') & (df['time'] < '11:00:00'), day_part] = 'morning'
-        df.loc[(df['time'] >= '11:00:00') & (df['time'] < '17:00:00'), day_part] = 'noon'
-        df.loc[(df['time'] >= '17:00:00') & (df['time'] < '22:00:00'), day_part] = 'evening'
-        df.loc[(df['time'] >= '22:00:00') & (df['time'] < '24:00:00'), day_part] = 'night'
-        hook = PostgresHook(postgres_conn_id='postgres_conn')
-        df.to_sql('dim_time',
-                  hook.get_sqlalchemy_engine(),
-                  schema=dds_layer,
-                  if_exists='replace',
-                  index=False,
-                  dtype={'time': sqlalchemy.types.TIME()})
-
-
-    @task
-    def dim_date():
-        """
-        Создаем таблицу с датами и признаками дат
-        и заливаем сразу в nds
-        """
-        df = pd.DataFrame(pd.date_range(start="2019-01-01", end="2099-12-31"), columns=['date'])
-        df['week_of_year'] = df['date'].dt.isocalendar().week
-        df['week_start'] = df['date'].dt.to_period('W-SUN').dt.start_time
-        df['day_of_week'] = df['date'].dt.dayofweek + 1
-        df['month_number'] = df['date'].dt.month
-        df['month_name'] = pd.to_datetime(df['date'], format='%m').dt.month_name()
-        df['quarter'] = df['date'].dt.quarter
-        df['year'] = df['date'].dt.year
-        df['season'] = np.where(df['month_number'].isin([12, 1, 2]), 'winter', 'spring')
-        df['season'] = np.where(df['month_number'].isin([6, 7, 8]), 'summer', df['season'])
-        df['season'] = np.where(df['month_number'].isin([9, 10, 11]), 'fall', df['season'])
-        df['date'] = df['date'].dt.strftime('%Y-%m-%d')
-        df['week_start'] = df['week_start'].dt.strftime('%Y-%m-%d')
-        hook = PostgresHook(postgres_conn_id='postgres_conn')
-        df.to_sql('dim_date',
-                  hook.get_sqlalchemy_engine(),
-                  schema=dds_layer,
-                  if_exists='replace',
-                  index=False,
-                  dtype={'date': sqlalchemy.types.DATE(),
-                         'week_start': sqlalchemy.types.DATE()})
-
-
-    @task
     def fact_nds(downloaded_file_path, file_new_name):
         """
         Забираем из базы обновленные измерения и их ключи.
@@ -324,13 +312,11 @@ with DAG(
     gender = dim_gender(downloaded_file_path, file_new_name)
     product_line = dim_product_line(downloaded_file_path, file_new_name)
     payment = dim_payment(downloaded_file_path, file_new_name)
-    time_ = dim_time()
-    date_ = dim_date()
     fact_sales = fact_nds(downloaded_file_path, file_new_name)
 
     task_s3_sensor >> file_name >> downloaded_file_path >> [
         branch, city, customer_type, gender, product_line, payment
     ] >> task_update_dims
     task_update_dims >> fact_sales >> task_update_fact >> task_clear_data_directory
-    task_s3_sensor >> task_create_tables >> [time_, date_]
+    task_s3_sensor >> task_create_tables
     downloaded_file_path >> task_delete_s3_obj

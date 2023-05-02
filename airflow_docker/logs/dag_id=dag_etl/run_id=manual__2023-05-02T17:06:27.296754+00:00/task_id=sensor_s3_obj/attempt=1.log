@@ -1,0 +1,37 @@
+[2023-05-02 17:06:31,158] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.sensor_s3_obj manual__2023-05-02T17:06:27.296754+00:00 [queued]>
+[2023-05-02 17:06:31,209] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.sensor_s3_obj manual__2023-05-02T17:06:27.296754+00:00 [queued]>
+[2023-05-02 17:06:31,211] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-02 17:06:31,212] {taskinstance.py:1357} INFO - Starting attempt 1 of 6
+[2023-05-02 17:06:31,212] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-02 17:06:31,298] {taskinstance.py:1377} INFO - Executing <Task(S3KeySensor): sensor_s3_obj> on 2023-05-02 17:06:27.296754+00:00
+[2023-05-02 17:06:31,312] {standard_task_runner.py:52} INFO - Started process 1848 to run task
+[2023-05-02 17:06:31,323] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dag_etl', 'sensor_s3_obj', 'manual__2023-05-02T17:06:27.296754+00:00', '--job-id', '818', '--raw', '--subdir', 'DAGS_FOLDER/dag_etl_taskflow.py', '--cfg-path', '/tmp/tmpy9ry4kxy', '--error-file', '/tmp/tmpbx9vknwk']
+[2023-05-02 17:06:31,325] {standard_task_runner.py:80} INFO - Job 818: Subtask sensor_s3_obj
+[2023-05-02 17:06:31,869] {task_command.py:370} INFO - Running <TaskInstance: dag_etl.sensor_s3_obj manual__2023-05-02T17:06:27.296754+00:00 [running]> on host 295d97741f96
+[2023-05-02 17:06:32,460] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Victor
+AIRFLOW_CTX_DAG_ID=dag_etl
+AIRFLOW_CTX_TASK_ID=sensor_s3_obj
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-02T17:06:27.296754+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-05-02T17:06:27.296754+00:00
+[2023-05-02 17:06:32,464] {s3.py:104} INFO - Poking for key : s3://raw/supermarket_sales.csv
+[2023-05-02 17:06:32,552] {base.py:68} INFO - Using connection ID 'minio_conn' for task execution.
+[2023-05-02 17:06:32,558] {base_aws.py:206} INFO - Credentials retrieved from login
+[2023-05-02 17:06:37,940] {s3.py:104} INFO - Poking for key : s3://raw/supermarket_sales.csv
+[2023-05-02 17:06:42,960] {s3.py:104} INFO - Poking for key : s3://raw/supermarket_sales.csv
+[2023-05-02 17:06:47,978] {s3.py:104} INFO - Poking for key : s3://raw/supermarket_sales.csv
+[2023-05-02 17:06:53,006] {s3.py:104} INFO - Poking for key : s3://raw/supermarket_sales.csv
+[2023-05-02 17:06:58,039] {s3.py:104} INFO - Poking for key : s3://raw/supermarket_sales.csv
+[2023-05-02 17:07:03,058] {s3.py:104} INFO - Poking for key : s3://raw/supermarket_sales.csv
+[2023-05-02 17:07:03,124] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/sensors/base.py", line 288, in execute
+    raise AirflowSensorTimeout(f"Snap. Time is OUT. DAG id: {log_dag_id}")
+airflow.exceptions.AirflowSensorTimeout: Snap. Time is OUT. DAG id: dag_etl
+[2023-05-02 17:07:03,283] {taskinstance.py:1400} INFO - Immediate failure requested. Marking task as FAILED. dag_id=dag_etl, task_id=sensor_s3_obj, execution_date=20230502T170627, start_date=20230502T170631, end_date=20230502T170703
+[2023-05-02 17:07:03,377] {standard_task_runner.py:97} ERROR - Failed to execute job 818 for task sensor_s3_obj (Snap. Time is OUT. DAG id: dag_etl; 1848)
+[2023-05-02 17:07:03,429] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-05-02 17:07:03,842] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

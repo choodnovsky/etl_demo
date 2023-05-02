@@ -1,0 +1,23 @@
+[2023-05-02 15:35:16,804] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl_date.rename_extracted_file manual__2023-05-02T15:34:57.018665+00:00 [queued]>
+[2023-05-02 15:35:16,858] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl_date.rename_extracted_file manual__2023-05-02T15:34:57.018665+00:00 [queued]>
+[2023-05-02 15:35:16,859] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-02 15:35:16,860] {taskinstance.py:1357} INFO - Starting attempt 1 of 6
+[2023-05-02 15:35:16,861] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-02 15:35:16,946] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): rename_extracted_file> on 2023-05-02 15:34:57.018665+00:00
+[2023-05-02 15:35:16,956] {standard_task_runner.py:52} INFO - Started process 885 to run task
+[2023-05-02 15:35:16,964] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dag_etl_date', 'rename_extracted_file', 'manual__2023-05-02T15:34:57.018665+00:00', '--job-id', '735', '--raw', '--subdir', 'DAGS_FOLDER/dag_etl_taskflow_date.py', '--cfg-path', '/tmp/tmp4rxh5plr', '--error-file', '/tmp/tmps74yk12p']
+[2023-05-02 15:35:16,966] {standard_task_runner.py:80} INFO - Job 735: Subtask rename_extracted_file
+[2023-05-02 15:35:17,453] {task_command.py:370} INFO - Running <TaskInstance: dag_etl_date.rename_extracted_file manual__2023-05-02T15:34:57.018665+00:00 [running]> on host 295d97741f96
+[2023-05-02 15:35:18,220] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Victor
+AIRFLOW_CTX_DAG_ID=dag_etl_date
+AIRFLOW_CTX_TASK_ID=rename_extracted_file
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-02T15:34:57.018665+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-05-02T15:34:57.018665+00:00
+[2023-05-02 15:35:18,225] {python.py:173} INFO - Done. Returned value was: /opt/***/data
+[2023-05-02 15:35:18,470] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=dag_etl_date, task_id=rename_extracted_file, execution_date=20230502T153457, start_date=20230502T153516, end_date=20230502T153518
+[2023-05-02 15:35:18,562] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-05-02 15:35:18,922] {local_task_job.py:273} INFO - 7 downstream tasks scheduled from follow-on schedule check

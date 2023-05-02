@@ -1,0 +1,37 @@
+[2023-05-02 15:12:23,398] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl_date.update_fact_table manual__2023-05-02T15:11:22.892155+00:00 [queued]>
+[2023-05-02 15:12:23,458] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl_date.update_fact_table manual__2023-05-02T15:11:22.892155+00:00 [queued]>
+[2023-05-02 15:12:23,459] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-02 15:12:23,460] {taskinstance.py:1357} INFO - Starting attempt 1 of 6
+[2023-05-02 15:12:23,461] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-02 15:12:23,556] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): update_fact_table> on 2023-05-02 15:11:22.892155+00:00
+[2023-05-02 15:12:23,566] {standard_task_runner.py:52} INFO - Started process 1463 to run task
+[2023-05-02 15:12:23,575] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dag_etl_date', 'update_fact_table', 'manual__2023-05-02T15:11:22.892155+00:00', '--job-id', '682', '--raw', '--subdir', 'DAGS_FOLDER/dag_etl_taskflow_date.py', '--cfg-path', '/tmp/tmpoo8y_q7r', '--error-file', '/tmp/tmpb_a2s4gp']
+[2023-05-02 15:12:23,577] {standard_task_runner.py:80} INFO - Job 682: Subtask update_fact_table
+[2023-05-02 15:12:23,957] {task_command.py:370} INFO - Running <TaskInstance: dag_etl_date.update_fact_table manual__2023-05-02T15:11:22.892155+00:00 [running]> on host 295d97741f96
+[2023-05-02 15:12:24,605] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Victor
+AIRFLOW_CTX_DAG_ID=dag_etl_date
+AIRFLOW_CTX_TASK_ID=update_fact_table
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-02T15:11:22.892155+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-05-02T15:11:22.892155+00:00
+[2023-05-02 15:12:24,700] {base.py:68} INFO - Using connection ID 'postgres_conn' for task execution.
+[2023-05-02 15:12:24,743] {dbapi.py:213} INFO - Running statement: 
+            SET search_path TO dds;
+            
+            --// Обновляем таблицу с фактом свежей таблицей с фактами из stage //--
+            INSERT INTO fact_sales (invoice_id, branch, city, customer_type, gender,
+                                    product_line, unit_price, quantity, "tax_5%", total, date,
+                                    time, payment, cogs, gross_margin_percentage, gross_income, rating)
+            (SELECT 
+                    invoice_id, branch, city, customer_type, gender, 
+                    product_line, unit_price, quantity, "tax_5%", total, date::date,
+                    time, payment, cogs, gross_margin_percentage, gross_income, rating 
+            FROM nds.fact_sales WHERE invoice_id NOT IN (SELECT invoice_id FROM fact_sales));
+            , parameters: None
+[2023-05-02 15:12:25,238] {dbapi.py:221} INFO - Rows affected: 1000
+[2023-05-02 15:12:25,420] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=dag_etl_date, task_id=update_fact_table, execution_date=20230502T151122, start_date=20230502T151223, end_date=20230502T151225
+[2023-05-02 15:12:25,536] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-05-02 15:12:25,841] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
