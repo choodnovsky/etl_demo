@@ -22,3 +22,27 @@ AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-28T00:00:00+00:00
 [2023-04-30 07:04:49,829] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=dag_etl, task_id=dim_product_line, execution_date=20230428T000000, start_date=20230430T070433, end_date=20230430T070449
 [2023-04-30 07:04:50,552] {local_task_job.py:156} INFO - Task exited with return code 0
 [2023-04-30 07:04:53,222] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-05-02 10:33:33,939] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.dim_product_line scheduled__2023-04-28T00:00:00+00:00 [queued]>
+[2023-05-02 10:33:35,154] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.dim_product_line scheduled__2023-04-28T00:00:00+00:00 [queued]>
+[2023-05-02 10:33:35,196] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-02 10:33:35,201] {taskinstance.py:1357} INFO - Starting attempt 1 of 6
+[2023-05-02 10:33:35,209] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-02 10:33:36,396] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): dim_product_line> on 2023-04-28 00:00:00+00:00
+[2023-05-02 10:33:36,539] {standard_task_runner.py:52} INFO - Started process 563 to run task
+[2023-05-02 10:33:36,674] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dag_etl', 'dim_product_line', 'scheduled__2023-04-28T00:00:00+00:00', '--job-id', '400', '--raw', '--subdir', 'DAGS_FOLDER/dag_etl_taskflow.py', '--cfg-path', '/tmp/tmpe7k7tcxb', '--error-file', '/tmp/tmpi1go08vj']
+[2023-05-02 10:33:36,685] {standard_task_runner.py:80} INFO - Job 400: Subtask dim_product_line
+[2023-05-02 10:33:38,897] {task_command.py:370} INFO - Running <TaskInstance: dag_etl.dim_product_line scheduled__2023-04-28T00:00:00+00:00 [running]> on host 295d97741f96
+[2023-05-02 10:33:54,134] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Victor
+AIRFLOW_CTX_DAG_ID=dag_etl
+AIRFLOW_CTX_TASK_ID=dim_product_line
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-28T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-28T00:00:00+00:00
+[2023-05-02 10:33:57,755] {base.py:68} INFO - Using connection ID 'postgres_conn' for task execution.
+[2023-05-02 10:33:59,179] {python.py:173} INFO - Done. Returned value was: None
+[2023-05-02 10:34:00,346] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=dag_etl, task_id=dim_product_line, execution_date=20230428T000000, start_date=20230502T103333, end_date=20230502T103400
+[2023-05-02 10:34:01,632] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-05-02 10:34:05,926] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

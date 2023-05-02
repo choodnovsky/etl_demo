@@ -44,3 +44,49 @@ AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-28T00:00:00+00:00
 [2023-04-30 12:00:06,445] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=dag_etl, task_id=rename_extracted_file, execution_date=20230428T000000, start_date=20230430T115957, end_date=20230430T120006
 [2023-04-30 12:00:06,959] {local_task_job.py:156} INFO - Task exited with return code 0
 [2023-04-30 12:00:10,959] {local_task_job.py:273} INFO - 7 downstream tasks scheduled from follow-on schedule check
+[2023-05-02 10:32:37,789] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.rename_extracted_file scheduled__2023-04-28T00:00:00+00:00 [queued]>
+[2023-05-02 10:32:38,710] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.rename_extracted_file scheduled__2023-04-28T00:00:00+00:00 [queued]>
+[2023-05-02 10:32:38,743] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-02 10:32:38,791] {taskinstance.py:1357} INFO - Starting attempt 1 of 6
+[2023-05-02 10:32:38,808] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-02 10:32:39,380] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): rename_extracted_file> on 2023-04-28 00:00:00+00:00
+[2023-05-02 10:32:39,525] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dag_etl', 'rename_extracted_file', 'scheduled__2023-04-28T00:00:00+00:00', '--job-id', '396', '--raw', '--subdir', 'DAGS_FOLDER/dag_etl_taskflow.py', '--cfg-path', '/tmp/tmp_ok71gnv', '--error-file', '/tmp/tmp6swxqnxo']
+[2023-05-02 10:32:39,533] {standard_task_runner.py:80} INFO - Job 396: Subtask rename_extracted_file
+[2023-05-02 10:32:39,518] {standard_task_runner.py:52} INFO - Started process 470 to run task
+[2023-05-02 10:32:44,872] {task_command.py:370} INFO - Running <TaskInstance: dag_etl.rename_extracted_file scheduled__2023-04-28T00:00:00+00:00 [running]> on host 295d97741f96
+[2023-05-02 10:32:50,904] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Victor
+AIRFLOW_CTX_DAG_ID=dag_etl
+AIRFLOW_CTX_TASK_ID=rename_extracted_file
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-28T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-28T00:00:00+00:00
+[2023-05-02 10:32:50,980] {python.py:173} INFO - Done. Returned value was: /opt/***/data
+[2023-05-02 10:32:52,297] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=dag_etl, task_id=rename_extracted_file, execution_date=20230428T000000, start_date=20230502T103237, end_date=20230502T103252
+[2023-05-02 10:32:53,539] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-05-02 10:32:59,902] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-05-02 10:38:16,538] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.rename_extracted_file scheduled__2023-04-28T00:00:00+00:00 [queued]>
+[2023-05-02 10:38:17,246] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.rename_extracted_file scheduled__2023-04-28T00:00:00+00:00 [queued]>
+[2023-05-02 10:38:17,269] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-02 10:38:17,282] {taskinstance.py:1357} INFO - Starting attempt 1 of 6
+[2023-05-02 10:38:17,284] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-02 10:38:17,908] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): rename_extracted_file> on 2023-04-28 00:00:00+00:00
+[2023-05-02 10:38:17,934] {standard_task_runner.py:52} INFO - Started process 1076 to run task
+[2023-05-02 10:38:17,978] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dag_etl', 'rename_extracted_file', 'scheduled__2023-04-28T00:00:00+00:00', '--job-id', '435', '--raw', '--subdir', 'DAGS_FOLDER/dag_etl_taskflow.py', '--cfg-path', '/tmp/tmp83ij6wi4', '--error-file', '/tmp/tmpmnzxvu6y']
+[2023-05-02 10:38:17,984] {standard_task_runner.py:80} INFO - Job 435: Subtask rename_extracted_file
+[2023-05-02 10:38:20,943] {task_command.py:370} INFO - Running <TaskInstance: dag_etl.rename_extracted_file scheduled__2023-04-28T00:00:00+00:00 [running]> on host 295d97741f96
+[2023-05-02 10:38:26,044] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Victor
+AIRFLOW_CTX_DAG_ID=dag_etl
+AIRFLOW_CTX_TASK_ID=rename_extracted_file
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-28T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-28T00:00:00+00:00
+[2023-05-02 10:38:26,096] {python.py:173} INFO - Done. Returned value was: /opt/***/data
+[2023-05-02 10:38:33,008] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=dag_etl, task_id=rename_extracted_file, execution_date=20230428T000000, start_date=20230502T103816, end_date=20230502T103832
+[2023-05-02 10:38:34,294] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-05-02 10:38:38,025] {local_task_job.py:273} INFO - 7 downstream tasks scheduled from follow-on schedule check

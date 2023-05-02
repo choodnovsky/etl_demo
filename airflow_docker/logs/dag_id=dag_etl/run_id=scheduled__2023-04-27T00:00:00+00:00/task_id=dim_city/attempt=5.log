@@ -1,0 +1,50 @@
+[2023-05-02 10:31:39,077] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.dim_city scheduled__2023-04-27T00:00:00+00:00 [queued]>
+[2023-05-02 10:31:39,852] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.dim_city scheduled__2023-04-27T00:00:00+00:00 [queued]>
+[2023-05-02 10:31:39,870] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-02 10:31:39,874] {taskinstance.py:1357} INFO - Starting attempt 5 of 6
+[2023-05-02 10:31:39,894] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-02 10:31:41,153] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): dim_city> on 2023-04-27 00:00:00+00:00
+[2023-05-02 10:31:41,276] {standard_task_runner.py:52} INFO - Started process 363 to run task
+[2023-05-02 10:31:41,459] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dag_etl', 'dim_city', 'scheduled__2023-04-27T00:00:00+00:00', '--job-id', '383', '--raw', '--subdir', 'DAGS_FOLDER/dag_etl_taskflow.py', '--cfg-path', '/tmp/tmplgqdk8_u', '--error-file', '/tmp/tmpxda6w678']
+[2023-05-02 10:31:41,498] {standard_task_runner.py:80} INFO - Job 383: Subtask dim_city
+[2023-05-02 10:31:46,111] {task_command.py:370} INFO - Running <TaskInstance: dag_etl.dim_city scheduled__2023-04-27T00:00:00+00:00 [running]> on host 295d97741f96
+[2023-05-02 10:31:51,897] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Victor
+AIRFLOW_CTX_DAG_ID=dag_etl
+AIRFLOW_CTX_TASK_ID=dim_city
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-27T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=5
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-27T00:00:00+00:00
+[2023-05-02 10:31:51,906] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 179, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 181, in dim_city
+    df = pd.read_csv(f"{downloaded_file_path}/{file_new_name}")
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 51, in __init__
+    self._open_handles(src, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/base_parser.py", line 229, in _open_handles
+    errors=kwds.get("encoding_errors", "strict"),
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/common.py", line 707, in get_handle
+    newline="",
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/data/downloaded_from_minio.csv'
+[2023-05-02 10:31:52,355] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=dag_etl, task_id=dim_city, execution_date=20230427T000000, start_date=20230502T103139, end_date=20230502T103152
+[2023-05-02 10:31:52,735] {standard_task_runner.py:97} ERROR - Failed to execute job 383 for task dim_city ([Errno 2] No such file or directory: '/opt/airflow/data/downloaded_from_minio.csv'; 363)
+[2023-05-02 10:31:52,858] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-05-02 10:31:55,190] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

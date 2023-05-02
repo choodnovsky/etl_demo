@@ -1,0 +1,1075 @@
+[2023-05-02 10:02:45,217] {processor.py:153} INFO - Started process (PID=381) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:02:45,236] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:02:45,282] {logging_mixin.py:115} INFO - [2023-05-02 10:02:45,281] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:03:17,194] {logging_mixin.py:115} INFO - [2023-05-02 10:03:17,192] {timeout.py:67} ERROR - Process timed out, PID: 381
+[2023-05-02 10:03:17,341] {logging_mixin.py:115} INFO - [2023-05-02 10:03:17,203] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 5, in <module>
+    import pandas as pd
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/__init__.py", line 50, in <module>
+    from pandas.core.api import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/api.py", line 29, in <module>
+    from pandas.core.arrays import Categorical
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/arrays/__init__.py", line 20, in <module>
+    from pandas.core.arrays.string_arrow import ArrowStringArray
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 857, in get_code
+  File "<frozen importlib._bootstrap_external>", line 525, in _compile_bytecode
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 68, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/dag_etl_taskflow.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#reducing-dag-complexity, PID: 381
+[2023-05-02 10:03:17,372] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:03:18,707] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 33.828 seconds
+[2023-05-02 10:03:50,423] {processor.py:153} INFO - Started process (PID=435) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:03:50,465] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:03:50,558] {logging_mixin.py:115} INFO - [2023-05-02 10:03:50,521] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:04:20,744] {logging_mixin.py:115} INFO - [2023-05-02 10:04:20,712] {timeout.py:67} ERROR - Process timed out, PID: 435
+[2023-05-02 10:04:21,354] {logging_mixin.py:115} INFO - [2023-05-02 10:04:20,800] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 5, in <module>
+    import pandas as pd
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/__init__.py", line 50, in <module>
+    from pandas.core.api import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/api.py", line 48, in <module>
+    from pandas.core.groupby import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/groupby/__init__.py", line 1, in <module>
+    from pandas.core.groupby.generic import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/groupby/generic.py", line 64, in <module>
+    from pandas.core.aggregation import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/aggregation.py", line 33, in <module>
+    from pandas.core.indexes.api import Index
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/indexes/api.py", line 28, in <module>
+    from pandas.core.indexes.period import PeriodIndex
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/indexes/period.py", line 86, in <module>
+    class PeriodIndex(DatetimeIndexOpsMixin):
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/indexes/period.py", line 181, in PeriodIndex
+    def to_timestamp(self, freq=None, how="start") -> DatetimeIndex:
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 391, in decorator
+    for component in docstring_components
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 391, in <genexpr>
+    for component in docstring_components
+  File "/usr/local/lib/python3.7/textwrap.py", line 461, in dedent
+    text = re.sub(r'(?m)^' + margin, '', text)
+  File "/usr/local/lib/python3.7/re.py", line 194, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 68, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/dag_etl_taskflow.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#reducing-dag-complexity, PID: 435
+[2023-05-02 10:04:21,524] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:04:23,692] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 33.634 seconds
+[2023-05-02 10:04:44,159] {processor.py:153} INFO - Started process (PID=484) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:04:44,211] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:04:44,293] {logging_mixin.py:115} INFO - [2023-05-02 10:04:44,258] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:05:14,576] {logging_mixin.py:115} INFO - [2023-05-02 10:05:14,510] {timeout.py:67} ERROR - Process timed out, PID: 484
+[2023-05-02 10:05:14,798] {logging_mixin.py:115} INFO - [2023-05-02 10:05:14,619] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 5, in <module>
+    import pandas as pd
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/__init__.py", line 50, in <module>
+    from pandas.core.api import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/api.py", line 29, in <module>
+    from pandas.core.arrays import Categorical
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/arrays/__init__.py", line 20, in <module>
+    from pandas.core.arrays.string_arrow import ArrowStringArray
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/arrays/string_arrow.py", line 65, in <module>
+    import pyarrow.compute as pc
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyarrow/compute.py", line 251, in <module>
+    _make_global_functions()
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyarrow/compute.py", line 248, in _make_global_functions
+    g[cpp_name] = g[name] = _wrap_function(name, func)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyarrow/compute.py", line 227, in _wrap_function
+    return _decorate_compute_function(wrapper, name, func, option_class)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyarrow/compute.py", line 144, in _decorate_compute_function
+    """.format(p.name, option_class.__name__))
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 68, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/dag_etl_taskflow.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#reducing-dag-complexity, PID: 484
+[2023-05-02 10:05:14,861] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:05:16,217] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 32.350 seconds
+[2023-05-02 10:05:38,411] {processor.py:153} INFO - Started process (PID=528) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:05:38,528] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:05:38,594] {logging_mixin.py:115} INFO - [2023-05-02 10:05:38,567] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:06:18,860] {logging_mixin.py:115} INFO - [2023-05-02 10:06:18,442] {timeout.py:67} ERROR - Process timed out, PID: 528
+[2023-05-02 10:06:19,232] {logging_mixin.py:115} INFO - [2023-05-02 10:06:19,084] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 5, in <module>
+    import pandas as pd
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/__init__.py", line 50, in <module>
+    from pandas.core.api import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/api.py", line 29, in <module>
+    from pandas.core.arrays import Categorical
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/arrays/__init__.py", line 20, in <module>
+    from pandas.core.arrays.string_arrow import ArrowStringArray
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 857, in get_code
+  File "<frozen importlib._bootstrap_external>", line 525, in _compile_bytecode
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 68, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/dag_etl_taskflow.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#reducing-dag-complexity, PID: 528
+[2023-05-02 10:06:19,390] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:06:21,635] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 43.818 seconds
+[2023-05-02 10:06:56,887] {processor.py:153} INFO - Started process (PID=586) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:06:56,915] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:06:56,977] {logging_mixin.py:115} INFO - [2023-05-02 10:06:56,946] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:07:28,553] {logging_mixin.py:115} INFO - [2023-05-02 10:07:28,326] {timeout.py:67} ERROR - Process timed out, PID: 586
+[2023-05-02 10:07:29,289] {logging_mixin.py:115} INFO - [2023-05-02 10:07:28,692] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 5, in <module>
+    import pandas as pd
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/__init__.py", line 50, in <module>
+    from pandas.core.api import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/api.py", line 29, in <module>
+    from pandas.core.arrays import Categorical
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/arrays/__init__.py", line 20, in <module>
+    from pandas.core.arrays.string_arrow import ArrowStringArray
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 857, in get_code
+  File "<frozen importlib._bootstrap_external>", line 525, in _compile_bytecode
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 68, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/dag_etl_taskflow.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#reducing-dag-complexity, PID: 586
+[2023-05-02 10:07:29,348] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:07:32,075] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 35.472 seconds
+[2023-05-02 10:08:07,716] {processor.py:153} INFO - Started process (PID=651) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:08:07,747] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:08:07,881] {logging_mixin.py:115} INFO - [2023-05-02 10:08:07,880] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:08:38,147] {logging_mixin.py:115} INFO - [2023-05-02 10:08:38,067] {timeout.py:67} ERROR - Process timed out, PID: 651
+[2023-05-02 10:08:38,654] {logging_mixin.py:115} INFO - [2023-05-02 10:08:38,211] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 5, in <module>
+    import pandas as pd
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/__init__.py", line 50, in <module>
+    from pandas.core.api import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/api.py", line 29, in <module>
+    from pandas.core.arrays import Categorical
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/arrays/__init__.py", line 11, in <module>
+    from pandas.core.arrays.interval import IntervalArray
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/arrays/interval.py", line 82, in <module>
+    from pandas.core.indexes.base import ensure_index
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/indexes/base.py", line 21, in <module>
+    from pandas._libs import (
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 963, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 906, in _find_spec
+  File "<frozen importlib._bootstrap_external>", line 1280, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1252, in _get_spec
+  File "<frozen importlib._bootstrap_external>", line 1394, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 95, in _path_isfile
+  File "<frozen importlib._bootstrap_external>", line 87, in _path_is_mode_type
+  File "<frozen importlib._bootstrap_external>", line 81, in _path_stat
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 68, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/dag_etl_taskflow.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#reducing-dag-complexity, PID: 651
+[2023-05-02 10:08:38,720] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:08:42,932] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 35.530 seconds
+[2023-05-02 10:09:02,724] {processor.py:153} INFO - Started process (PID=696) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:09:02,778] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:09:02,892] {logging_mixin.py:115} INFO - [2023-05-02 10:09:02,891] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:09:33,445] {logging_mixin.py:115} INFO - [2023-05-02 10:09:33,337] {timeout.py:67} ERROR - Process timed out, PID: 696
+[2023-05-02 10:09:33,843] {logging_mixin.py:115} INFO - [2023-05-02 10:09:33,495] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 5, in <module>
+    import pandas as pd
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/__init__.py", line 50, in <module>
+    from pandas.core.api import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/api.py", line 29, in <module>
+    from pandas.core.arrays import Categorical
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/arrays/__init__.py", line 7, in <module>
+    from pandas.core.arrays.categorical import Categorical
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/arrays/categorical.py", line 99, in <module>
+    from pandas.core.base import (
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 857, in get_code
+  File "<frozen importlib._bootstrap_external>", line 525, in _compile_bytecode
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 68, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/dag_etl_taskflow.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#reducing-dag-complexity, PID: 696
+[2023-05-02 10:09:33,990] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:09:36,857] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 34.641 seconds
+[2023-05-02 10:10:10,924] {processor.py:153} INFO - Started process (PID=760) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:10:11,061] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:10:11,126] {logging_mixin.py:115} INFO - [2023-05-02 10:10:11,125] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:10:42,785] {logging_mixin.py:115} INFO - [2023-05-02 10:10:42,671] {timeout.py:67} ERROR - Process timed out, PID: 760
+[2023-05-02 10:10:42,799] {logging_mixin.py:115} WARNING - Exception ignored in: <module 'collections.abc' from '/usr/local/lib/python3.7/collections/abc.py'>
+[2023-05-02 10:10:42,868] {logging_mixin.py:115} WARNING - Traceback (most recent call last):
+[2023-05-02 10:10:42,877] {logging_mixin.py:115} WARNING -   File "<string>", line 1, in <module>
+[2023-05-02 10:10:43,013] {logging_mixin.py:115} WARNING -   File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 68, in handle_timeout
+[2023-05-02 10:10:43,243] {logging_mixin.py:115} WARNING -     raise AirflowTaskTimeout(self.error_message)
+[2023-05-02 10:10:43,265] {logging_mixin.py:115} WARNING - airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/dag_etl_taskflow.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#reducing-dag-complexity, PID: 760
+[2023-05-02 10:10:46,187] {logging_mixin.py:115} WARNING - /usr/local/lib/python3.7/importlib/_bootstrap.py:219 RuntimeWarning: Cython module failed to patch module with custom type
+[2023-05-02 10:11:02,032] {processor.py:153} INFO - Started process (PID=797) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:11:02,094] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:11:02,193] {logging_mixin.py:115} INFO - [2023-05-02 10:11:02,193] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:11:32,835] {logging_mixin.py:115} INFO - [2023-05-02 10:11:32,629] {timeout.py:67} ERROR - Process timed out, PID: 797
+[2023-05-02 10:11:33,661] {logging_mixin.py:115} INFO - [2023-05-02 10:11:32,873] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 5, in <module>
+    import pandas as pd
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/__init__.py", line 50, in <module>
+    from pandas.core.api import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/api.py", line 29, in <module>
+    from pandas.core.arrays import Categorical
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/arrays/__init__.py", line 8, in <module>
+    from pandas.core.arrays.datetimes import DatetimeArray
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/arrays/datetimes.py", line 67, in <module>
+    from pandas.core.arrays import (
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 857, in get_code
+  File "<frozen importlib._bootstrap_external>", line 525, in _compile_bytecode
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 68, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/dag_etl_taskflow.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#reducing-dag-complexity, PID: 797
+[2023-05-02 10:11:33,840] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:11:37,786] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 36.200 seconds
+[2023-05-02 10:12:13,070] {processor.py:153} INFO - Started process (PID=868) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:12:13,160] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:12:13,367] {logging_mixin.py:115} INFO - [2023-05-02 10:12:13,240] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:12:43,823] {logging_mixin.py:115} INFO - [2023-05-02 10:12:43,546] {timeout.py:67} ERROR - Process timed out, PID: 868
+[2023-05-02 10:12:44,424] {logging_mixin.py:115} INFO - [2023-05-02 10:12:43,925] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 5, in <module>
+    import pandas as pd
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/__init__.py", line 22, in <module>
+    from pandas.compat import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/compat/__init__.py", line 23, in <module>
+    from pandas.compat.pyarrow import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/compat/pyarrow.py", line 6, in <module>
+    import pyarrow as pa
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyarrow/__init__.py", line 212, in <module>
+    from pyarrow.serialization import (default_serialization_context,
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 800, in get_code
+  File "<frozen importlib._bootstrap_external>", line 407, in _check_name_wrapper
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 68, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/dag_etl_taskflow.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#reducing-dag-complexity, PID: 868
+[2023-05-02 10:12:44,619] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:12:47,592] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 35.054 seconds
+[2023-05-02 10:22:39,150] {processor.py:153} INFO - Started process (PID=417) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:22:39,165] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:22:39,183] {logging_mixin.py:115} INFO - [2023-05-02 10:22:39,182] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:23:09,308] {logging_mixin.py:115} INFO - [2023-05-02 10:23:09,286] {timeout.py:67} ERROR - Process timed out, PID: 417
+[2023-05-02 10:23:09,507] {logging_mixin.py:115} INFO - [2023-05-02 10:23:09,340] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 7, in <module>
+    from airflow.decorators import task
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 20, in <module>
+    from airflow.decorators.base import TaskDecorator
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 410, in <module>
+    class DecoratedMappedOperator(MappedOperator):
+  File "/home/airflow/.local/lib/python3.7/site-packages/attr/_next_gen.py", line 110, in wrap
+    return do_it(cls, True)
+  File "/home/airflow/.local/lib/python3.7/site-packages/attr/_next_gen.py", line 76, in do_it
+    field_transformer=field_transformer,
+  File "/home/airflow/.local/lib/python3.7/site-packages/attr/_make.py", line 1388, in attrs
+    return wrap(maybe_cls)
+  File "/home/airflow/.local/lib/python3.7/site-packages/attr/_make.py", line 1312, in wrap
+    field_transformer,
+  File "/home/airflow/.local/lib/python3.7/site-packages/attr/_make.py", line 610, in __init__
+    field_transformer,
+  File "/home/airflow/.local/lib/python3.7/site-packages/attr/_make.py", line 503, in _transform_attrs
+    AttrsClass = _make_attr_tuple_class(cls.__name__, attr_names)
+  File "/home/airflow/.local/lib/python3.7/site-packages/attr/_make.py", line 299, in _make_attr_tuple_class
+    eval(compile("\n".join(attr_class_template), "", "exec"), globs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 68, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/dag_etl_taskflow.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#reducing-dag-complexity, PID: 417
+[2023-05-02 10:23:09,549] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:23:10,724] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 31.695 seconds
+[2023-05-02 10:23:41,946] {processor.py:153} INFO - Started process (PID=480) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:23:41,956] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:23:41,993] {logging_mixin.py:115} INFO - [2023-05-02 10:23:41,992] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:24:12,077] {logging_mixin.py:115} INFO - [2023-05-02 10:24:12,050] {timeout.py:67} ERROR - Process timed out, PID: 480
+[2023-05-02 10:24:12,316] {logging_mixin.py:115} INFO - [2023-05-02 10:24:12,122] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 9, in <module>
+    from airflow.providers.amazon.aws.hooks.s3 import S3Hook
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 35, in <module>
+    from boto3.s3.transfer import S3Transfer, TransferConfig
+  File "/home/airflow/.local/lib/python3.7/site-packages/boto3/__init__.py", line 17, in <module>
+    from boto3.session import Session
+  File "/home/airflow/.local/lib/python3.7/site-packages/boto3/session.py", line 17, in <module>
+    import botocore.session
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/session.py", line 26, in <module>
+    import botocore.client
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/client.py", line 15, in <module>
+    from botocore import waiter, xform_name
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/waiter.py", line 18, in <module>
+    from botocore.docs.docstring import WaiterDocstring
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/docs/__init__.py", line 15, in <module>
+    from botocore.docs.service import ServiceDocumenter
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/docs/service.py", line 14, in <module>
+    from botocore.docs.client import ClientDocumenter, ClientExceptionsDocumenter
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/docs/client.py", line 14, in <module>
+    from botocore.docs.example import ResponseExampleDocumenter
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/docs/example.py", line 13, in <module>
+    from botocore.docs.shape import ShapeDocumenter
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/docs/shape.py", line 19, in <module>
+    from botocore.utils import is_json_value_header
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 857, in get_code
+  File "<frozen importlib._bootstrap_external>", line 525, in _compile_bytecode
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 68, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/dag_etl_taskflow.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#reducing-dag-complexity, PID: 480
+[2023-05-02 10:24:12,336] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:24:13,162] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 31.352 seconds
+[2023-05-02 10:24:44,461] {processor.py:153} INFO - Started process (PID=537) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:24:44,491] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:24:44,553] {logging_mixin.py:115} INFO - [2023-05-02 10:24:44,529] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:25:14,764] {logging_mixin.py:115} INFO - [2023-05-02 10:25:14,702] {timeout.py:67} ERROR - Process timed out, PID: 537
+[2023-05-02 10:25:14,831] {logging_mixin.py:115} INFO - [2023-05-02 10:25:14,786] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap_external>", line 1219, in _path_importer_cache
+KeyError: '/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/amazon/aws/hooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap_external>", line 1197, in _path_hooks
+zipimport.ZipImportError: not a Zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 9, in <module>
+    from airflow.providers.amazon.aws.hooks.s3 import S3Hook
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 963, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 906, in _find_spec
+  File "<frozen importlib._bootstrap_external>", line 1280, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1249, in _get_spec
+  File "<frozen importlib._bootstrap_external>", line 1221, in _path_importer_cache
+  File "<frozen importlib._bootstrap_external>", line 1197, in _path_hooks
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 68, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/dag_etl_taskflow.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#reducing-dag-complexity, PID: 537
+[2023-05-02 10:25:14,860] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:25:15,869] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 31.565 seconds
+[2023-05-02 10:25:46,772] {processor.py:153} INFO - Started process (PID=594) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:25:46,781] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:25:46,801] {logging_mixin.py:115} INFO - [2023-05-02 10:25:46,800] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:26:16,842] {logging_mixin.py:115} INFO - [2023-05-02 10:26:16,840] {timeout.py:67} ERROR - Process timed out, PID: 594
+[2023-05-02 10:26:16,994] {logging_mixin.py:115} INFO - [2023-05-02 10:26:16,867] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 324, in <module>
+    gender = dim_gender(downloaded_file_path, file_new_name)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 264, in __call__
+    **self.kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 390, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/python.py", line 55, in __init__
+    **kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 390, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 176, in __init__
+    super().__init__(task_id=task_id, **kwargs_to_upstream, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 390, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 161, in __init__
+    self.op_kwargs = op_kwargs or {}
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 990, in __setattr__
+    super().__setattr__(key, value)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 68, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/dag_etl_taskflow.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#reducing-dag-complexity, PID: 594
+[2023-05-02 10:26:17,016] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:26:17,886] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 31.310 seconds
+[2023-05-02 10:26:49,211] {processor.py:153} INFO - Started process (PID=648) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:26:49,241] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:26:49,264] {logging_mixin.py:115} INFO - [2023-05-02 10:26:49,263] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:27:19,332] {logging_mixin.py:115} INFO - [2023-05-02 10:27:19,306] {timeout.py:67} ERROR - Process timed out, PID: 648
+[2023-05-02 10:27:19,498] {logging_mixin.py:115} INFO - [2023-05-02 10:27:19,356] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 9, in <module>
+    from airflow.providers.amazon.aws.hooks.s3 import S3Hook
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 96, in <module>
+    class S3Hook(AwsBaseHook):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 471, in S3Hook
+    def read_key(self, key: str, bucket_name: Optional[str] = None) -> str:
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 73, in unify_bucket_name_and_key
+    function_signature = signature(func)
+  File "/usr/local/lib/python3.7/inspect.py", line 3083, in signature
+    return Signature.from_callable(obj, follow_wrapped=follow_wrapped)
+  File "/usr/local/lib/python3.7/inspect.py", line 2833, in from_callable
+    follow_wrapper_chains=follow_wrapped)
+  File "/usr/local/lib/python3.7/inspect.py", line 2198, in _signature_from_callable
+    def _signature_from_callable(obj, *,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 68, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/dag_etl_taskflow.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#reducing-dag-complexity, PID: 648
+[2023-05-02 10:27:19,508] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:27:20,276] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 31.188 seconds
+[2023-05-02 10:30:56,415] {processor.py:153} INFO - Started process (PID=263) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:30:56,418] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:30:56,420] {logging_mixin.py:115} INFO - [2023-05-02 10:30:56,420] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:31:01,083] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:31:02,977] {logging_mixin.py:115} INFO - [2023-05-02 10:31:02,976] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 10:31:03,372] {logging_mixin.py:115} INFO - [2023-05-02 10:31:03,371] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-01T00:00:00+00:00, run_after=2023-05-02T00:00:00+00:00
+[2023-05-02 10:31:03,505] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 7.100 seconds
+[2023-05-02 10:31:33,929] {processor.py:153} INFO - Started process (PID=326) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:31:33,940] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:31:33,954] {logging_mixin.py:115} INFO - [2023-05-02 10:31:33,953] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:32:04,017] {logging_mixin.py:115} INFO - [2023-05-02 10:32:04,016] {timeout.py:67} ERROR - Process timed out, PID: 326
+[2023-05-02 10:32:04,300] {logging_mixin.py:115} INFO - [2023-05-02 10:32:04,074] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/cron_descriptor/GetText.py", line 45, in __init__
+    trans = gettext.GNUTranslations(open(filename, "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/home/airflow/.local/lib/python3.7/site-packages/cron_descriptor/locale/en_US.mo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 32, in <module>
+    default_args=default_args
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py", line 420, in __init__
+    self.timetable = create_timetable(schedule_interval, self.timezone)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py", line 168, in create_timetable
+    return CronDataIntervalTimetable(interval, timezone)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/timetables/interval.py", line 135, in __init__
+    expression=self._expression, casing_type=CasingTypeEnum.Sentence, use_24hour_time_format=True
+  File "/home/airflow/.local/lib/python3.7/site-packages/cron_descriptor/ExpressionDescriptor.py", line 74, in __init__
+    GetText(options.locale_code)
+  File "/home/airflow/.local/lib/python3.7/site-packages/cron_descriptor/GetText.py", line 45, in __init__
+    trans = gettext.GNUTranslations(open(filename, "rb"))
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 68, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/dag_etl_taskflow.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#reducing-dag-complexity, PID: 326
+[2023-05-02 10:32:04,369] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:32:05,314] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 31.417 seconds
+[2023-05-02 10:32:36,811] {processor.py:153} INFO - Started process (PID=449) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:32:36,819] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:32:36,826] {logging_mixin.py:115} INFO - [2023-05-02 10:32:36,826] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:33:06,969] {logging_mixin.py:115} INFO - [2023-05-02 10:33:06,968] {timeout.py:67} ERROR - Process timed out, PID: 449
+[2023-05-02 10:33:08,465] {logging_mixin.py:115} INFO - [2023-05-02 10:33:07,276] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 5, in <module>
+    import pandas as pd
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/__init__.py", line 50, in <module>
+    from pandas.core.api import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/api.py", line 48, in <module>
+    from pandas.core.groupby import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/groupby/__init__.py", line 1, in <module>
+    from pandas.core.groupby.generic import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/groupby/generic.py", line 73, in <module>
+    from pandas.core.frame import DataFrame
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/frame.py", line 129, in <module>
+    from pandas.core import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 191, in <module>
+    class NDFrame(PandasObject, indexing.IndexingMixin):
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 2309, in NDFrame
+    storage_options: StorageOptions = None,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 372, in decorator
+    docstring_components.append(dedent(decorated.__doc__))
+  File "/usr/local/lib/python3.7/textwrap.py", line 461, in dedent
+    text = re.sub(r'(?m)^' + margin, '', text)
+  File "/usr/local/lib/python3.7/re.py", line 194, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 68, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/dag_etl_taskflow.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#reducing-dag-complexity, PID: 449
+[2023-05-02 10:33:08,511] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:33:09,032] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 32.504 seconds
+[2023-05-02 10:33:40,522] {processor.py:153} INFO - Started process (PID=579) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:33:40,580] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:33:40,593] {logging_mixin.py:115} INFO - [2023-05-02 10:33:40,593] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:34:11,437] {logging_mixin.py:115} INFO - [2023-05-02 10:34:11,389] {timeout.py:67} ERROR - Process timed out, PID: 579
+[2023-05-02 10:34:11,773] {logging_mixin.py:115} INFO - [2023-05-02 10:34:11,479] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 5, in <module>
+    import pandas as pd
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/__init__.py", line 50, in <module>
+    from pandas.core.api import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/api.py", line 29, in <module>
+    from pandas.core.arrays import Categorical
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/arrays/__init__.py", line 20, in <module>
+    from pandas.core.arrays.string_arrow import ArrowStringArray
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/arrays/string_arrow.py", line 65, in <module>
+    import pyarrow.compute as pc
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyarrow/compute.py", line 18, in <module>
+    from pyarrow._compute import (  # noqa
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 68, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/dag_etl_taskflow.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#reducing-dag-complexity, PID: 579
+[2023-05-02 10:34:11,829] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:34:13,850] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 33.583 seconds
+[2023-05-02 10:34:45,306] {processor.py:153} INFO - Started process (PID=696) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:34:45,397] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:34:45,410] {logging_mixin.py:115} INFO - [2023-05-02 10:34:45,409] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:35:03,040] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:35:08,374] {logging_mixin.py:115} INFO - [2023-05-02 10:35:08,372] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 10:35:09,234] {logging_mixin.py:115} INFO - [2023-05-02 10:35:09,234] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 10:35:09,834] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 24.769 seconds
+[2023-05-02 10:35:40,717] {processor.py:153} INFO - Started process (PID=763) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:35:40,720] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:35:40,724] {logging_mixin.py:115} INFO - [2023-05-02 10:35:40,724] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:35:43,447] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:35:44,078] {logging_mixin.py:115} INFO - [2023-05-02 10:35:44,076] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 10:35:44,129] {logging_mixin.py:115} INFO - [2023-05-02 10:35:44,128] {dag.py:2398} INFO - Creating ORM DAG for dag_etl
+[2023-05-02 10:35:44,222] {logging_mixin.py:115} INFO - [2023-05-02 10:35:44,222] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-04-27T00:00:00+00:00, run_after=2023-04-28T00:00:00+00:00
+[2023-05-02 10:35:44,309] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 3.604 seconds
+[2023-05-02 10:36:14,613] {processor.py:153} INFO - Started process (PID=792) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:36:14,616] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:36:14,618] {logging_mixin.py:115} INFO - [2023-05-02 10:36:14,617] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:36:16,751] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:36:17,330] {logging_mixin.py:115} INFO - [2023-05-02 10:36:17,329] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 10:36:17,477] {logging_mixin.py:115} INFO - [2023-05-02 10:36:17,477] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-04-27T00:00:00+00:00, run_after=2023-04-28T00:00:00+00:00
+[2023-05-02 10:36:17,571] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.967 seconds
+[2023-05-02 10:36:47,812] {processor.py:153} INFO - Started process (PID=861) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:36:47,826] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:36:47,834] {logging_mixin.py:115} INFO - [2023-05-02 10:36:47,828] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:36:51,881] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:36:53,231] {logging_mixin.py:115} INFO - [2023-05-02 10:36:53,229] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 10:36:53,421] {logging_mixin.py:115} INFO - [2023-05-02 10:36:53,421] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 10:36:53,519] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 5.715 seconds
+[2023-05-02 10:37:23,970] {processor.py:153} INFO - Started process (PID=936) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:37:23,980] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:37:23,992] {logging_mixin.py:115} INFO - [2023-05-02 10:37:23,991] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:37:42,454] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:37:47,362] {logging_mixin.py:115} INFO - [2023-05-02 10:37:47,340] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 10:37:48,330] {logging_mixin.py:115} INFO - [2023-05-02 10:37:48,329] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 10:37:49,220] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 25.270 seconds
+[2023-05-02 10:38:20,105] {processor.py:153} INFO - Started process (PID=1080) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:38:20,116] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:38:20,145] {logging_mixin.py:115} INFO - [2023-05-02 10:38:20,144] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:38:50,238] {logging_mixin.py:115} INFO - [2023-05-02 10:38:50,235] {timeout.py:67} ERROR - Process timed out, PID: 1080
+[2023-05-02 10:38:50,353] {logging_mixin.py:115} INFO - [2023-05-02 10:38:50,287] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 9, in <module>
+    from airflow.providers.amazon.aws.hooks.s3 import S3Hook
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 35, in <module>
+    from boto3.s3.transfer import S3Transfer, TransferConfig
+  File "/home/airflow/.local/lib/python3.7/site-packages/boto3/__init__.py", line 17, in <module>
+    from boto3.session import Session
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 857, in get_code
+  File "<frozen importlib._bootstrap_external>", line 525, in _compile_bytecode
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 68, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/dag_etl_taskflow.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.3.2/best-practices.html#reducing-dag-complexity, PID: 1080
+[2023-05-02 10:38:50,397] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:38:51,141] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 31.191 seconds
+[2023-05-02 10:39:22,735] {processor.py:153} INFO - Started process (PID=1201) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:39:22,742] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:39:22,753] {logging_mixin.py:115} INFO - [2023-05-02 10:39:22,752] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:39:35,576] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:39:37,543] {logging_mixin.py:115} INFO - [2023-05-02 10:39:37,541] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 10:39:37,923] {logging_mixin.py:115} INFO - [2023-05-02 10:39:37,923] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 10:39:38,121] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 15.485 seconds
+[2023-05-02 10:40:08,529] {processor.py:153} INFO - Started process (PID=1272) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:40:08,536] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:40:08,540] {logging_mixin.py:115} INFO - [2023-05-02 10:40:08,539] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:40:13,715] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:40:15,339] {logging_mixin.py:115} INFO - [2023-05-02 10:40:15,337] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 10:40:15,601] {logging_mixin.py:115} INFO - [2023-05-02 10:40:15,601] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 10:40:15,888] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 7.368 seconds
+[2023-05-02 10:40:46,234] {processor.py:153} INFO - Started process (PID=1354) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:40:46,243] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:40:46,249] {logging_mixin.py:115} INFO - [2023-05-02 10:40:46,248] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:40:51,530] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:40:52,615] {logging_mixin.py:115} INFO - [2023-05-02 10:40:52,613] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 10:40:52,799] {logging_mixin.py:115} INFO - [2023-05-02 10:40:52,799] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 10:40:52,982] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 6.776 seconds
+[2023-05-02 10:41:23,354] {processor.py:153} INFO - Started process (PID=1418) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:41:23,366] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:41:23,371] {logging_mixin.py:115} INFO - [2023-05-02 10:41:23,370] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:41:25,469] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:41:25,931] {logging_mixin.py:115} INFO - [2023-05-02 10:41:25,930] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 10:41:26,050] {logging_mixin.py:115} INFO - [2023-05-02 10:41:26,050] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 10:41:26,116] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.787 seconds
+[2023-05-02 10:41:56,380] {processor.py:153} INFO - Started process (PID=1457) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:41:56,382] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:41:56,384] {logging_mixin.py:115} INFO - [2023-05-02 10:41:56,383] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:41:58,851] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:41:59,447] {logging_mixin.py:115} INFO - [2023-05-02 10:41:59,446] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 10:41:59,586] {logging_mixin.py:115} INFO - [2023-05-02 10:41:59,585] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 10:41:59,660] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 3.289 seconds
+[2023-05-02 10:42:29,897] {processor.py:153} INFO - Started process (PID=1496) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:42:29,899] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:42:29,902] {logging_mixin.py:115} INFO - [2023-05-02 10:42:29,902] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:42:32,150] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:42:32,644] {logging_mixin.py:115} INFO - [2023-05-02 10:42:32,643] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 10:42:32,777] {logging_mixin.py:115} INFO - [2023-05-02 10:42:32,776] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 10:42:32,850] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.964 seconds
+[2023-05-02 10:42:33,967] {processor.py:153} INFO - Started process (PID=1503) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:42:33,969] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:42:33,972] {logging_mixin.py:115} INFO - [2023-05-02 10:42:33,971] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:42:36,171] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:42:36,273] {logging_mixin.py:115} INFO - [2023-05-02 10:42:36,272] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 10:42:36,407] {logging_mixin.py:115} INFO - [2023-05-02 10:42:36,407] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 10:42:36,481] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.522 seconds
+[2023-05-02 10:43:06,692] {processor.py:153} INFO - Started process (PID=1543) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:43:06,693] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:43:06,695] {logging_mixin.py:115} INFO - [2023-05-02 10:43:06,695] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:43:08,797] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:43:09,326] {logging_mixin.py:115} INFO - [2023-05-02 10:43:09,324] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 10:43:09,446] {logging_mixin.py:115} INFO - [2023-05-02 10:43:09,445] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 10:43:09,537] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.855 seconds
+[2023-05-02 10:43:39,881] {processor.py:153} INFO - Started process (PID=1637) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:43:39,897] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:43:39,908] {logging_mixin.py:115} INFO - [2023-05-02 10:43:39,908] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:43:53,470] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:43:55,687] {logging_mixin.py:115} INFO - [2023-05-02 10:43:55,681] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 10:43:56,023] {logging_mixin.py:115} INFO - [2023-05-02 10:43:56,022] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 10:43:56,196] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 16.324 seconds
+[2023-05-02 10:44:26,550] {processor.py:153} INFO - Started process (PID=1704) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:44:26,556] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:44:26,559] {logging_mixin.py:115} INFO - [2023-05-02 10:44:26,558] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:44:29,173] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:44:30,087] {logging_mixin.py:115} INFO - [2023-05-02 10:44:30,086] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 10:44:30,259] {logging_mixin.py:115} INFO - [2023-05-02 10:44:30,258] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 10:44:30,333] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 3.808 seconds
+[2023-05-02 10:45:00,533] {processor.py:153} INFO - Started process (PID=1759) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:45:00,535] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 10:45:00,538] {logging_mixin.py:115} INFO - [2023-05-02 10:45:00,537] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:45:02,596] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 10:45:03,071] {logging_mixin.py:115} INFO - [2023-05-02 10:45:03,070] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 10:45:03,200] {logging_mixin.py:115} INFO - [2023-05-02 10:45:03,199] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 10:45:03,268] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.744 seconds
+[2023-05-02 11:36:35,956] {processor.py:153} INFO - Started process (PID=263) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:36:35,958] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:36:35,961] {logging_mixin.py:115} INFO - [2023-05-02 11:36:35,960] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:36:38,356] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:36:38,888] {logging_mixin.py:115} INFO - [2023-05-02 11:36:38,887] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:36:39,026] {logging_mixin.py:115} INFO - [2023-05-02 11:36:39,026] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:36:39,095] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 3.147 seconds
+[2023-05-02 11:37:09,311] {processor.py:153} INFO - Started process (PID=302) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:37:09,320] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:37:09,322] {logging_mixin.py:115} INFO - [2023-05-02 11:37:09,322] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:37:14,134] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:37:15,058] {logging_mixin.py:115} INFO - [2023-05-02 11:37:15,057] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:37:15,192] {logging_mixin.py:115} INFO - [2023-05-02 11:37:15,192] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:37:15,318] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 6.023 seconds
+[2023-05-02 11:37:45,583] {processor.py:153} INFO - Started process (PID=340) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:37:45,591] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:37:45,597] {logging_mixin.py:115} INFO - [2023-05-02 11:37:45,595] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:37:47,780] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:37:48,230] {logging_mixin.py:115} INFO - [2023-05-02 11:37:48,229] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:37:48,349] {logging_mixin.py:115} INFO - [2023-05-02 11:37:48,348] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:37:48,414] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.840 seconds
+[2023-05-02 11:38:18,583] {processor.py:153} INFO - Started process (PID=378) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:38:18,586] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:38:18,589] {logging_mixin.py:115} INFO - [2023-05-02 11:38:18,588] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:38:20,945] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:38:21,536] {logging_mixin.py:115} INFO - [2023-05-02 11:38:21,534] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:38:21,653] {logging_mixin.py:115} INFO - [2023-05-02 11:38:21,653] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:38:21,718] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 3.143 seconds
+[2023-05-02 11:38:51,897] {processor.py:153} INFO - Started process (PID=411) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:38:51,899] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:38:51,902] {logging_mixin.py:115} INFO - [2023-05-02 11:38:51,901] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:38:54,298] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:38:54,824] {logging_mixin.py:115} INFO - [2023-05-02 11:38:54,822] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:38:54,944] {logging_mixin.py:115} INFO - [2023-05-02 11:38:54,944] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:38:55,033] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 3.144 seconds
+[2023-05-02 11:39:25,295] {processor.py:153} INFO - Started process (PID=440) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:39:25,297] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:39:25,299] {logging_mixin.py:115} INFO - [2023-05-02 11:39:25,299] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:39:27,387] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:39:27,866] {logging_mixin.py:115} INFO - [2023-05-02 11:39:27,865] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:39:27,987] {logging_mixin.py:115} INFO - [2023-05-02 11:39:27,986] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:39:28,057] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.770 seconds
+[2023-05-02 11:39:58,167] {processor.py:153} INFO - Started process (PID=479) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:39:58,169] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:39:58,171] {logging_mixin.py:115} INFO - [2023-05-02 11:39:58,171] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:40:00,305] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:40:01,042] {logging_mixin.py:115} INFO - [2023-05-02 11:40:01,041] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:40:01,163] {logging_mixin.py:115} INFO - [2023-05-02 11:40:01,162] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:40:01,231] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 3.072 seconds
+[2023-05-02 11:40:31,378] {processor.py:153} INFO - Started process (PID=517) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:40:31,380] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:40:31,385] {logging_mixin.py:115} INFO - [2023-05-02 11:40:31,385] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:40:34,065] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:40:34,859] {logging_mixin.py:115} INFO - [2023-05-02 11:40:34,858] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:40:34,987] {logging_mixin.py:115} INFO - [2023-05-02 11:40:34,986] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:40:35,063] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 3.694 seconds
+[2023-05-02 11:41:05,266] {processor.py:153} INFO - Started process (PID=555) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:41:05,268] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:41:05,270] {logging_mixin.py:115} INFO - [2023-05-02 11:41:05,270] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:41:07,221] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:41:07,714] {logging_mixin.py:115} INFO - [2023-05-02 11:41:07,712] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:41:07,848] {logging_mixin.py:115} INFO - [2023-05-02 11:41:07,847] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:41:07,919] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.662 seconds
+[2023-05-02 11:41:38,139] {processor.py:153} INFO - Started process (PID=594) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:41:38,142] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:41:38,143] {logging_mixin.py:115} INFO - [2023-05-02 11:41:38,143] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:41:40,092] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:41:40,574] {logging_mixin.py:115} INFO - [2023-05-02 11:41:40,572] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:41:40,689] {logging_mixin.py:115} INFO - [2023-05-02 11:41:40,689] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:41:40,754] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.622 seconds
+[2023-05-02 11:42:10,945] {processor.py:153} INFO - Started process (PID=638) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:42:10,948] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:42:10,950] {logging_mixin.py:115} INFO - [2023-05-02 11:42:10,949] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:42:12,962] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:42:13,460] {logging_mixin.py:115} INFO - [2023-05-02 11:42:13,458] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:42:13,851] {logging_mixin.py:115} INFO - [2023-05-02 11:42:13,850] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:42:13,926] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.988 seconds
+[2023-05-02 11:42:44,261] {processor.py:153} INFO - Started process (PID=720) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:42:44,272] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:42:44,278] {logging_mixin.py:115} INFO - [2023-05-02 11:42:44,278] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:42:57,440] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:42:59,573] {logging_mixin.py:115} INFO - [2023-05-02 11:42:59,567] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:42:59,895] {logging_mixin.py:115} INFO - [2023-05-02 11:42:59,894] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:43:00,087] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 15.848 seconds
+[2023-05-02 11:43:30,439] {processor.py:153} INFO - Started process (PID=796) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:43:30,441] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:43:30,444] {logging_mixin.py:115} INFO - [2023-05-02 11:43:30,443] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:43:32,953] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:43:33,745] {logging_mixin.py:115} INFO - [2023-05-02 11:43:33,727] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:43:33,897] {logging_mixin.py:115} INFO - [2023-05-02 11:43:33,896] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:43:34,004] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 3.575 seconds
+[2023-05-02 11:44:04,238] {processor.py:153} INFO - Started process (PID=845) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:44:04,241] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:44:04,244] {logging_mixin.py:115} INFO - [2023-05-02 11:44:04,243] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:44:06,268] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:44:06,800] {logging_mixin.py:115} INFO - [2023-05-02 11:44:06,798] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:44:07,067] {logging_mixin.py:115} INFO - [2023-05-02 11:44:07,066] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:44:07,155] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.931 seconds
+[2023-05-02 11:44:37,382] {processor.py:153} INFO - Started process (PID=884) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:44:37,385] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:44:37,387] {logging_mixin.py:115} INFO - [2023-05-02 11:44:37,387] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:44:39,424] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:44:39,873] {logging_mixin.py:115} INFO - [2023-05-02 11:44:39,872] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:44:39,989] {logging_mixin.py:115} INFO - [2023-05-02 11:44:39,988] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:44:40,052] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.678 seconds
+[2023-05-02 11:45:10,242] {processor.py:153} INFO - Started process (PID=923) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:45:10,246] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:45:10,248] {logging_mixin.py:115} INFO - [2023-05-02 11:45:10,248] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:45:12,240] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:45:12,695] {logging_mixin.py:115} INFO - [2023-05-02 11:45:12,693] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:45:12,815] {logging_mixin.py:115} INFO - [2023-05-02 11:45:12,814] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:45:12,883] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.649 seconds
+[2023-05-02 11:45:43,057] {processor.py:153} INFO - Started process (PID=963) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:45:43,059] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:45:43,061] {logging_mixin.py:115} INFO - [2023-05-02 11:45:43,060] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:45:45,108] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:45:45,554] {logging_mixin.py:115} INFO - [2023-05-02 11:45:45,553] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:45:45,677] {logging_mixin.py:115} INFO - [2023-05-02 11:45:45,676] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:45:45,741] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.692 seconds
+[2023-05-02 11:46:15,946] {processor.py:153} INFO - Started process (PID=1002) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:46:15,948] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:46:15,950] {logging_mixin.py:115} INFO - [2023-05-02 11:46:15,950] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:46:17,835] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:46:18,284] {logging_mixin.py:115} INFO - [2023-05-02 11:46:18,283] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:46:18,404] {logging_mixin.py:115} INFO - [2023-05-02 11:46:18,403] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:46:18,468] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.530 seconds
+[2023-05-02 11:46:48,795] {processor.py:153} INFO - Started process (PID=1088) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:46:48,801] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:46:48,811] {logging_mixin.py:115} INFO - [2023-05-02 11:46:48,811] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:47:01,383] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:47:03,457] {logging_mixin.py:115} INFO - [2023-05-02 11:47:03,456] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:47:04,011] {logging_mixin.py:115} INFO - [2023-05-02 11:47:04,010] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:47:04,212] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 15.440 seconds
+[2023-05-02 11:47:34,528] {processor.py:153} INFO - Started process (PID=1166) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:47:34,531] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:47:34,534] {logging_mixin.py:115} INFO - [2023-05-02 11:47:34,534] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:47:36,978] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:47:37,533] {logging_mixin.py:115} INFO - [2023-05-02 11:47:37,531] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:47:37,714] {logging_mixin.py:115} INFO - [2023-05-02 11:47:37,708] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:47:37,836] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 3.318 seconds
+[2023-05-02 11:48:08,054] {processor.py:153} INFO - Started process (PID=1214) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:48:08,057] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:48:08,059] {logging_mixin.py:115} INFO - [2023-05-02 11:48:08,059] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:48:10,064] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:48:10,553] {logging_mixin.py:115} INFO - [2023-05-02 11:48:10,552] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:48:10,679] {logging_mixin.py:115} INFO - [2023-05-02 11:48:10,678] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:48:10,758] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.712 seconds
+[2023-05-02 11:48:40,962] {processor.py:153} INFO - Started process (PID=1253) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:48:40,965] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:48:40,967] {logging_mixin.py:115} INFO - [2023-05-02 11:48:40,966] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:48:43,036] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:48:43,493] {logging_mixin.py:115} INFO - [2023-05-02 11:48:43,492] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:48:43,610] {logging_mixin.py:115} INFO - [2023-05-02 11:48:43,609] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:48:43,673] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.719 seconds
+[2023-05-02 11:49:13,870] {processor.py:153} INFO - Started process (PID=1291) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:49:13,872] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:49:13,874] {logging_mixin.py:115} INFO - [2023-05-02 11:49:13,874] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:49:15,994] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:49:16,492] {logging_mixin.py:115} INFO - [2023-05-02 11:49:16,491] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:49:16,610] {logging_mixin.py:115} INFO - [2023-05-02 11:49:16,610] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:49:16,676] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.814 seconds
+[2023-05-02 11:49:46,879] {processor.py:153} INFO - Started process (PID=1329) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:49:46,881] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:49:46,883] {logging_mixin.py:115} INFO - [2023-05-02 11:49:46,883] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:49:49,029] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:49:49,499] {logging_mixin.py:115} INFO - [2023-05-02 11:49:49,498] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:49:49,618] {logging_mixin.py:115} INFO - [2023-05-02 11:49:49,617] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:49:49,683] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.814 seconds
+[2023-05-02 11:50:19,866] {processor.py:153} INFO - Started process (PID=1368) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:50:19,868] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:50:19,870] {logging_mixin.py:115} INFO - [2023-05-02 11:50:19,870] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:50:21,782] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:50:22,238] {logging_mixin.py:115} INFO - [2023-05-02 11:50:22,237] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:50:22,356] {logging_mixin.py:115} INFO - [2023-05-02 11:50:22,355] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:50:22,422] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.563 seconds
+[2023-05-02 11:50:52,608] {processor.py:153} INFO - Started process (PID=1407) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:50:52,610] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:50:52,612] {logging_mixin.py:115} INFO - [2023-05-02 11:50:52,612] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:50:54,454] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:50:54,928] {logging_mixin.py:115} INFO - [2023-05-02 11:50:54,927] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:50:55,045] {logging_mixin.py:115} INFO - [2023-05-02 11:50:55,044] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:50:55,108] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.508 seconds
+[2023-05-02 11:51:25,279] {processor.py:153} INFO - Started process (PID=1445) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:51:25,280] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:51:25,282] {logging_mixin.py:115} INFO - [2023-05-02 11:51:25,282] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:51:27,103] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:51:27,540] {logging_mixin.py:115} INFO - [2023-05-02 11:51:27,539] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:51:27,652] {logging_mixin.py:115} INFO - [2023-05-02 11:51:27,652] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:51:27,713] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.442 seconds
+[2023-05-02 11:51:57,907] {processor.py:153} INFO - Started process (PID=1484) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:51:57,909] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:51:57,911] {logging_mixin.py:115} INFO - [2023-05-02 11:51:57,911] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:51:59,742] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:52:00,192] {logging_mixin.py:115} INFO - [2023-05-02 11:52:00,191] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:52:00,312] {logging_mixin.py:115} INFO - [2023-05-02 11:52:00,312] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:52:00,381] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.481 seconds
+[2023-05-02 11:52:30,592] {processor.py:153} INFO - Started process (PID=1523) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:52:30,605] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:52:30,623] {logging_mixin.py:115} INFO - [2023-05-02 11:52:30,622] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:52:32,546] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:52:32,994] {logging_mixin.py:115} INFO - [2023-05-02 11:52:32,992] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:52:33,108] {logging_mixin.py:115} INFO - [2023-05-02 11:52:33,108] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:52:33,168] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.585 seconds
+[2023-05-02 11:53:03,384] {processor.py:153} INFO - Started process (PID=1567) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:53:03,386] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:53:03,393] {logging_mixin.py:115} INFO - [2023-05-02 11:53:03,392] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:53:05,769] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:53:06,229] {logging_mixin.py:115} INFO - [2023-05-02 11:53:06,228] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:53:06,350] {logging_mixin.py:115} INFO - [2023-05-02 11:53:06,349] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:53:06,414] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 3.038 seconds
+[2023-05-02 11:53:36,491] {processor.py:153} INFO - Started process (PID=1606) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:53:36,494] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:53:36,497] {logging_mixin.py:115} INFO - [2023-05-02 11:53:36,496] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:53:38,434] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:53:38,931] {logging_mixin.py:115} INFO - [2023-05-02 11:53:38,930] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:53:39,062] {logging_mixin.py:115} INFO - [2023-05-02 11:53:39,061] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:53:39,131] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.649 seconds
+[2023-05-02 11:54:09,317] {processor.py:153} INFO - Started process (PID=1646) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:54:09,319] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:54:09,321] {logging_mixin.py:115} INFO - [2023-05-02 11:54:09,321] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:54:11,258] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:54:11,710] {logging_mixin.py:115} INFO - [2023-05-02 11:54:11,709] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:54:11,827] {logging_mixin.py:115} INFO - [2023-05-02 11:54:11,826] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:54:11,891] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.582 seconds
+[2023-05-02 11:54:42,089] {processor.py:153} INFO - Started process (PID=1685) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:54:42,091] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:54:42,094] {logging_mixin.py:115} INFO - [2023-05-02 11:54:42,093] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:54:44,076] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:54:44,526] {logging_mixin.py:115} INFO - [2023-05-02 11:54:44,525] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:54:44,644] {logging_mixin.py:115} INFO - [2023-05-02 11:54:44,643] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:54:44,709] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.628 seconds
+[2023-05-02 11:55:14,949] {processor.py:153} INFO - Started process (PID=1718) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:55:14,954] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:55:14,958] {logging_mixin.py:115} INFO - [2023-05-02 11:55:14,958] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:55:17,324] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:55:18,023] {logging_mixin.py:115} INFO - [2023-05-02 11:55:18,021] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:55:18,147] {logging_mixin.py:115} INFO - [2023-05-02 11:55:18,146] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:55:18,238] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 3.302 seconds
+[2023-05-02 11:55:48,437] {processor.py:153} INFO - Started process (PID=1752) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:55:48,439] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:55:48,441] {logging_mixin.py:115} INFO - [2023-05-02 11:55:48,441] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:55:50,799] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:55:51,625] {logging_mixin.py:115} INFO - [2023-05-02 11:55:51,623] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:55:51,750] {logging_mixin.py:115} INFO - [2023-05-02 11:55:51,749] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:55:51,891] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 3.462 seconds
+[2023-05-02 11:56:22,347] {processor.py:153} INFO - Started process (PID=1846) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:56:22,352] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:56:22,363] {logging_mixin.py:115} INFO - [2023-05-02 11:56:22,363] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:56:33,509] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:56:34,611] {logging_mixin.py:115} INFO - [2023-05-02 11:56:34,610] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:56:34,974] {logging_mixin.py:115} INFO - [2023-05-02 11:56:34,973] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:56:35,073] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 12.796 seconds
+[2023-05-02 11:57:05,510] {processor.py:153} INFO - Started process (PID=1925) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:57:05,512] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:57:05,514] {logging_mixin.py:115} INFO - [2023-05-02 11:57:05,514] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:57:07,700] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:57:08,190] {logging_mixin.py:115} INFO - [2023-05-02 11:57:08,188] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:57:08,318] {logging_mixin.py:115} INFO - [2023-05-02 11:57:08,318] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:57:08,389] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.888 seconds
+[2023-05-02 11:57:38,609] {processor.py:153} INFO - Started process (PID=1964) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:57:38,611] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:57:38,614] {logging_mixin.py:115} INFO - [2023-05-02 11:57:38,613] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:57:40,624] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:57:41,142] {logging_mixin.py:115} INFO - [2023-05-02 11:57:41,140] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:57:41,261] {logging_mixin.py:115} INFO - [2023-05-02 11:57:41,261] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:57:41,335] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.736 seconds
+[2023-05-02 11:58:11,526] {processor.py:153} INFO - Started process (PID=2004) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:58:11,528] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:58:11,530] {logging_mixin.py:115} INFO - [2023-05-02 11:58:11,530] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:58:13,401] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:58:13,850] {logging_mixin.py:115} INFO - [2023-05-02 11:58:13,849] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:58:13,968] {logging_mixin.py:115} INFO - [2023-05-02 11:58:13,967] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:58:14,031] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.513 seconds
+[2023-05-02 11:58:44,215] {processor.py:153} INFO - Started process (PID=2042) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:58:44,217] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:58:44,219] {logging_mixin.py:115} INFO - [2023-05-02 11:58:44,219] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:58:46,220] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:58:46,693] {logging_mixin.py:115} INFO - [2023-05-02 11:58:46,691] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:58:46,807] {logging_mixin.py:115} INFO - [2023-05-02 11:58:46,806] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:58:46,871] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.663 seconds
+[2023-05-02 11:59:16,995] {processor.py:153} INFO - Started process (PID=2081) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:59:16,997] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:59:17,000] {logging_mixin.py:115} INFO - [2023-05-02 11:59:17,000] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:59:19,123] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:59:19,554] {logging_mixin.py:115} INFO - [2023-05-02 11:59:19,553] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:59:19,665] {logging_mixin.py:115} INFO - [2023-05-02 11:59:19,665] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:59:19,726] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.739 seconds
+[2023-05-02 11:59:49,906] {processor.py:153} INFO - Started process (PID=2121) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:59:49,908] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-05-02 11:59:49,911] {logging_mixin.py:115} INFO - [2023-05-02 11:59:49,910] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:59:51,849] {processor.py:651} INFO - DAG(s) dict_keys(['dag_etl']) retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-05-02 11:59:52,357] {logging_mixin.py:115} INFO - [2023-05-02 11:59:52,356] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-05-02 11:59:52,478] {logging_mixin.py:115} INFO - [2023-05-02 11:59:52,477] {dag.py:2931} INFO - Setting next_dagrun for dag_etl to 2023-05-02T00:00:00+00:00, run_after=2023-05-03T00:00:00+00:00
+[2023-05-02 11:59:52,542] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 2.645 seconds

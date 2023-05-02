@@ -16,6 +16,8 @@ raw_key = 'supermarket_sales.csv'
 raw_bucket = 'raw'
 raw_local_path = 'data'
 file_new_name = 'downloaded_from_minio.csv'
+nds_layer = 'nds'
+dds_layer = 'dds'
 default_args = {
     'owner': 'Victor',
     'retries': 5,
@@ -36,16 +38,16 @@ with DAG(
         aws_conn_id='minio_conn',
         mode='poke',
         poke_interval=5,
-        timeout=60 # Тут надо выставить 24*60*60 - т.е. все сутки, НО комп сильно устает
+        timeout=30 # Тут надо выставить 24*60*60 - т.е. все сутки, НО комп сильно устает
     )
     task_create_tables = PostgresOperator(
         task_id='create_nds_tables_if_not_exists',
         postgres_conn_id='postgres_conn',
-        sql="""
-            CREATE SCHEMA IF NOT EXISTS nds;
-            CREATE SCHEMA IF NOT EXISTS stage;
+        sql=f"""
+            CREATE SCHEMA IF NOT EXISTS {dds_layer};
+            CREATE SCHEMA IF NOT EXISTS {nds_layer};
     
-            SET search_path TO nds;        
+            SET search_path TO {dds_layer};        
             
             --// создаем таблицу с ветками //--
             CREATE TABLE IF NOT EXISTS dim_branch(
@@ -101,30 +103,30 @@ with DAG(
     task_update_dims = PostgresOperator(
         task_id='update_dim_tables',
         postgres_conn_id='postgres_conn',
-        sql="""
-            SET search_path TO nds;    
+        sql=f"""
+            SET search_path TO {dds_layer};    
             
-            --// Обновляем таблицы в nds сырыми таблицами из stage //--
+            --// Обновляем таблицы в dds сырыми таблицами из nds //--
             INSERT INTO dim_branch (branch)
-            (SELECT branch FROM stage.dim_branch WHERE branch NOT IN (SELECT branch FROM dim_branch));
+            (SELECT branch FROM {nds_layer}.dim_branch WHERE branch NOT IN (SELECT branch FROM dim_branch));
             INSERT INTO dim_city (city)
-            (SELECT city FROM stage.dim_city WHERE city NOT IN (SELECT city FROM dim_city));
+            (SELECT city FROM {nds_layer}.dim_city WHERE city NOT IN (SELECT city FROM dim_city));
             INSERT INTO dim_customer_type (customer_type)
-            (SELECT customer_type FROM stage.dim_customer_type WHERE customer_type NOT IN (SELECT customer_type FROM dim_customer_type));
+            (SELECT customer_type FROM {nds_layer}.dim_customer_type WHERE customer_type NOT IN (SELECT customer_type FROM dim_customer_type));
             INSERT INTO dim_gender (gender)
-            (SELECT gender FROM stage.dim_gender WHERE gender NOT IN (SELECT gender FROM dim_gender));
+            (SELECT gender FROM {nds_layer}.dim_gender WHERE gender NOT IN (SELECT gender FROM dim_gender));
             INSERT INTO dim_product_line (product_line)
-            (SELECT product_line FROM stage.dim_product_line WHERE product_line NOT IN (SELECT product_line FROM dim_product_line));
+            (SELECT product_line FROM {nds_layer}.dim_product_line WHERE product_line NOT IN (SELECT product_line FROM dim_product_line));
             INSERT INTO dim_payment (payment)
-            (SELECT payment FROM stage.dim_payment WHERE payment NOT IN (SELECT payment FROM dim_payment));
+            (SELECT payment FROM {nds_layer}.dim_payment WHERE payment NOT IN (SELECT payment FROM dim_payment));
              
             """
     )
     task_update_fact = PostgresOperator(
         task_id='update_fact_table',
         postgres_conn_id='postgres_conn',
-        sql="""
-            SET search_path TO nds;
+        sql=f"""
+            SET search_path TO {dds_layer};
             
             --// Обновляем таблицу с фактом свежей таблицей с фактами из stage //--
             INSERT INTO fact_sales (invoice_id, branch, city, customer_type, gender,
@@ -134,7 +136,7 @@ with DAG(
                     invoice_id, branch, city, customer_type, gender, 
                     product_line, unit_price, quantity, "tax_5%", total, date::date,
                     time, payment, cogs, gross_margin_percentage, gross_income, rating 
-            FROM stage.fact_sales WHERE invoice_id NOT IN (SELECT invoice_id FROM fact_sales));
+            FROM {nds_layer}.fact_sales WHERE invoice_id NOT IN (SELECT invoice_id FROM fact_sales));
             """
     )
     task_delete_s3_obj = S3DeleteObjectsOperator(
@@ -146,7 +148,7 @@ with DAG(
     )
     task_clear_data_directory = BashOperator(
         task_id='clear_data_directory',
-        bash_command='rm -rf ${pwd}data/* | ❯ echo "приехали"'
+        bash_command='rm -rf ${pwd}data/* | echo "приехали"'
     )
 
 
@@ -171,7 +173,7 @@ with DAG(
         branch = pd.Series(df['branch'].unique(), name='branch')
         branch_df = pd.DataFrame(branch)
         hook = PostgresHook(postgres_conn_id='postgres_conn')
-        branch_df.to_sql('dim_branch', hook.get_sqlalchemy_engine(), schema='stage', if_exists='replace')
+        branch_df.to_sql('dim_branch', hook.get_sqlalchemy_engine(), schema=nds_layer, if_exists='replace')
 
 
     @task
@@ -181,7 +183,7 @@ with DAG(
         city = pd.Series(df['city'].unique(), name='city')
         city_df = pd.DataFrame(city)
         hook = PostgresHook(postgres_conn_id='postgres_conn')
-        city_df.to_sql('dim_city', hook.get_sqlalchemy_engine(), schema='stage', if_exists='replace')
+        city_df.to_sql('dim_city', hook.get_sqlalchemy_engine(), schema=nds_layer, if_exists='replace')
 
 
     @task
@@ -191,7 +193,7 @@ with DAG(
         customer_type = pd.Series(df['customer_type'].unique(), name='customer_type')
         customer_type_df = pd.DataFrame(customer_type)
         hook = PostgresHook(postgres_conn_id='postgres_conn')
-        customer_type_df.to_sql('dim_customer_type', hook.get_sqlalchemy_engine(), schema='stage', if_exists='replace')
+        customer_type_df.to_sql('dim_customer_type', hook.get_sqlalchemy_engine(), schema=nds_layer, if_exists='replace')
 
 
     @task
@@ -201,7 +203,7 @@ with DAG(
         gender = pd.Series(df['gender'].unique(), name='gender')
         gender_df = pd.DataFrame(gender)
         hook = PostgresHook(postgres_conn_id='postgres_conn')
-        gender_df.to_sql('dim_gender', hook.get_sqlalchemy_engine(), schema='stage', if_exists='replace')
+        gender_df.to_sql('dim_gender', hook.get_sqlalchemy_engine(), schema=nds_layer, if_exists='replace')
 
 
     @task
@@ -211,7 +213,7 @@ with DAG(
         product_line = pd.Series(df['product_line'].unique(), name='product_line')
         product_line_df = pd.DataFrame(product_line)
         hook = PostgresHook(postgres_conn_id='postgres_conn')
-        product_line_df.to_sql('dim_product_line', hook.get_sqlalchemy_engine(), schema='stage', if_exists='replace')
+        product_line_df.to_sql('dim_product_line', hook.get_sqlalchemy_engine(), schema=nds_layer, if_exists='replace')
 
 
     @task
@@ -221,7 +223,7 @@ with DAG(
         payment = pd.Series(df['payment'].unique(), name='payment')
         payment_df = pd.DataFrame(payment)
         hook = PostgresHook(postgres_conn_id='postgres_conn')
-        payment_df.to_sql('dim_payment', hook.get_sqlalchemy_engine(), schema='stage', if_exists='replace')
+        payment_df.to_sql('dim_payment', hook.get_sqlalchemy_engine(), schema=nds_layer, if_exists='replace')
 
 
     @task
@@ -241,7 +243,7 @@ with DAG(
         hook = PostgresHook(postgres_conn_id='postgres_conn')
         df.to_sql('dim_time',
                   hook.get_sqlalchemy_engine(),
-                  schema='nds',
+                  schema=dds_layer,
                   if_exists='replace',
                   index=False,
                   dtype={'time': sqlalchemy.types.TIME()})
@@ -269,7 +271,7 @@ with DAG(
         hook = PostgresHook(postgres_conn_id='postgres_conn')
         df.to_sql('dim_date',
                   hook.get_sqlalchemy_engine(),
-                  schema='nds',
+                  schema=dds_layer,
                   if_exists='replace',
                   index=False,
                   dtype={'date': sqlalchemy.types.DATE(),
@@ -277,7 +279,7 @@ with DAG(
 
 
     @task
-    def fact_stage(downloaded_file_path, file_new_name):
+    def fact_nds(downloaded_file_path, file_new_name):
         """
         Забираем из базы обновленные измерения и их ключи.
         Ключи прежних загрузок остаются неизменными.
@@ -287,17 +289,17 @@ with DAG(
         hook = PostgresHook(postgres_conn_id='postgres_conn')
         conn = hook.get_conn()
         cursor = conn.cursor()
-        cursor.execute("""SET search_path TO nds; SELECT * FROM dim_branch;""")
+        cursor.execute(f"""SET search_path TO {dds_layer}; SELECT * FROM dim_branch;""")
         branch = dict(cursor.fetchall())
-        cursor.execute("""SET search_path TO nds; SELECT * FROM dim_city;""")
+        cursor.execute(f"""SET search_path TO {dds_layer}; SELECT * FROM dim_city;""")
         city = dict(cursor.fetchall())
-        cursor.execute("""SET search_path TO nds; SELECT * FROM dim_customer_type;""")
+        cursor.execute(f"""SET search_path TO {dds_layer}; SELECT * FROM dim_customer_type;""")
         customer_type = dict(cursor.fetchall())
-        cursor.execute("""SET search_path TO nds; SELECT * FROM dim_gender;""")
+        cursor.execute(f"""SET search_path TO {dds_layer}; SELECT * FROM dim_gender;""")
         gender = dict(cursor.fetchall())
-        cursor.execute("""SET search_path TO nds; SELECT * FROM dim_product_line;""")
+        cursor.execute(f"""SET search_path TO {dds_layer}; SELECT * FROM dim_product_line;""")
         product_line = dict(cursor.fetchall())
-        cursor.execute("""SET search_path TO nds; SELECT * FROM dim_payment;""")
+        cursor.execute(f"""SET search_path TO {dds_layer}; SELECT * FROM dim_payment;""")
         payment = dict(cursor.fetchall())
         cursor.close()
         conn.close()
@@ -311,7 +313,7 @@ with DAG(
         df['gender'] = df['gender'].map({v: k for k, v in gender.items()})
         df['product_line'] = df['product_line'].map({v: k for k, v in product_line.items()})
         df['payment'] = df['payment'].map({v: k for k, v in payment.items()})
-        df.to_sql('fact_sales', hook.get_sqlalchemy_engine(), schema='stage', if_exists='replace', index=False)
+        df.to_sql('fact_sales', hook.get_sqlalchemy_engine(), schema=nds_layer, if_exists='replace', index=False)
 
 
     file_name = extract_from_s3(raw_key, raw_bucket, raw_local_path)
@@ -324,7 +326,7 @@ with DAG(
     payment = dim_payment(downloaded_file_path, file_new_name)
     time_ = dim_time()
     date_ = dim_date()
-    fact_sales = fact_stage(downloaded_file_path, file_new_name)
+    fact_sales = fact_nds(downloaded_file_path, file_new_name)
 
     task_s3_sensor >> file_name >> downloaded_file_path >> [
         branch, city, customer_type, gender, product_line, payment
