@@ -314,9 +314,7 @@ with DAG(
     payment = dim_payment(downloaded_file_path, file_new_name)
     fact_sales = fact_nds(downloaded_file_path, file_new_name)
 
-    task_s3_sensor >> file_name >> downloaded_file_path >> [
-        branch, city, customer_type, gender, product_line, payment
-    ] >> task_update_dims
+    task_s3_sensor >> file_name >> downloaded_file_path >> [branch, city, customer_type, gender, product_line, payment] >> task_update_dims
     task_update_dims >> fact_sales >> task_update_fact >> task_clear_data_directory
     task_s3_sensor >> task_create_tables
     downloaded_file_path >> task_delete_s3_obj
