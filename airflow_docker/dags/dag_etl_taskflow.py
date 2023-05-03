@@ -42,15 +42,17 @@ with DAG(
         task_id='create_dds_tables_if_not_exists',
         postgres_conn_id='postgres_conn',
         sql=f"""
+            --// Создаем две схемы - слоя в базе //--
             CREATE SCHEMA IF NOT EXISTS {dds_layer};
             CREATE SCHEMA IF NOT EXISTS {nds_layer};
-    
+            
+            --// Устанавливаем путь к схеме dds. В ней будем создавать нужные таблицы //--
             SET search_path TO {dds_layer};        
             
-            --// создаем таблицу с ветками //--
+            --// создаем таблицу с бранчами //--
             CREATE TABLE IF NOT EXISTS dim_branch(
-            id SERIAL PRIMARY KEY,
-            branch VARCHAR(100) NOT NULL);
+                id SERIAL PRIMARY KEY,
+                branch VARCHAR(100) NOT NULL);
             
             --// создаем таблицу с городами //--
             CREATE TABLE IF NOT EXISTS dim_city(
@@ -77,7 +79,7 @@ with DAG(
                 id SERIAL PRIMARY KEY,
                 payment VARCHAR(100) NOT NULL);
             
-            --// создаем таблицу с датами //--
+            --// создаем таблицу с датами. Т.к. даты не меняются, сразу же их и заполним //--
             CREATE TABLE IF NOT EXISTS dim_date AS
             WITH cte1 AS (
                 SELECT dd::date AS dt -- создаем серию из дат с интервалом в 1 день
@@ -96,7 +98,7 @@ with DAG(
             ALTER TABLE dim_date ADD CONSTRAINT dim_date_pkey PRIMARY KEY (date);
             
             
-            --//  создаем таблицу с временем  //--
+            --//  создаем таблицу с временем. Т.к. время не меняется, сразу же его и заполним //--
             CREATE TABLE IF NOT EXISTS dim_time AS
             WITH cte1 AS (
                 SELECT tt::time AS t -- создаем серию из дат с интервалом в 1 день
@@ -111,7 +113,7 @@ with DAG(
                        when (time >= '11:00:00'::time AND time < '17:00:00'::time) then 'noon'
                        when (time >= '17:00:00'::time AND time < '22:00:00'::time) then 'evening'
                        when (time >= '22:00:00'::time AND time < '24:00:00'::time) then 'ningt'
-                   end AS date_part
+                   end AS date_part -- Проставляем части суток
             from cte2;
             ALTER TABLE dim_time DROP CONSTRAINT IF EXISTS dim_time_pkey CASCADE;
             ALTER TABLE dim_time ADD CONSTRAINT dim_time_pkey PRIMARY KEY (time);
@@ -269,10 +271,10 @@ with DAG(
     @task
     def fact_nds(downloaded_file_path, file_new_name):
         """
-        Забираем из базы обновленные измерения и их ключи.
+        Забираем из слоя dds обновленные измерения и их ключи.
         Ключи прежних загрузок остаются неизменными.
         Преобразуем эти пары в словари и меняем в таблице фактов значения на ключи.
-        Заливаем пока в stage
+        Заливаем в слой nds
         """
         hook = PostgresHook(postgres_conn_id='postgres_conn')
         conn = hook.get_conn()
