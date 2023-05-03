@@ -1,0 +1,24 @@
+[2023-05-03 18:35:34,107] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.dim_payment manual__2023-05-03T18:34:59.697678+00:00 [queued]>
+[2023-05-03 18:35:34,227] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.dim_payment manual__2023-05-03T18:34:59.697678+00:00 [queued]>
+[2023-05-03 18:35:34,235] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-03 18:35:34,237] {taskinstance.py:1357} INFO - Starting attempt 1 of 6
+[2023-05-03 18:35:34,238] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-03 18:35:34,622] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): dim_payment> on 2023-05-03 18:34:59.697678+00:00
+[2023-05-03 18:35:34,649] {standard_task_runner.py:52} INFO - Started process 533 to run task
+[2023-05-03 18:35:34,711] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dag_etl', 'dim_payment', 'manual__2023-05-03T18:34:59.697678+00:00', '--job-id', '860', '--raw', '--subdir', 'DAGS_FOLDER/dag_etl_taskflow.py', '--cfg-path', '/tmp/tmp2c_ranh7', '--error-file', '/tmp/tmpsrum6xmk']
+[2023-05-03 18:35:34,735] {standard_task_runner.py:80} INFO - Job 860: Subtask dim_payment
+[2023-05-03 18:35:36,406] {task_command.py:370} INFO - Running <TaskInstance: dag_etl.dim_payment manual__2023-05-03T18:34:59.697678+00:00 [running]> on host 295d97741f96
+[2023-05-03 18:35:41,534] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Victor
+AIRFLOW_CTX_DAG_ID=dag_etl
+AIRFLOW_CTX_TASK_ID=dim_payment
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-03T18:34:59.697678+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-05-03T18:34:59.697678+00:00
+[2023-05-03 18:35:42,757] {base.py:68} INFO - Using connection ID 'postgres_conn' for task execution.
+[2023-05-03 18:35:43,686] {python.py:173} INFO - Done. Returned value was: None
+[2023-05-03 18:35:43,969] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=dag_etl, task_id=dim_payment, execution_date=20230503T183459, start_date=20230503T183534, end_date=20230503T183543
+[2023-05-03 18:35:44,280] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-05-03 18:35:44,827] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
