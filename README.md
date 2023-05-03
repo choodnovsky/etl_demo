@@ -92,20 +92,6 @@ _____
 ## 👉[ТУТ !!! Python скрипт с DAG-ом !!! ТУТ](airflow_docker/dags/dag_etl_taskflow.py) 👈
 _____
 <html>
-<head>
-<title>dag_etl_taskflow.py</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<style type="text/css">
-.s0 { color: #cc7832;}
-.s1 { color: #a9b7c6;}
-.s2 { color: #6a8759;}
-.s3 { color: #6897bb;}
-.s4 { color: #808080;}
-.s5 { color: #629755; font-style: italic;}
-.ln { color: #606366; font-weight: normal; font-style: normal; }
-</style>
-</head>
-<body bgcolor="#2b2b2b">
 <table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
 <tr><td><center>
 <font face="Arial, Helvetica" color="#000000">
