@@ -1,0 +1,149 @@
+[2023-05-04 05:11:30,857] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.create_dds_tables_if_not_exists manual__2023-05-04T05:10:16.045945+00:00 [queued]>
+[2023-05-04 05:11:32,091] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.create_dds_tables_if_not_exists manual__2023-05-04T05:10:16.045945+00:00 [queued]>
+[2023-05-04 05:11:32,121] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-04 05:11:32,122] {taskinstance.py:1357} INFO - Starting attempt 1 of 6
+[2023-05-04 05:11:32,124] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-04 05:11:33,806] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): create_dds_tables_if_not_exists> on 2023-05-04 05:10:16.045945+00:00
+[2023-05-04 05:11:33,895] {standard_task_runner.py:52} INFO - Started process 793 to run task
+[2023-05-04 05:11:34,041] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dag_etl', 'create_dds_tables_if_not_exists', 'manual__2023-05-04T05:10:16.045945+00:00', '--job-id', '931', '--raw', '--subdir', 'DAGS_FOLDER/dag_etl_taskflow.py', '--cfg-path', '/tmp/tmpo9zrljza', '--error-file', '/tmp/tmps2qy_aaa']
+[2023-05-04 05:11:34,103] {standard_task_runner.py:80} INFO - Job 931: Subtask create_dds_tables_if_not_exists
+[2023-05-04 05:11:37,820] {task_command.py:370} INFO - Running <TaskInstance: dag_etl.create_dds_tables_if_not_exists manual__2023-05-04T05:10:16.045945+00:00 [running]> on host 295d97741f96
+[2023-05-04 05:11:50,008] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Victor
+AIRFLOW_CTX_DAG_ID=dag_etl
+AIRFLOW_CTX_TASK_ID=create_dds_tables_if_not_exists
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-04T05:10:16.045945+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-05-04T05:10:16.045945+00:00
+[2023-05-04 05:11:50,523] {base.py:68} INFO - Using connection ID 'postgres_conn' for task execution.
+[2023-05-04 05:11:50,659] {dbapi.py:213} INFO - Running statement: 
+            --// Создаем две схемы - слоя в базе //--
+            CREATE SCHEMA IF NOT EXISTS dds;
+            CREATE SCHEMA IF NOT EXISTS nds;
+            
+            --// Устанавливаем путь к схеме dds. В ней будем создавать нужные таблицы //--
+            SET search_path TO dds;        
+            
+            --// создаем таблицу с бранчами //--
+            CREATE TABLE IF NOT EXISTS dim_branch(
+                id SERIAL PRIMARY KEY,
+                branch VARCHAR(100) NOT NULL);
+            
+            --// создаем таблицу с городами //--
+            CREATE TABLE IF NOT EXISTS dim_city(
+                id SERIAL PRIMARY KEY,
+                city VARCHAR(100) NOT NULL);
+            
+            --// создаем таблицу с типами клиентов //--
+            CREATE TABLE IF NOT EXISTS dim_customer_type(
+                id SERIAL PRIMARY KEY,
+                customer_type VARCHAR(200) NOT NULL);
+            
+            --// создаем таблицу с гендерами //--
+            CREATE TABLE IF NOT EXISTS dim_gender(
+                id SERIAL PRIMARY KEY,
+                gender VARCHAR(200) NOT NULL);
+            
+            --// создаем таблицу с продуктовыми линейками //--
+            CREATE TABLE IF NOT EXISTS dim_product_line(
+                id SERIAL PRIMARY KEY,
+                product_line VARCHAR(200) NOT NULL);
+            
+            --// создаем таблицу с видами оплат //--
+            CREATE TABLE IF NOT EXISTS dim_payment(
+                id SERIAL PRIMARY KEY,
+                payment VARCHAR(100) NOT NULL);
+            
+            --// создаем таблицу с датами. Т.к. даты не меняются, сразу же их и заполним //--
+            CREATE TABLE IF NOT EXISTS dim_date AS
+            WITH cte1 AS (
+                SELECT dd::date AS dt -- создаем серию из дат с интервалом в 1 день
+                FROM generate_series('2019-01-01'::timestamp,'2030-01-01'::timestamp,'1 day'::interval) dd)
+            SELECT
+                dt AS date,
+                date_part('week', dt)::int AS week_of_year,
+                date_trunc('week', dt)::date AS week_start,
+                date_part('isodow', dt)::int AS day_of_week,
+                date_part('month', dt)::int AS month_number,
+                to_char(dt::timestamp, 'Month') AS month_name,
+                extract(quarter from dt) AS quarter,
+                date_part('isoyear', dt)::int AS year
+            FROM cte1;
+            ALTER TABLE dim_date DROP CONSTRAINT IF EXISTS dim_date_pkey CASCADE;
+            ALTER TABLE dim_date ADD CONSTRAINT dim_date_pkey PRIMARY KEY (date);
+            
+            
+            --//  создаем таблицу с временем. Т.к. время не меняется, сразу же его и заполним //--
+            CREATE TABLE IF NOT EXISTS dim_time AS
+            WITH cte1 AS (
+                SELECT tt::time AS t -- создаем серию из дат с интервалом в 1 день
+                FROM generate_series(current_date, current_date + '1 day - 1 second'::interval,'1 minute') tt),
+            cte2 AS (SELECT
+                t AS time
+            FROM cte1 ORDER BY t)
+            SELECT time,
+                   case
+                       when (time >= '00:00:00'::time AND time < '06:00:00'::time) then 'ningt'
+                       when (time >= '06:00:00'::time AND time < '11:00:00'::time) then 'morning'
+                       when (time >= '11:00:00'::time AND time < '17:00:00'::time) then 'noon'
+                       when (time >= '17:00:00'::time AND time < '22:00:00'::time) then 'evening'
+                       when (time >= '22:00:00'::time AND time < '24:00:00'::time) then 'ningt'
+                   end AS date_part -- Проставляем части суток
+            from cte2;
+            ALTER TABLE dim_time DROP CONSTRAINT IF EXISTS dim_time_pkey CASCADE;
+            ALTER TABLE dim_time ADD CONSTRAINT dim_time_pkey PRIMARY KEY (time);
+            
+           
+            --// создаем таблицу с фактами //--       
+            CREATE TABLE IF NOT EXISTS fact_sales(
+                invoice_id VARCHAR(15) PRIMARY KEY,
+                branch INT NOT NULL REFERENCES dim_branch(id),
+                city INT NOT NULL REFERENCES dim_city(id),
+                customer_type INT NOT NULL REFERENCES dim_customer_type(id),
+                gender INT NOT NULL REFERENCES dim_gender(id),
+                product_line INT NOT NULL REFERENCES dim_product_line(id),
+                unit_price DOUBLE PRECISION,
+                quantity DOUBLE PRECISION,
+                "tax_5%" DOUBLE PRECISION,
+                total DOUBLE PRECISION,
+                date DATE NOT NULL,
+                time TIME NOT NULL,
+                payment INT NOT NULL REFERENCES dim_payment(id),
+                cogs DOUBLE PRECISION,
+                gross_margin_percentage DOUBLE PRECISION,
+                gross_income DOUBLE PRECISION,
+                rating DOUBLE PRECISION);
+                ALTER TABLE fact_sales ADD CONSTRAINT fact_sales_date_fkey FOREIGN KEY (date) REFERENCES dim_date(date);
+                ALTER TABLE fact_sales ADD CONSTRAINT fact_sales_time_fkey FOREIGN KEY (time) REFERENCES dim_time(time);   
+        , parameters: None
+[2023-05-04 05:11:50,871] {postgres.py:94} INFO - NOTICE:  schema "dds" already exists, skipping
+
+[2023-05-04 05:11:50,879] {postgres.py:94} INFO - NOTICE:  schema "nds" already exists, skipping
+
+[2023-05-04 05:11:50,880] {postgres.py:94} INFO - NOTICE:  relation "dim_branch" already exists, skipping
+
+[2023-05-04 05:11:50,881] {postgres.py:94} INFO - NOTICE:  relation "dim_city" already exists, skipping
+
+[2023-05-04 05:11:50,882] {postgres.py:94} INFO - NOTICE:  relation "dim_customer_type" already exists, skipping
+
+[2023-05-04 05:11:50,883] {postgres.py:94} INFO - NOTICE:  relation "dim_gender" already exists, skipping
+
+[2023-05-04 05:11:50,884] {postgres.py:94} INFO - NOTICE:  relation "dim_product_line" already exists, skipping
+
+[2023-05-04 05:11:50,885] {postgres.py:94} INFO - NOTICE:  relation "dim_payment" already exists, skipping
+
+[2023-05-04 05:11:50,886] {postgres.py:94} INFO - NOTICE:  relation "dim_date" already exists, skipping
+
+[2023-05-04 05:11:50,886] {postgres.py:94} INFO - NOTICE:  drop cascades to constraint fact_sales_date_fkey on table fact_sales
+
+[2023-05-04 05:11:50,887] {postgres.py:94} INFO - NOTICE:  relation "dim_time" already exists, skipping
+
+[2023-05-04 05:11:50,888] {postgres.py:94} INFO - NOTICE:  drop cascades to constraint fact_sales_time_fkey on table fact_sales
+
+[2023-05-04 05:11:50,888] {postgres.py:94} INFO - NOTICE:  relation "fact_sales" already exists, skipping
+
+[2023-05-04 05:11:52,004] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=dag_etl, task_id=create_dds_tables_if_not_exists, execution_date=20230504T051016, start_date=20230504T051130, end_date=20230504T051151
+[2023-05-04 05:11:53,009] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-05-04 05:11:55,024] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,51 @@
+[2023-05-04 05:08:14,689] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.delete_s3_obj scheduled__2023-05-03T00:00:00+00:00 [queued]>
+[2023-05-04 05:08:15,157] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.delete_s3_obj scheduled__2023-05-03T00:00:00+00:00 [queued]>
+[2023-05-04 05:08:15,159] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-04 05:08:15,161] {taskinstance.py:1357} INFO - Starting attempt 1 of 6
+[2023-05-04 05:08:15,163] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-04 05:08:15,688] {taskinstance.py:1377} INFO - Executing <Task(S3DeleteObjectsOperator): delete_s3_obj> on 2023-05-03 00:00:00+00:00
+[2023-05-04 05:08:15,749] {standard_task_runner.py:52} INFO - Started process 462 to run task
+[2023-05-04 05:08:15,836] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dag_etl', 'delete_s3_obj', 'scheduled__2023-05-03T00:00:00+00:00', '--job-id', '913', '--raw', '--subdir', 'DAGS_FOLDER/dag_etl_taskflow.py', '--cfg-path', '/tmp/tmpv5qq2i_0', '--error-file', '/tmp/tmp5af1456r']
+[2023-05-04 05:08:15,873] {standard_task_runner.py:80} INFO - Job 913: Subtask delete_s3_obj
+[2023-05-04 05:08:18,791] {task_command.py:370} INFO - Running <TaskInstance: dag_etl.delete_s3_obj scheduled__2023-05-03T00:00:00+00:00 [running]> on host 295d97741f96
+[2023-05-04 05:08:25,646] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Victor
+AIRFLOW_CTX_DAG_ID=dag_etl
+AIRFLOW_CTX_TASK_ID=delete_s3_obj
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-03T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-05-03T00:00:00+00:00
+[2023-05-04 05:08:26,126] {base.py:68} INFO - Using connection ID 'minio_conn' for task execution.
+[2023-05-04 05:08:26,154] {base_aws.py:206} INFO - Credentials retrieved from login
+[2023-05-04 05:08:32,185] {s3.py:841} INFO - Deleted: ['supermarket_sales.csv']
+[2023-05-04 05:08:33,896] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=dag_etl, task_id=delete_s3_obj, execution_date=20230503T000000, start_date=20230504T050814, end_date=20230504T050833
+[2023-05-04 05:08:37,730] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-05-04 05:08:40,283] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-05-04 05:13:07,476] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.delete_s3_obj scheduled__2023-05-03T00:00:00+00:00 [queued]>
+[2023-05-04 05:13:08,554] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.delete_s3_obj scheduled__2023-05-03T00:00:00+00:00 [queued]>
+[2023-05-04 05:13:08,610] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-04 05:13:08,614] {taskinstance.py:1357} INFO - Starting attempt 1 of 6
+[2023-05-04 05:13:08,626] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-04 05:13:11,045] {taskinstance.py:1377} INFO - Executing <Task(S3DeleteObjectsOperator): delete_s3_obj> on 2023-05-03 00:00:00+00:00
+[2023-05-04 05:13:11,298] {standard_task_runner.py:52} INFO - Started process 996 to run task
+[2023-05-04 05:13:11,530] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dag_etl', 'delete_s3_obj', 'scheduled__2023-05-03T00:00:00+00:00', '--job-id', '953', '--raw', '--subdir', 'DAGS_FOLDER/dag_etl_taskflow.py', '--cfg-path', '/tmp/tmpvfvz4hfq', '--error-file', '/tmp/tmpnvzdwf27']
+[2023-05-04 05:13:11,635] {standard_task_runner.py:80} INFO - Job 953: Subtask delete_s3_obj
+[2023-05-04 05:13:15,393] {task_command.py:370} INFO - Running <TaskInstance: dag_etl.delete_s3_obj scheduled__2023-05-03T00:00:00+00:00 [running]> on host 295d97741f96
+[2023-05-04 05:13:21,940] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Victor
+AIRFLOW_CTX_DAG_ID=dag_etl
+AIRFLOW_CTX_TASK_ID=delete_s3_obj
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-03T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-05-03T00:00:00+00:00
+[2023-05-04 05:13:22,609] {base.py:68} INFO - Using connection ID 'minio_conn' for task execution.
+[2023-05-04 05:13:22,622] {base_aws.py:206} INFO - Credentials retrieved from login
+[2023-05-04 05:13:24,441] {local_task_job.py:221} WARNING - State of this instance has been externally set to success. Terminating instance.
+[2023-05-04 05:13:24,551] {process_utils.py:129} INFO - Sending Signals.SIGTERM to group 996. PIDs of all processes in the group: [996]
+[2023-05-04 05:13:24,569] {process_utils.py:80} INFO - Sending the signal Signals.SIGTERM to group 996
+[2023-05-04 05:13:25,355] {taskinstance.py:1541} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-05-04 05:13:26,814] {process_utils.py:75} INFO - Process psutil.Process(pid=996, status='terminated', exitcode=0, started='05:13:10') (996) terminated with exit code 0

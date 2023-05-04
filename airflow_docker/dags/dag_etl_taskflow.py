@@ -2,6 +2,7 @@ import os
 from datetime import datetime, timedelta
 import pandas as pd
 from airflow import DAG
+from airflow.models import Variable
 from airflow.decorators import task
 from airflow.operators.bash import BashOperator
 from airflow.providers.amazon.aws.hooks.s3 import S3Hook
@@ -10,12 +11,13 @@ from airflow.providers.postgres.hooks.postgres import PostgresHook
 from airflow.providers.postgres.operators.postgres import PostgresOperator
 from airflow.providers.amazon.aws.operators.s3_delete_objects import S3DeleteObjectsOperator
 
-raw_key = 'supermarket_sales.csv'
-raw_bucket = 'raw'
-raw_local_path = 'data'
-file_new_name = 'downloaded_from_minio.csv'
-nds_layer = 'nds'
-dds_layer = 'dds'
+raw_key = Variable.get('RAW_KEY')
+raw_bucket = Variable.get('RAW_BUCKET')
+raw_local_path = Variable.get('RAW_LOCAL_PATH')
+file_new_name = Variable.get('FILE_NEW_NAME')
+nds_layer = Variable.get('NDS_LAYER')
+dds_layer = Variable.get('DDS_LAYER')
+
 default_args = {
     'owner': 'Victor',
     'retries': 5,
@@ -25,7 +27,7 @@ default_args = {
 with DAG(
         dag_id='dag_etl',
         description='стартует, когда в бакет попадает csv файл',
-        start_date=datetime(2023, 4, 27, 0),
+        start_date=datetime(2023, 5, 4, 0),
         schedule_interval='@daily',
         default_args=default_args
 ) as dag:

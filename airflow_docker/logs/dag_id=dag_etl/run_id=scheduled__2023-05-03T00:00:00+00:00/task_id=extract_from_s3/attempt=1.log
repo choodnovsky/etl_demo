@@ -1,0 +1,52 @@
+[2023-05-04 05:06:53,479] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.extract_from_s3 scheduled__2023-05-03T00:00:00+00:00 [queued]>
+[2023-05-04 05:06:53,718] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.extract_from_s3 scheduled__2023-05-03T00:00:00+00:00 [queued]>
+[2023-05-04 05:06:53,719] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-04 05:06:53,720] {taskinstance.py:1357} INFO - Starting attempt 1 of 6
+[2023-05-04 05:06:53,721] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-04 05:06:54,180] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): extract_from_s3> on 2023-05-03 00:00:00+00:00
+[2023-05-04 05:06:54,216] {standard_task_runner.py:52} INFO - Started process 327 to run task
+[2023-05-04 05:06:54,275] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dag_etl', 'extract_from_s3', 'scheduled__2023-05-03T00:00:00+00:00', '--job-id', '907', '--raw', '--subdir', 'DAGS_FOLDER/dag_etl_taskflow.py', '--cfg-path', '/tmp/tmpt63kjc3_', '--error-file', '/tmp/tmprkjdvn2s']
+[2023-05-04 05:06:54,310] {standard_task_runner.py:80} INFO - Job 907: Subtask extract_from_s3
+[2023-05-04 05:06:55,883] {task_command.py:370} INFO - Running <TaskInstance: dag_etl.extract_from_s3 scheduled__2023-05-03T00:00:00+00:00 [running]> on host 295d97741f96
+[2023-05-04 05:06:59,453] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Victor
+AIRFLOW_CTX_DAG_ID=dag_etl
+AIRFLOW_CTX_TASK_ID=extract_from_s3
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-03T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-05-03T00:00:00+00:00
+[2023-05-04 05:06:59,462] {s3.py:861} INFO - Downloading source S3 file from Bucket raw with path supermarket_sales.csv
+[2023-05-04 05:06:59,807] {base.py:68} INFO - Using connection ID 'minio_conn' for task execution.
+[2023-05-04 05:06:59,817] {base_aws.py:206} INFO - Credentials retrieved from login
+[2023-05-04 05:07:04,426] {python.py:173} INFO - Done. Returned value was: /opt/***/data/***_tmp_1drgo0pg
+[2023-05-04 05:07:05,022] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=dag_etl, task_id=extract_from_s3, execution_date=20230503T000000, start_date=20230504T050653, end_date=20230504T050705
+[2023-05-04 05:07:05,304] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-05-04 05:07:06,735] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-05-04 05:11:06,410] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.extract_from_s3 scheduled__2023-05-03T00:00:00+00:00 [queued]>
+[2023-05-04 05:11:07,020] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.extract_from_s3 scheduled__2023-05-03T00:00:00+00:00 [queued]>
+[2023-05-04 05:11:07,038] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-04 05:11:07,043] {taskinstance.py:1357} INFO - Starting attempt 1 of 6
+[2023-05-04 05:11:07,045] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-04 05:11:08,153] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): extract_from_s3> on 2023-05-03 00:00:00+00:00
+[2023-05-04 05:11:08,310] {standard_task_runner.py:52} INFO - Started process 736 to run task
+[2023-05-04 05:11:08,394] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dag_etl', 'extract_from_s3', 'scheduled__2023-05-03T00:00:00+00:00', '--job-id', '924', '--raw', '--subdir', 'DAGS_FOLDER/dag_etl_taskflow.py', '--cfg-path', '/tmp/tmpvm958w_a', '--error-file', '/tmp/tmp4tjwpgfh']
+[2023-05-04 05:11:08,417] {standard_task_runner.py:80} INFO - Job 924: Subtask extract_from_s3
+[2023-05-04 05:11:09,791] {task_command.py:370} INFO - Running <TaskInstance: dag_etl.extract_from_s3 scheduled__2023-05-03T00:00:00+00:00 [running]> on host 295d97741f96
+[2023-05-04 05:11:16,159] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Victor
+AIRFLOW_CTX_DAG_ID=dag_etl
+AIRFLOW_CTX_TASK_ID=extract_from_s3
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-03T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-05-03T00:00:00+00:00
+[2023-05-04 05:11:16,169] {s3.py:861} INFO - Downloading source S3 file from Bucket raw with path supermarket_sales.csv
+[2023-05-04 05:11:16,604] {base.py:68} INFO - Using connection ID 'minio_conn' for task execution.
+[2023-05-04 05:11:16,666] {base_aws.py:206} INFO - Credentials retrieved from login
+[2023-05-04 05:11:26,567] {python.py:173} INFO - Done. Returned value was: /opt/***/data/***_tmp_i30z5f_c
+[2023-05-04 05:11:29,514] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=dag_etl, task_id=extract_from_s3, execution_date=20230503T000000, start_date=20230504T051106, end_date=20230504T051129
+[2023-05-04 05:11:30,105] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-05-04 05:11:32,120] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
