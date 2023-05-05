@@ -1,0 +1,59 @@
+[2023-05-05 05:31:28,301] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.extract_from_s3 manual__2023-05-05T05:30:43.346434+00:00 [queued]>
+[2023-05-05 05:31:28,441] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.extract_from_s3 manual__2023-05-05T05:30:43.346434+00:00 [queued]>
+[2023-05-05 05:31:28,451] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-05 05:31:28,452] {taskinstance.py:1357} INFO - Starting attempt 1 of 6
+[2023-05-05 05:31:28,458] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-05 05:31:28,758] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): extract_from_s3> on 2023-05-05 05:30:43.346434+00:00
+[2023-05-05 05:31:28,776] {standard_task_runner.py:52} INFO - Started process 468 to run task
+[2023-05-05 05:31:28,801] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dag_etl', 'extract_from_s3', 'manual__2023-05-05T05:30:43.346434+00:00', '--job-id', '1020', '--raw', '--subdir', 'DAGS_FOLDER/dag_etl_taskflow.py', '--cfg-path', '/tmp/tmp3aoy0855', '--error-file', '/tmp/tmp8zyr13ua']
+[2023-05-05 05:31:28,808] {standard_task_runner.py:80} INFO - Job 1020: Subtask extract_from_s3
+[2023-05-05 05:31:29,533] {task_command.py:370} INFO - Running <TaskInstance: dag_etl.extract_from_s3 manual__2023-05-05T05:30:43.346434+00:00 [running]> on host 295d97741f96
+[2023-05-05 05:31:30,757] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Victor
+AIRFLOW_CTX_DAG_ID=dag_etl
+AIRFLOW_CTX_TASK_ID=extract_from_s3
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-05T05:30:43.346434+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-05-05T05:30:43.346434+00:00
+[2023-05-05 05:31:30,763] {s3.py:861} INFO - Downloading source S3 file from Bucket raw with path supermarket_sales.csv
+[2023-05-05 05:31:30,904] {base.py:68} INFO - Using connection ID 'minio_conn' for task execution.
+[2023-05-05 05:31:30,922] {base_aws.py:206} INFO - Credentials retrieved from login
+[2023-05-05 05:31:33,938] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 179, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 202, in extract_from_s3
+    file_name = hook.download_file(bucket_key, bucket_name, local_path)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 63, in wrapper
+    return func(*bound_args.args, **bound_args.kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 91, in wrapper
+    return func(*bound_args.args, **bound_args.kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 871, in download_file
+    raise e
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 864, in download_file
+    s3_obj = self.get_key(key, bucket_name)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 63, in wrapper
+    return func(*bound_args.args, **bound_args.kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 91, in wrapper
+    return func(*bound_args.args, **bound_args.kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 466, in get_key
+    obj.load()
+  File "/home/airflow/.local/lib/python3.7/site-packages/boto3/resources/factory.py", line 564, in do_action
+    response = action(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/boto3/resources/action.py", line 88, in __call__
+    response = getattr(parent.meta.client, operation_name)(*args, **params)
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/client.py", line 508, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/client.py", line 911, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (404) when calling the HeadObject operation: Not Found
+[2023-05-05 05:31:34,220] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=dag_etl, task_id=extract_from_s3, execution_date=20230505T053043, start_date=20230505T053128, end_date=20230505T053134
+[2023-05-05 05:31:34,580] {standard_task_runner.py:97} ERROR - Failed to execute job 1020 for task extract_from_s3 (An error occurred (404) when calling the HeadObject operation: Not Found; 468)
+[2023-05-05 05:31:34,671] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-05-05 05:31:35,415] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

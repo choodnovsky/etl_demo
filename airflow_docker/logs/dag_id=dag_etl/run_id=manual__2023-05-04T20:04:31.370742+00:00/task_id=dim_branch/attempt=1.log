@@ -1,0 +1,24 @@
+[2023-05-04 20:05:09,428] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.dim_branch manual__2023-05-04T20:04:31.370742+00:00 [queued]>
+[2023-05-04 20:05:09,884] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag_etl.dim_branch manual__2023-05-04T20:04:31.370742+00:00 [queued]>
+[2023-05-04 20:05:09,886] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-04 20:05:09,890] {taskinstance.py:1357} INFO - Starting attempt 1 of 6
+[2023-05-04 20:05:09,900] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-04 20:05:10,273] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): dim_branch> on 2023-05-04 20:04:31.370742+00:00
+[2023-05-04 20:05:10,312] {standard_task_runner.py:52} INFO - Started process 809 to run task
+[2023-05-04 20:05:10,348] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dag_etl', 'dim_branch', 'manual__2023-05-04T20:04:31.370742+00:00', '--job-id', '992', '--raw', '--subdir', 'DAGS_FOLDER/dag_etl_taskflow.py', '--cfg-path', '/tmp/tmpon4llvy9', '--error-file', '/tmp/tmp_erdggld']
+[2023-05-04 20:05:10,351] {standard_task_runner.py:80} INFO - Job 992: Subtask dim_branch
+[2023-05-04 20:05:11,840] {task_command.py:370} INFO - Running <TaskInstance: dag_etl.dim_branch manual__2023-05-04T20:04:31.370742+00:00 [running]> on host 295d97741f96
+[2023-05-04 20:05:17,156] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Victor
+AIRFLOW_CTX_DAG_ID=dag_etl
+AIRFLOW_CTX_TASK_ID=dim_branch
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-04T20:04:31.370742+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-05-04T20:04:31.370742+00:00
+[2023-05-04 20:05:18,148] {base.py:68} INFO - Using connection ID 'postgres_conn' for task execution.
+[2023-05-04 20:05:18,903] {python.py:173} INFO - Done. Returned value was: None
+[2023-05-04 20:05:19,333] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=dag_etl, task_id=dim_branch, execution_date=20230504T200431, start_date=20230504T200509, end_date=20230504T200519
+[2023-05-04 20:05:19,641] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-05-04 20:05:21,636] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

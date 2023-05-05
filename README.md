@@ -277,10 +277,10 @@ dag_etl_taskflow.py</font>
 <a name="l177"><span class="ln">177  </span></a>                                    <span class="s2">product_line, unit_price, quantity, &quot;tax_5%&quot;, total, date,</span>
 <a name="l178"><span class="ln">178  </span></a>                                    <span class="s2">time, payment, cogs, gross_margin_percentage, gross_income, rating)</span>
 <a name="l179"><span class="ln">179  </span></a>            <span class="s2">(SELECT </span>
-<a name="l180"><span class="ln">180  </span></a>                    <span class="s2">invoice_id, branch, city, customer_type, gender, </span>
+<a name="l180"><span class="ln">180  </span></a>                    <span class="s2">distinct invoice_id, branch, city, customer_type, gender, </span>
 <a name="l181"><span class="ln">181  </span></a>                    <span class="s2">product_line, unit_price, quantity, &quot;tax_5%&quot;, total, date::date,</span>
 <a name="l182"><span class="ln">182  </span></a>                    <span class="s2">time, payment, cogs, gross_margin_percentage, gross_income, rating </span>
-<a name="l183"><span class="ln">183  </span></a>            <span class="s2">FROM </span><span class="s0">{</span><span class="s1">nds_layer</span><span class="s0">}</span><span class="s2">.fact_sales WHERE invoice_id NOT IN (SELECT invoice_id FROM fact_sales));</span>
+<a name="l183"><span class="ln">183  </span></a>            <span class="s2">FROM </span><span class="s0">{</span><span class="s1">nds_layer</span><span class="s0">}</span><span class="s2">.fact_sales WHERE invoice_id NOT IN (SELECT distinct invoice_id FROM fact_sales));</span>
 <a name="l184"><span class="ln">184  </span></a>            <span class="s2">&quot;&quot;&quot;</span>
 <a name="l185"><span class="ln">185  </span></a>    <span class="s1">)</span>
 <a name="l186"><span class="ln">186  </span></a>    <span class="s1">task_delete_s3_obj = S3DeleteObjectsOperator(</span>
@@ -429,5 +429,5 @@ dag_etl_taskflow.py</font>
 Поскольку на территории РФ использование Tableau невозможно, а MS Power BI выпускается только для OS Windows будем использовать __SUPERSET__
 1. Подключаемся по дефолтным логину и паролю ![superset_connection](images/superset_connection.png)
 2. Создаем подключение к хранилищу на __POSTGRES__ ![postgres connection](images/postgres_connection.png)
-3. Создаем чарты как из витрин в слое __mart__, так и напрямую из слоя __dds__ sql-запрсами в UI superset. Собираем их в дашборд ![dashboard](images/dashboard.jpg)
+3. Создаем чарты как из витрин в слое __mart__, так и напрямую из слоя __dds__ sql-запрсами в __UI SUPERSET__. Собираем их в дашборд ![dashboard](images/dashboard.jpg)
 4. В UI __SUPERSET__ без труда можно настроить автоматическое обновление и рассылку ![refresh](images/refresh.png)

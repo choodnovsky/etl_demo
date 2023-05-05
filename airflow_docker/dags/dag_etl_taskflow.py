@@ -110,11 +110,11 @@ with DAG(
             FROM cte1 ORDER BY t)
             SELECT time,
                    case
-                       when (time >= '00:00:00'::time AND time < '06:00:00'::time) then 'ningt'
+                       when (time >= '00:00:00'::time AND time < '06:00:00'::time) then 'night'
                        when (time >= '06:00:00'::time AND time < '11:00:00'::time) then 'morning'
                        when (time >= '11:00:00'::time AND time < '17:00:00'::time) then 'noon'
                        when (time >= '17:00:00'::time AND time < '22:00:00'::time) then 'evening'
-                       when (time >= '22:00:00'::time AND time < '24:00:00'::time) then 'ningt'
+                       when (time >= '22:00:00'::time AND time < '24:00:00'::time) then 'night'
                    end AS date_part -- Проставляем части суток
             from cte2;
             ALTER TABLE dim_time DROP CONSTRAINT IF EXISTS dim_time_pkey CASCADE;
@@ -177,10 +177,10 @@ with DAG(
                                     product_line, unit_price, quantity, "tax_5%", total, date,
                                     time, payment, cogs, gross_margin_percentage, gross_income, rating)
             (SELECT 
-                    invoice_id, branch, city, customer_type, gender, 
+                    distinct invoice_id, branch, city, customer_type, gender, 
                     product_line, unit_price, quantity, "tax_5%", total, date::date,
                     time, payment, cogs, gross_margin_percentage, gross_income, rating 
-            FROM {nds_layer}.fact_sales WHERE invoice_id NOT IN (SELECT invoice_id FROM fact_sales));
+            FROM {nds_layer}.fact_sales WHERE invoice_id NOT IN (SELECT distinct invoice_id FROM fact_sales));
             """
     )
     task_delete_s3_obj = S3DeleteObjectsOperator(
