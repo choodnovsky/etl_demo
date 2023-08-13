@@ -38,7 +38,7 @@ with DAG(
         aws_conn_id='minio_conn',
         mode='poke',
         poke_interval=5,
-        timeout=30 # Тут надо выставить 24*60*60 - т.е. все сутки, НО комп сильно устает
+        timeout=30
     )
     task_create_tables = PostgresOperator(
         task_id='create_dds_tables_if_not_exists',

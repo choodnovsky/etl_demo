@@ -1,0 +1,1427 @@
+[2023-07-03 16:47:51,464] {processor.py:153} INFO - Started process (PID=481) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:47:51,465] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:47:51,466] {logging_mixin.py:115} INFO - [2023-07-03 16:47:51,466] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:47:51,479] {processor.py:651} INFO - DAG(s) dict_keys(['dummyoperator_dag']) retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:47:51,564] {logging_mixin.py:115} INFO - [2023-07-03 16:47:51,564] {manager.py:508} INFO - Created Permission View: can edit on DAG:dummyoperator_dag
+[2023-07-03 16:47:51,570] {logging_mixin.py:115} INFO - [2023-07-03 16:47:51,570] {manager.py:508} INFO - Created Permission View: can delete on DAG:dummyoperator_dag
+[2023-07-03 16:47:51,575] {logging_mixin.py:115} INFO - [2023-07-03 16:47:51,575] {manager.py:508} INFO - Created Permission View: can read on DAG:dummyoperator_dag
+[2023-07-03 16:47:51,575] {logging_mixin.py:115} INFO - [2023-07-03 16:47:51,575] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-07-03 16:47:51,582] {logging_mixin.py:115} INFO - [2023-07-03 16:47:51,582] {dag.py:2398} INFO - Creating ORM DAG for dummyoperator_dag
+[2023-07-03 16:47:51,591] {logging_mixin.py:115} INFO - [2023-07-03 16:47:51,591] {dag.py:2931} INFO - Setting next_dagrun for dummyoperator_dag to 2022-02-21T00:00:00+00:00, run_after=2022-02-22T00:00:00+00:00
+[2023-07-03 16:47:51,602] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.141 seconds
+[2023-07-03 16:48:21,764] {processor.py:153} INFO - Started process (PID=511) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:48:21,766] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:48:21,768] {logging_mixin.py:115} INFO - [2023-07-03 16:48:21,768] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:48:21,779] {processor.py:651} INFO - DAG(s) dict_keys(['dummyoperator_dag']) retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:48:21,807] {logging_mixin.py:115} INFO - [2023-07-03 16:48:21,807] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-07-03 16:48:21,825] {logging_mixin.py:115} INFO - [2023-07-03 16:48:21,824] {dag.py:2931} INFO - Setting next_dagrun for dummyoperator_dag to 2022-02-21T00:00:00+00:00, run_after=2022-02-22T00:00:00+00:00
+[2023-07-03 16:48:21,832] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.074 seconds
+[2023-07-03 16:48:51,982] {processor.py:153} INFO - Started process (PID=549) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:48:51,985] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:48:51,986] {logging_mixin.py:115} INFO - [2023-07-03 16:48:51,986] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:48:51,998] {processor.py:651} INFO - DAG(s) dict_keys(['dummyoperator_dag']) retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:48:52,030] {logging_mixin.py:115} INFO - [2023-07-03 16:48:52,030] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-07-03 16:48:52,048] {logging_mixin.py:115} INFO - [2023-07-03 16:48:52,048] {dag.py:2931} INFO - Setting next_dagrun for dummyoperator_dag to 2022-03-06T00:00:00+00:00, run_after=2022-03-07T00:00:00+00:00
+[2023-07-03 16:48:52,057] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.080 seconds
+[2023-07-03 16:49:22,238] {processor.py:153} INFO - Started process (PID=588) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:49:22,241] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:49:22,242] {logging_mixin.py:115} INFO - [2023-07-03 16:49:22,242] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:49:22,254] {processor.py:651} INFO - DAG(s) dict_keys(['dummyoperator_dag']) retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:49:22,287] {logging_mixin.py:115} INFO - [2023-07-03 16:49:22,287] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-07-03 16:49:22,306] {logging_mixin.py:115} INFO - [2023-07-03 16:49:22,306] {dag.py:2931} INFO - Setting next_dagrun for dummyoperator_dag to 2022-03-29T00:00:00+00:00, run_after=2022-03-30T00:00:00+00:00
+[2023-07-03 16:49:22,314] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.082 seconds
+[2023-07-03 16:49:52,482] {processor.py:153} INFO - Started process (PID=617) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:49:52,484] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:49:52,485] {logging_mixin.py:115} INFO - [2023-07-03 16:49:52,485] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:49:52,495] {processor.py:651} INFO - DAG(s) dict_keys(['dummyoperator_dag']) retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:49:52,525] {logging_mixin.py:115} INFO - [2023-07-03 16:49:52,525] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-07-03 16:49:52,543] {logging_mixin.py:115} INFO - [2023-07-03 16:49:52,543] {dag.py:2931} INFO - Setting next_dagrun for dummyoperator_dag to 2022-04-21T00:00:00+00:00, run_after=2022-04-22T00:00:00+00:00
+[2023-07-03 16:49:52,552] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.076 seconds
+[2023-07-03 16:50:22,709] {processor.py:153} INFO - Started process (PID=654) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:50:22,710] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:50:22,711] {logging_mixin.py:115} INFO - [2023-07-03 16:50:22,711] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:50:22,719] {processor.py:651} INFO - DAG(s) dict_keys(['dummyoperator_dag']) retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:50:22,749] {logging_mixin.py:115} INFO - [2023-07-03 16:50:22,749] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-07-03 16:50:22,768] {logging_mixin.py:115} INFO - [2023-07-03 16:50:22,768] {dag.py:2931} INFO - Setting next_dagrun for dummyoperator_dag to 2022-05-14T00:00:00+00:00, run_after=2022-05-15T00:00:00+00:00
+[2023-07-03 16:50:22,777] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.072 seconds
+[2023-07-03 16:50:52,954] {processor.py:153} INFO - Started process (PID=692) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:50:52,956] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:50:52,958] {logging_mixin.py:115} INFO - [2023-07-03 16:50:52,957] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:50:52,970] {processor.py:651} INFO - DAG(s) dict_keys(['dummyoperator_dag']) retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:50:53,006] {logging_mixin.py:115} INFO - [2023-07-03 16:50:53,006] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-07-03 16:50:53,028] {logging_mixin.py:115} INFO - [2023-07-03 16:50:53,028] {dag.py:2931} INFO - Setting next_dagrun for dummyoperator_dag to 2022-06-04T00:00:00+00:00, run_after=2022-06-05T00:00:00+00:00
+[2023-07-03 16:50:53,037] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.090 seconds
+[2023-07-03 16:51:23,203] {processor.py:153} INFO - Started process (PID=730) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:51:23,205] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:51:23,206] {logging_mixin.py:115} INFO - [2023-07-03 16:51:23,206] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:51:23,216] {processor.py:651} INFO - DAG(s) dict_keys(['dummyoperator_dag']) retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:51:23,249] {logging_mixin.py:115} INFO - [2023-07-03 16:51:23,249] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-07-03 16:51:23,269] {logging_mixin.py:115} INFO - [2023-07-03 16:51:23,269] {dag.py:2931} INFO - Setting next_dagrun for dummyoperator_dag to 2022-06-24T00:00:00+00:00, run_after=2022-06-25T00:00:00+00:00
+[2023-07-03 16:51:23,278] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.081 seconds
+[2023-07-03 16:51:47,741] {processor.py:153} INFO - Started process (PID=759) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:51:47,743] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:51:47,744] {logging_mixin.py:115} INFO - [2023-07-03 16:51:47,744] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:51:47,748] {logging_mixin.py:115} INFO - [2023-07-03 16:51:47,747] {dagbag.py:300} INFO - File /opt/airflow/dags/sample.py assumed to contain no DAGs. Skipping.
+[2023-07-03 16:51:47,748] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:51:47,770] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.034 seconds
+[2023-07-03 16:52:08,910] {processor.py:153} INFO - Started process (PID=788) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:52:08,912] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:52:08,913] {logging_mixin.py:115} INFO - [2023-07-03 16:52:08,913] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:52:08,916] {logging_mixin.py:115} INFO - [2023-07-03 16:52:08,916] {dagbag.py:300} INFO - File /opt/airflow/dags/sample.py assumed to contain no DAGs. Skipping.
+[2023-07-03 16:52:08,917] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:52:08,940] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.036 seconds
+[2023-07-03 16:52:22,989] {processor.py:153} INFO - Started process (PID=802) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:52:22,990] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:52:22,991] {logging_mixin.py:115} INFO - [2023-07-03 16:52:22,991] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:52:23,006] {processor.py:651} INFO - DAG(s) dict_keys(['dummyoperator_dag']) retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:52:23,039] {logging_mixin.py:115} INFO - [2023-07-03 16:52:23,039] {dag.py:2379} INFO - Sync 1 DAGs
+[2023-07-03 16:52:23,059] {logging_mixin.py:115} INFO - [2023-07-03 16:52:23,059] {dag.py:2931} INFO - Setting next_dagrun for dummyoperator_dag to 2022-08-09T00:00:00+00:00, run_after=2022-08-10T00:00:00+00:00
+[2023-07-03 16:52:23,069] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.085 seconds
+[2023-07-03 16:52:33,096] {processor.py:153} INFO - Started process (PID=816) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:52:33,097] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:52:33,098] {logging_mixin.py:115} INFO - [2023-07-03 16:52:33,098] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:52:33,127] {logging_mixin.py:115} INFO - [2023-07-03 16:52:33,125] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 1, in <module>
+    from airflow.decorators import DAG
+ImportError: cannot import name 'DAG' from 'airflow.decorators' (/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py)
+[2023-07-03 16:52:33,128] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:52:33,151] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.059 seconds
+[2023-07-03 16:52:45,266] {processor.py:153} INFO - Started process (PID=836) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:52:45,268] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:52:45,269] {logging_mixin.py:115} INFO - [2023-07-03 16:52:45,269] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:52:45,303] {logging_mixin.py:115} INFO - [2023-07-03 16:52:45,301] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 5, in <module>
+    my_dag = DAG(
+NameError: name 'DAG' is not defined
+[2023-07-03 16:52:45,304] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:52:45,328] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.071 seconds
+[2023-07-03 16:53:00,387] {processor.py:153} INFO - Started process (PID=849) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:53:00,389] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:53:00,391] {logging_mixin.py:115} INFO - [2023-07-03 16:53:00,390] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:53:00,422] {logging_mixin.py:115} INFO - [2023-07-03 16:53:00,421] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 5, in <module>
+    my_dag = DAG(
+NameError: name 'DAG' is not defined
+[2023-07-03 16:53:00,423] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:53:00,447] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.066 seconds
+[2023-07-03 16:53:07,445] {processor.py:153} INFO - Started process (PID=863) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:53:07,446] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:53:07,447] {logging_mixin.py:115} INFO - [2023-07-03 16:53:07,447] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:53:07,471] {logging_mixin.py:115} INFO - [2023-07-03 16:53:07,469] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 6, in <module>
+    my_dag = DAG(
+NameError: name 'DAG' is not defined
+[2023-07-03 16:53:07,472] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:53:07,493] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.051 seconds
+[2023-07-03 16:53:19,589] {processor.py:153} INFO - Started process (PID=883) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:53:19,591] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:53:19,592] {logging_mixin.py:115} INFO - [2023-07-03 16:53:19,592] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:53:19,600] {logging_mixin.py:115} INFO - [2023-07-03 16:53:19,599] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 6
+    @dag
+       ^
+SyntaxError: unexpected EOF while parsing
+[2023-07-03 16:53:19,602] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:53:19,632] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.048 seconds
+[2023-07-03 16:53:31,655] {processor.py:153} INFO - Started process (PID=897) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:53:31,656] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:53:31,657] {logging_mixin.py:115} INFO - [2023-07-03 16:53:31,657] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:53:31,664] {logging_mixin.py:115} INFO - [2023-07-03 16:53:31,663] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 8
+    )
+    ^
+SyntaxError: unexpected EOF while parsing
+[2023-07-03 16:53:31,664] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:53:31,692] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.042 seconds
+[2023-07-03 16:54:01,870] {processor.py:153} INFO - Started process (PID=935) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:54:01,872] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:54:01,873] {logging_mixin.py:115} INFO - [2023-07-03 16:54:01,873] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:54:01,878] {logging_mixin.py:115} INFO - [2023-07-03 16:54:01,877] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 8
+    )
+    ^
+SyntaxError: unexpected EOF while parsing
+[2023-07-03 16:54:01,879] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:54:01,907] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.042 seconds
+[2023-07-03 16:54:32,096] {processor.py:153} INFO - Started process (PID=972) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:54:32,099] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:54:32,103] {logging_mixin.py:115} INFO - [2023-07-03 16:54:32,103] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:54:32,124] {logging_mixin.py:115} INFO - [2023-07-03 16:54:32,121] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 8
+    )
+    ^
+SyntaxError: unexpected EOF while parsing
+[2023-07-03 16:54:32,129] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:54:32,186] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.101 seconds
+[2023-07-03 16:54:45,851] {processor.py:153} INFO - Started process (PID=994) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:54:45,853] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:54:45,854] {logging_mixin.py:115} INFO - [2023-07-03 16:54:45,854] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:54:45,866] {logging_mixin.py:115} INFO - [2023-07-03 16:54:45,865] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4
+    from airflow.providers.
+                          ^
+SyntaxError: invalid syntax
+[2023-07-03 16:54:45,867] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:54:45,899] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.056 seconds
+[2023-07-03 16:54:57,934] {processor.py:153} INFO - Started process (PID=1007) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:54:57,936] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:54:57,937] {logging_mixin.py:115} INFO - [2023-07-03 16:54:57,937] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:54:57,944] {logging_mixin.py:115} INFO - [2023-07-03 16:54:57,943] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4
+    from airflow.providers.telegram.operators.telegram import
+                                                             ^
+SyntaxError: invalid syntax
+[2023-07-03 16:54:57,945] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:54:57,979] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.048 seconds
+[2023-07-03 16:55:04,018] {processor.py:153} INFO - Started process (PID=1012) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:55:04,019] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:55:04,020] {logging_mixin.py:115} INFO - [2023-07-03 16:55:04,020] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:55:04,029] {logging_mixin.py:115} INFO - [2023-07-03 16:55:04,028] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 8
+    )
+    ^
+SyntaxError: unexpected EOF while parsing
+[2023-07-03 16:55:04,031] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:55:04,061] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.047 seconds
+[2023-07-03 16:55:11,071] {processor.py:153} INFO - Started process (PID=1026) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:55:11,072] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:55:11,073] {logging_mixin.py:115} INFO - [2023-07-03 16:55:11,073] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:55:11,078] {logging_mixin.py:115} INFO - [2023-07-03 16:55:11,078] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 9
+    )
+    ^
+SyntaxError: unexpected EOF while parsing
+[2023-07-03 16:55:11,079] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:55:11,107] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.040 seconds
+[2023-07-03 16:55:17,183] {processor.py:153} INFO - Started process (PID=1037) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:55:17,184] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:55:17,185] {logging_mixin.py:115} INFO - [2023-07-03 16:55:17,185] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:55:17,192] {logging_mixin.py:115} INFO - [2023-07-03 16:55:17,191] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 9
+    )
+    ^
+SyntaxError: invalid syntax
+[2023-07-03 16:55:17,193] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:55:17,226] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.048 seconds
+[2023-07-03 16:55:27,216] {processor.py:153} INFO - Started process (PID=1051) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:55:27,218] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:55:27,219] {logging_mixin.py:115} INFO - [2023-07-03 16:55:27,219] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:55:27,227] {logging_mixin.py:115} INFO - [2023-07-03 16:55:27,226] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 7
+    schedule_interval=@daily
+                      ^
+SyntaxError: invalid syntax
+[2023-07-03 16:55:27,228] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:55:27,255] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.044 seconds
+[2023-07-03 16:55:38,324] {processor.py:153} INFO - Started process (PID=1065) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:55:38,326] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:55:38,327] {logging_mixin.py:115} INFO - [2023-07-03 16:55:38,327] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:55:38,335] {logging_mixin.py:115} INFO - [2023-07-03 16:55:38,334] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 9
+    )
+    ^
+SyntaxError: unexpected EOF while parsing
+[2023-07-03 16:55:38,336] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:55:38,370] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.052 seconds
+[2023-07-03 16:56:08,572] {processor.py:153} INFO - Started process (PID=1102) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:56:08,574] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:56:08,575] {logging_mixin.py:115} INFO - [2023-07-03 16:56:08,575] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:56:08,581] {logging_mixin.py:115} INFO - [2023-07-03 16:56:08,580] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 9
+    )
+    ^
+SyntaxError: unexpected EOF while parsing
+[2023-07-03 16:56:08,582] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:56:08,611] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.043 seconds
+[2023-07-03 16:56:12,616] {processor.py:153} INFO - Started process (PID=1107) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:56:12,618] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:56:12,619] {logging_mixin.py:115} INFO - [2023-07-03 16:56:12,619] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:56:12,627] {logging_mixin.py:115} INFO - [2023-07-03 16:56:12,626] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 10
+    )
+    ^
+SyntaxError: unexpected EOF while parsing
+[2023-07-03 16:56:12,628] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:56:12,658] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.046 seconds
+[2023-07-03 16:56:32,290] {processor.py:153} INFO - Started process (PID=1137) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:56:32,292] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:56:32,293] {logging_mixin.py:115} INFO - [2023-07-03 16:56:32,293] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:56:32,301] {logging_mixin.py:115} INFO - [2023-07-03 16:56:32,300] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 10
+    )
+    ^
+SyntaxError: invalid syntax
+[2023-07-03 16:56:32,302] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:56:32,335] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.052 seconds
+[2023-07-03 16:56:48,384] {processor.py:153} INFO - Started process (PID=1160) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:56:48,386] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:56:48,387] {logging_mixin.py:115} INFO - [2023-07-03 16:56:48,387] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:56:48,404] {logging_mixin.py:115} INFO - [2023-07-03 16:56:48,402] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 10
+    )
+    ^
+SyntaxError: unexpected EOF while parsing
+[2023-07-03 16:56:48,406] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:56:48,457] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.078 seconds
+[2023-07-03 16:57:18,638] {processor.py:153} INFO - Started process (PID=1189) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:57:18,640] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:57:18,641] {logging_mixin.py:115} INFO - [2023-07-03 16:57:18,641] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:57:18,647] {logging_mixin.py:115} INFO - [2023-07-03 16:57:18,646] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 10
+    )
+    ^
+SyntaxError: unexpected EOF while parsing
+[2023-07-03 16:57:18,648] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:57:18,681] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.047 seconds
+[2023-07-03 16:57:24,214] {processor.py:153} INFO - Started process (PID=1209) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:57:24,217] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:57:24,219] {logging_mixin.py:115} INFO - [2023-07-03 16:57:24,219] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:57:24,233] {logging_mixin.py:115} INFO - [2023-07-03 16:57:24,230] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 11
+    )
+    ^
+SyntaxError: unexpected EOF while parsing
+[2023-07-03 16:57:24,235] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:57:24,290] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.085 seconds
+[2023-07-03 16:57:42,330] {processor.py:153} INFO - Started process (PID=1223) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:57:42,332] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:57:42,333] {logging_mixin.py:115} INFO - [2023-07-03 16:57:42,333] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:57:42,341] {logging_mixin.py:115} INFO - [2023-07-03 16:57:42,340] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 12
+    )
+    ^
+SyntaxError: unexpected EOF while parsing
+[2023-07-03 16:57:42,342] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:57:42,373] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.049 seconds
+[2023-07-03 16:58:12,593] {processor.py:153} INFO - Started process (PID=1261) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:58:12,595] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:58:12,596] {logging_mixin.py:115} INFO - [2023-07-03 16:58:12,596] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:58:12,602] {logging_mixin.py:115} INFO - [2023-07-03 16:58:12,601] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 12
+    )
+    ^
+SyntaxError: unexpected EOF while parsing
+[2023-07-03 16:58:12,604] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:58:12,635] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.049 seconds
+[2023-07-03 16:58:42,810] {processor.py:153} INFO - Started process (PID=1298) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:58:42,813] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:58:42,814] {logging_mixin.py:115} INFO - [2023-07-03 16:58:42,814] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:58:42,820] {logging_mixin.py:115} INFO - [2023-07-03 16:58:42,819] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 12
+    )
+    ^
+SyntaxError: unexpected EOF while parsing
+[2023-07-03 16:58:42,821] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:58:42,849] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.045 seconds
+[2023-07-03 16:58:45,836] {processor.py:153} INFO - Started process (PID=1303) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:58:45,838] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:58:45,840] {logging_mixin.py:115} INFO - [2023-07-03 16:58:45,840] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:58:45,848] {logging_mixin.py:115} INFO - [2023-07-03 16:58:45,847] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 13
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+[2023-07-03 16:58:45,849] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:58:45,879] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.050 seconds
+[2023-07-03 16:59:04,477] {processor.py:153} INFO - Started process (PID=1332) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:59:04,479] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:59:04,480] {logging_mixin.py:115} INFO - [2023-07-03 16:59:04,480] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:59:04,488] {logging_mixin.py:115} INFO - [2023-07-03 16:59:04,487] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 14
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+[2023-07-03 16:59:04,490] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:59:04,517] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.046 seconds
+[2023-07-03 16:59:26,056] {processor.py:153} INFO - Started process (PID=1361) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:59:26,058] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:59:26,059] {logging_mixin.py:115} INFO - [2023-07-03 16:59:26,059] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:59:26,065] {logging_mixin.py:115} INFO - [2023-07-03 16:59:26,064] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 15
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+[2023-07-03 16:59:26,065] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:59:26,092] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.041 seconds
+[2023-07-03 16:59:46,194] {processor.py:153} INFO - Started process (PID=1375) to work on /opt/airflow/dags/sample.py
+[2023-07-03 16:59:46,195] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 16:59:46,196] {logging_mixin.py:115} INFO - [2023-07-03 16:59:46,196] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 16:59:46,228] {logging_mixin.py:115} INFO - [2023-07-03 16:59:46,226] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 16:59:46,229] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 16:59:46,249] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.061 seconds
+[2023-07-03 17:00:02,372] {processor.py:153} INFO - Started process (PID=1404) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:00:02,375] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:00:02,376] {logging_mixin.py:115} INFO - [2023-07-03 17:00:02,376] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:00:02,383] {logging_mixin.py:115} INFO - [2023-07-03 17:00:02,383] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 16
+    from airflow
+               ^
+SyntaxError: invalid syntax
+[2023-07-03 17:00:02,385] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:00:02,412] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.045 seconds
+[2023-07-03 17:00:12,430] {processor.py:153} INFO - Started process (PID=1418) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:00:12,432] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:00:12,433] {logging_mixin.py:115} INFO - [2023-07-03 17:00:12,433] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:00:12,440] {logging_mixin.py:115} INFO - [2023-07-03 17:00:12,439] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 16
+    from airflow.hooks.
+                      ^
+SyntaxError: invalid syntax
+[2023-07-03 17:00:12,441] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:00:12,470] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.047 seconds
+[2023-07-03 17:00:18,533] {processor.py:153} INFO - Started process (PID=1423) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:00:18,534] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:00:18,535] {logging_mixin.py:115} INFO - [2023-07-03 17:00:18,535] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:00:18,544] {logging_mixin.py:115} INFO - [2023-07-03 17:00:18,543] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 16
+    from airflow.hooks.base import
+                                  ^
+SyntaxError: invalid syntax
+[2023-07-03 17:00:18,545] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:00:18,575] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.046 seconds
+[2023-07-03 17:00:30,673] {processor.py:153} INFO - Started process (PID=1443) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:00:30,674] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:00:30,676] {logging_mixin.py:115} INFO - [2023-07-03 17:00:30,675] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:00:30,706] {logging_mixin.py:115} INFO - [2023-07-03 17:00:30,705] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:00:30,707] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:00:30,729] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.061 seconds
+[2023-07-03 17:00:50,760] {processor.py:153} INFO - Started process (PID=1465) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:00:50,762] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:00:50,764] {logging_mixin.py:115} INFO - [2023-07-03 17:00:50,763] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:00:50,773] {logging_mixin.py:115} INFO - [2023-07-03 17:00:50,772] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 17
+    conn_tg =
+             ^
+SyntaxError: invalid syntax
+[2023-07-03 17:00:50,774] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:00:50,802] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.048 seconds
+[2023-07-03 17:01:00,891] {processor.py:153} INFO - Started process (PID=1484) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:01:00,892] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:01:00,894] {logging_mixin.py:115} INFO - [2023-07-03 17:01:00,893] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:01:00,925] {logging_mixin.py:115} INFO - [2023-07-03 17:01:00,923] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:01:00,925] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:01:00,946] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.061 seconds
+[2023-07-03 17:01:08,953] {processor.py:153} INFO - Started process (PID=1498) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:01:08,954] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:01:08,956] {logging_mixin.py:115} INFO - [2023-07-03 17:01:08,956] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:01:08,987] {logging_mixin.py:115} INFO - [2023-07-03 17:01:08,985] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:01:08,988] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:01:09,009] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.062 seconds
+[2023-07-03 17:01:25,074] {processor.py:153} INFO - Started process (PID=1512) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:01:25,076] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:01:25,077] {logging_mixin.py:115} INFO - [2023-07-03 17:01:25,077] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:01:25,114] {logging_mixin.py:115} INFO - [2023-07-03 17:01:25,112] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:01:25,115] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:01:25,147] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.078 seconds
+[2023-07-03 17:01:34,256] {processor.py:153} INFO - Started process (PID=1532) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:01:34,258] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:01:34,259] {logging_mixin.py:115} INFO - [2023-07-03 17:01:34,259] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:01:34,289] {logging_mixin.py:115} INFO - [2023-07-03 17:01:34,288] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:01:34,291] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:01:34,312] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.062 seconds
+[2023-07-03 17:01:47,320] {processor.py:153} INFO - Started process (PID=1546) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:01:47,326] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:01:47,330] {logging_mixin.py:115} INFO - [2023-07-03 17:01:47,330] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:01:47,366] {logging_mixin.py:115} INFO - [2023-07-03 17:01:47,364] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:01:47,367] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:01:47,391] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.076 seconds
+[2023-07-03 17:01:53,441] {processor.py:153} INFO - Started process (PID=1560) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:01:53,443] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:01:53,444] {logging_mixin.py:115} INFO - [2023-07-03 17:01:53,444] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:01:53,477] {logging_mixin.py:115} INFO - [2023-07-03 17:01:53,476] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:01:53,478] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:01:53,501] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.067 seconds
+[2023-07-03 17:01:59,493] {processor.py:153} INFO - Started process (PID=1565) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:01:59,495] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:01:59,496] {logging_mixin.py:115} INFO - [2023-07-03 17:01:59,496] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:01:59,528] {logging_mixin.py:115} INFO - [2023-07-03 17:01:59,527] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:01:59,529] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:01:59,553] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.066 seconds
+[2023-07-03 17:02:11,672] {processor.py:153} INFO - Started process (PID=1585) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:02:11,674] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:02:11,675] {logging_mixin.py:115} INFO - [2023-07-03 17:02:11,675] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:02:11,706] {logging_mixin.py:115} INFO - [2023-07-03 17:02:11,704] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:02:11,707] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:02:11,732] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.067 seconds
+[2023-07-03 17:02:18,713] {processor.py:153} INFO - Started process (PID=1599) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:02:18,714] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:02:18,716] {logging_mixin.py:115} INFO - [2023-07-03 17:02:18,716] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:02:18,754] {logging_mixin.py:115} INFO - [2023-07-03 17:02:18,752] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:02:18,754] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:02:18,777] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.069 seconds
+[2023-07-03 17:02:25,844] {processor.py:153} INFO - Started process (PID=1613) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:02:25,845] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:02:25,847] {logging_mixin.py:115} INFO - [2023-07-03 17:02:25,847] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:02:25,856] {logging_mixin.py:115} INFO - [2023-07-03 17:02:25,855] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 18
+    url = f'http://api.telegram.org/bot{}'
+         ^
+SyntaxError: f-string: empty expression not allowed
+[2023-07-03 17:02:25,857] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:02:25,884] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.045 seconds
+[2023-07-03 17:02:33,968] {processor.py:153} INFO - Started process (PID=1624) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:02:33,970] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:02:33,971] {logging_mixin.py:115} INFO - [2023-07-03 17:02:33,971] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:02:34,001] {logging_mixin.py:115} INFO - [2023-07-03 17:02:33,999] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:02:34,001] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:02:34,021] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.058 seconds
+[2023-07-03 17:02:42,023] {processor.py:153} INFO - Started process (PID=1638) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:02:42,025] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:02:42,026] {logging_mixin.py:115} INFO - [2023-07-03 17:02:42,026] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:02:42,058] {logging_mixin.py:115} INFO - [2023-07-03 17:02:42,056] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:02:42,060] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:02:42,095] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.075 seconds
+[2023-07-03 17:02:57,186] {processor.py:153} INFO - Started process (PID=1660) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:02:57,187] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:02:57,188] {logging_mixin.py:115} INFO - [2023-07-03 17:02:57,187] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:02:57,213] {logging_mixin.py:115} INFO - [2023-07-03 17:02:57,211] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:02:57,214] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:02:57,238] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.055 seconds
+[2023-07-03 17:03:19,777] {processor.py:153} INFO - Started process (PID=1688) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:03:19,778] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:03:19,779] {logging_mixin.py:115} INFO - [2023-07-03 17:03:19,779] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:03:19,811] {logging_mixin.py:115} INFO - [2023-07-03 17:03:19,809] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:03:19,812] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:03:19,837] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.066 seconds
+[2023-07-03 17:03:28,853] {processor.py:153} INFO - Started process (PID=1693) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:03:28,855] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:03:28,856] {logging_mixin.py:115} INFO - [2023-07-03 17:03:28,856] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:03:28,893] {logging_mixin.py:115} INFO - [2023-07-03 17:03:28,891] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:03:28,894] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:03:28,927] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.081 seconds
+[2023-07-03 17:03:38,016] {processor.py:153} INFO - Started process (PID=1713) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:03:38,017] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:03:38,019] {logging_mixin.py:115} INFO - [2023-07-03 17:03:38,018] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:03:38,047] {logging_mixin.py:115} INFO - [2023-07-03 17:03:38,046] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:03:38,048] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:03:38,072] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.062 seconds
+[2023-07-03 17:03:44,074] {processor.py:153} INFO - Started process (PID=1728) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:03:44,075] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:03:44,077] {logging_mixin.py:115} INFO - [2023-07-03 17:03:44,077] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:03:44,109] {logging_mixin.py:115} INFO - [2023-07-03 17:03:44,105] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:03:44,110] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:03:44,142] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.075 seconds
+[2023-07-03 17:04:14,354] {processor.py:153} INFO - Started process (PID=1758) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:04:14,358] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:04:14,359] {logging_mixin.py:115} INFO - [2023-07-03 17:04:14,359] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:04:14,388] {logging_mixin.py:115} INFO - [2023-07-03 17:04:14,386] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:04:14,391] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:04:14,418] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.072 seconds
+[2023-07-03 17:04:26,404] {processor.py:153} INFO - Started process (PID=1779) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:04:26,405] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:04:26,406] {logging_mixin.py:115} INFO - [2023-07-03 17:04:26,406] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:04:26,413] {logging_mixin.py:115} INFO - [2023-07-03 17:04:26,412] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 15
+    chat_id =
+             ^
+SyntaxError: invalid syntax
+[2023-07-03 17:04:26,414] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:04:26,443] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.043 seconds
+[2023-07-03 17:04:53,097] {processor.py:153} INFO - Started process (PID=1810) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:04:53,099] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:04:53,100] {logging_mixin.py:115} INFO - [2023-07-03 17:04:53,100] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:04:53,127] {logging_mixin.py:115} INFO - [2023-07-03 17:04:53,125] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:04:53,128] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:04:53,153] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.062 seconds
+[2023-07-03 17:05:03,149] {processor.py:153} INFO - Started process (PID=1823) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:05:03,150] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:05:03,151] {logging_mixin.py:115} INFO - [2023-07-03 17:05:03,151] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:05:03,159] {logging_mixin.py:115} INFO - [2023-07-03 17:05:03,158] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 23
+    }
+    ^
+SyntaxError: invalid syntax
+[2023-07-03 17:05:03,160] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:05:03,192] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.049 seconds
+[2023-07-03 17:05:23,315] {processor.py:153} INFO - Started process (PID=1853) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:05:23,316] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:05:23,317] {logging_mixin.py:115} INFO - [2023-07-03 17:05:23,317] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:05:23,347] {logging_mixin.py:115} INFO - [2023-07-03 17:05:23,346] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:05:23,348] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:05:23,368] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.058 seconds
+[2023-07-03 17:05:38,469] {processor.py:153} INFO - Started process (PID=1873) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:05:38,471] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:05:38,473] {logging_mixin.py:115} INFO - [2023-07-03 17:05:38,473] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:05:38,509] {logging_mixin.py:115} INFO - [2023-07-03 17:05:38,507] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:05:38,510] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:05:38,532] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.072 seconds
+[2023-07-03 17:05:45,492] {processor.py:153} INFO - Started process (PID=1886) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:05:45,493] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:05:45,495] {logging_mixin.py:115} INFO - [2023-07-03 17:05:45,495] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:05:45,542] {logging_mixin.py:115} INFO - [2023-07-03 17:05:45,541] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:05:45,543] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:05:45,567] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.080 seconds
+[2023-07-03 17:05:59,673] {processor.py:153} INFO - Started process (PID=1900) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:05:59,675] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:05:59,677] {logging_mixin.py:115} INFO - [2023-07-03 17:05:59,677] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:05:59,712] {logging_mixin.py:115} INFO - [2023-07-03 17:05:59,711] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:05:59,713] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:05:59,736] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.071 seconds
+[2023-07-03 17:06:11,813] {processor.py:153} INFO - Started process (PID=1920) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:06:11,815] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:06:11,815] {logging_mixin.py:115} INFO - [2023-07-03 17:06:11,815] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:06:11,843] {logging_mixin.py:115} INFO - [2023-07-03 17:06:11,842] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:06:11,844] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:06:11,864] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.055 seconds
+[2023-07-03 17:06:34,981] {processor.py:153} INFO - Started process (PID=1944) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:06:34,982] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:06:34,983] {logging_mixin.py:115} INFO - [2023-07-03 17:06:34,983] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:06:34,990] {logging_mixin.py:115} INFO - [2023-07-03 17:06:34,990] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 25
+    if response
+              ^
+SyntaxError: invalid syntax
+[2023-07-03 17:06:34,991] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:06:35,016] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.040 seconds
+[2023-07-03 17:06:46,107] {processor.py:153} INFO - Started process (PID=1964) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:06:46,109] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:06:46,111] {logging_mixin.py:115} INFO - [2023-07-03 17:06:46,111] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:06:46,120] {logging_mixin.py:115} INFO - [2023-07-03 17:06:46,119] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 25
+    if response.status_code != 200
+                                 ^
+SyntaxError: invalid syntax
+[2023-07-03 17:06:46,121] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:06:46,154] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.055 seconds
+[2023-07-03 17:06:59,205] {processor.py:153} INFO - Started process (PID=1979) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:06:59,206] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:06:59,208] {logging_mixin.py:115} INFO - [2023-07-03 17:06:59,207] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:06:59,245] {logging_mixin.py:115} INFO - [2023-07-03 17:06:59,243] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:06:59,246] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:06:59,269] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.070 seconds
+[2023-07-03 17:07:12,354] {processor.py:153} INFO - Started process (PID=1999) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:07:12,356] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:07:12,357] {logging_mixin.py:115} INFO - [2023-07-03 17:07:12,357] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:07:12,383] {logging_mixin.py:115} INFO - [2023-07-03 17:07:12,381] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:07:12,384] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:07:12,411] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.061 seconds
+[2023-07-03 17:07:22,432] {processor.py:153} INFO - Started process (PID=2012) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:07:22,434] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:07:22,436] {logging_mixin.py:115} INFO - [2023-07-03 17:07:22,436] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:07:22,468] {logging_mixin.py:115} INFO - [2023-07-03 17:07:22,467] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:07:22,469] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:07:22,494] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.070 seconds
+[2023-07-03 17:07:29,519] {processor.py:153} INFO - Started process (PID=2026) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:07:29,520] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:07:29,521] {logging_mixin.py:115} INFO - [2023-07-03 17:07:29,521] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:07:29,555] {logging_mixin.py:115} INFO - [2023-07-03 17:07:29,553] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:07:29,555] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:07:29,576] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.062 seconds
+[2023-07-03 17:07:37,606] {processor.py:153} INFO - Started process (PID=2040) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:07:37,607] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:07:37,608] {logging_mixin.py:115} INFO - [2023-07-03 17:07:37,608] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:07:37,638] {logging_mixin.py:115} INFO - [2023-07-03 17:07:37,636] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:07:37,639] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:07:37,670] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.068 seconds
+[2023-07-03 17:07:42,696] {processor.py:153} INFO - Started process (PID=2045) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:07:42,697] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:07:42,699] {logging_mixin.py:115} INFO - [2023-07-03 17:07:42,699] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:07:42,732] {logging_mixin.py:115} INFO - [2023-07-03 17:07:42,731] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:07:42,733] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:07:42,759] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.071 seconds
+[2023-07-03 17:07:49,832] {processor.py:153} INFO - Started process (PID=2066) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:07:49,834] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:07:49,835] {logging_mixin.py:115} INFO - [2023-07-03 17:07:49,835] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:07:49,868] {logging_mixin.py:115} INFO - [2023-07-03 17:07:49,866] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:07:49,869] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:07:49,899] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.073 seconds
+[2023-07-03 17:08:03,008] {processor.py:153} INFO - Started process (PID=2079) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:08:03,011] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:08:03,013] {logging_mixin.py:115} INFO - [2023-07-03 17:08:03,013] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:08:03,048] {logging_mixin.py:115} INFO - [2023-07-03 17:08:03,046] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:08:03,049] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:08:03,077] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.085 seconds
+[2023-07-03 17:08:33,259] {processor.py:153} INFO - Started process (PID=2117) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:08:33,261] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:08:33,262] {logging_mixin.py:115} INFO - [2023-07-03 17:08:33,262] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:08:33,277] {logging_mixin.py:115} INFO - [2023-07-03 17:08:33,275] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:08:33,278] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:08:33,300] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.047 seconds
+[2023-07-03 17:08:55,441] {processor.py:153} INFO - Started process (PID=2145) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:08:55,443] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:08:55,444] {logging_mixin.py:115} INFO - [2023-07-03 17:08:55,444] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:08:55,470] {logging_mixin.py:115} INFO - [2023-07-03 17:08:55,468] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:08:55,471] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:08:55,496] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.063 seconds
+[2023-07-03 17:09:17,134] {processor.py:153} INFO - Started process (PID=2167) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:09:17,135] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:09:17,136] {logging_mixin.py:115} INFO - [2023-07-03 17:09:17,136] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:09:17,162] {logging_mixin.py:115} INFO - [2023-07-03 17:09:17,160] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:09:17,163] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:09:17,197] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.074 seconds
+[2023-07-03 17:09:36,222] {processor.py:153} INFO - Started process (PID=2190) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:09:36,224] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:09:36,225] {logging_mixin.py:115} INFO - [2023-07-03 17:09:36,225] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:09:36,249] {logging_mixin.py:115} INFO - [2023-07-03 17:09:36,248] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:09:36,250] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:09:36,273] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.061 seconds
+[2023-07-03 17:10:06,484] {processor.py:153} INFO - Started process (PID=2228) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:10:06,485] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:10:06,486] {logging_mixin.py:115} INFO - [2023-07-03 17:10:06,486] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:10:06,506] {logging_mixin.py:115} INFO - [2023-07-03 17:10:06,505] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:10:06,507] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:10:06,530] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.057 seconds
+[2023-07-03 17:10:08,513] {processor.py:153} INFO - Started process (PID=2233) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:10:08,515] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:10:08,517] {logging_mixin.py:115} INFO - [2023-07-03 17:10:08,516] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:10:08,543] {logging_mixin.py:115} INFO - [2023-07-03 17:10:08,541] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:10:08,544] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:10:08,566] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.069 seconds
+[2023-07-03 17:10:38,751] {processor.py:153} INFO - Started process (PID=2272) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:10:38,754] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:10:38,755] {logging_mixin.py:115} INFO - [2023-07-03 17:10:38,755] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:10:38,774] {logging_mixin.py:115} INFO - [2023-07-03 17:10:38,773] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:10:38,776] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:10:38,797] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.058 seconds
+[2023-07-03 17:11:08,973] {processor.py:153} INFO - Started process (PID=2302) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:11:08,975] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:11:08,976] {logging_mixin.py:115} INFO - [2023-07-03 17:11:08,976] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:11:08,994] {logging_mixin.py:115} INFO - [2023-07-03 17:11:08,992] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:11:08,994] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:11:09,016] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.056 seconds
+[2023-07-03 17:11:39,211] {processor.py:153} INFO - Started process (PID=2341) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:11:39,213] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:11:39,214] {logging_mixin.py:115} INFO - [2023-07-03 17:11:39,214] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:11:39,233] {logging_mixin.py:115} INFO - [2023-07-03 17:11:39,232] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 4, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:11:39,234] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:11:39,256] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.061 seconds
+[2023-07-03 17:11:49,233] {processor.py:153} INFO - Started process (PID=2355) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:11:49,234] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:11:49,235] {logging_mixin.py:115} INFO - [2023-07-03 17:11:49,235] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:11:49,257] {logging_mixin.py:115} INFO - [2023-07-03 17:11:49,255] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 6, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:11:49,257] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:11:49,282] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.056 seconds
+[2023-07-03 17:12:14,962] {processor.py:153} INFO - Started process (PID=2383) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:12:14,963] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:12:14,965] {logging_mixin.py:115} INFO - [2023-07-03 17:12:14,964] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:12:14,989] {logging_mixin.py:115} INFO - [2023-07-03 17:12:14,988] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 5, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:12:14,990] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:12:15,014] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.063 seconds
+[2023-07-03 17:12:39,173] {processor.py:153} INFO - Started process (PID=2412) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:12:39,176] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:12:39,178] {logging_mixin.py:115} INFO - [2023-07-03 17:12:39,178] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:12:39,187] {logging_mixin.py:115} INFO - [2023-07-03 17:12:39,186] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 15
+    task =
+       ^
+IndentationError: expected an indented block
+[2023-07-03 17:12:39,188] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:12:39,213] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.052 seconds
+[2023-07-03 17:13:09,368] {processor.py:153} INFO - Started process (PID=2450) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:13:09,369] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:13:09,370] {logging_mixin.py:115} INFO - [2023-07-03 17:13:09,370] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:13:09,375] {logging_mixin.py:115} INFO - [2023-07-03 17:13:09,374] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 15
+    task =
+       ^
+IndentationError: expected an indented block
+[2023-07-03 17:13:09,376] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:13:09,397] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.034 seconds
+[2023-07-03 17:13:11,402] {processor.py:153} INFO - Started process (PID=2455) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:13:11,404] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:13:11,405] {logging_mixin.py:115} INFO - [2023-07-03 17:13:11,405] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:13:11,432] {logging_mixin.py:115} INFO - [2023-07-03 17:13:11,431] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 5, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:13:11,433] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:13:11,457] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.061 seconds
+[2023-07-03 17:13:36,605] {processor.py:153} INFO - Started process (PID=2495) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:13:36,608] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:13:36,610] {logging_mixin.py:115} INFO - [2023-07-03 17:13:36,610] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:13:36,658] {logging_mixin.py:115} INFO - [2023-07-03 17:13:36,655] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 5, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:13:36,660] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:13:36,701] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.105 seconds
+[2023-07-03 17:14:06,876] {processor.py:153} INFO - Started process (PID=2523) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:14:06,878] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:14:06,878] {logging_mixin.py:115} INFO - [2023-07-03 17:14:06,878] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:14:06,896] {logging_mixin.py:115} INFO - [2023-07-03 17:14:06,895] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 5, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:14:06,897] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:14:06,918] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.047 seconds
+[2023-07-03 17:14:28,002] {processor.py:153} INFO - Started process (PID=2546) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:14:28,004] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:14:28,006] {logging_mixin.py:115} INFO - [2023-07-03 17:14:28,006] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:14:28,034] {logging_mixin.py:115} INFO - [2023-07-03 17:14:28,032] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 5, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:14:28,035] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:14:28,070] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.076 seconds
+[2023-07-03 17:14:58,301] {processor.py:153} INFO - Started process (PID=2584) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:14:58,303] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:14:58,305] {logging_mixin.py:115} INFO - [2023-07-03 17:14:58,305] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:14:58,332] {logging_mixin.py:115} INFO - [2023-07-03 17:14:58,330] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 5, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:14:58,332] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:14:58,360] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.067 seconds
+[2023-07-03 17:15:28,574] {processor.py:153} INFO - Started process (PID=2622) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:15:28,575] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:15:28,576] {logging_mixin.py:115} INFO - [2023-07-03 17:15:28,576] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:15:28,593] {logging_mixin.py:115} INFO - [2023-07-03 17:15:28,591] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 5, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:15:28,594] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:15:28,615] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.045 seconds
+[2023-07-03 17:47:54,362] {processor.py:153} INFO - Started process (PID=166) to work on /opt/airflow/dags/sample.py
+[2023-07-03 17:47:54,364] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample.py for tasks to queue
+[2023-07-03 17:47:54,367] {logging_mixin.py:115} INFO - [2023-07-03 17:47:54,366] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample.py
+[2023-07-03 17:47:54,406] {logging_mixin.py:115} INFO - [2023-07-03 17:47:54,404] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/sample.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/sample.py", line 5, in <module>
+    from airflow.providers.telegram.operators.telegram import TelegramOperator
+ModuleNotFoundError: No module named 'airflow.providers.telegram'
+[2023-07-03 17:47:54,408] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/sample.py
+[2023-07-03 17:47:54,443] {processor.py:161} INFO - Processing /opt/airflow/dags/sample.py took 0.087 seconds

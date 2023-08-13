@@ -1,0 +1,1040 @@
+[2023-07-03 16:42:51,404] {processor.py:153} INFO - Started process (PID=174) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:42:51,405] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:42:51,406] {logging_mixin.py:115} INFO - [2023-07-03 16:42:51,406] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:42:52,810] {logging_mixin.py:115} INFO - [2023-07-03 16:42:52,806] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:42:52,812] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:42:52,824] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 1.425 seconds
+[2023-07-03 16:43:23,012] {processor.py:153} INFO - Started process (PID=207) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:43:23,013] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:43:23,014] {logging_mixin.py:115} INFO - [2023-07-03 16:43:23,014] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:43:23,534] {logging_mixin.py:115} INFO - [2023-07-03 16:43:23,532] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:43:23,534] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:43:23,543] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.534 seconds
+[2023-07-03 16:43:53,677] {processor.py:153} INFO - Started process (PID=231) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:43:53,679] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:43:53,680] {logging_mixin.py:115} INFO - [2023-07-03 16:43:53,680] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:43:54,051] {logging_mixin.py:115} INFO - [2023-07-03 16:43:54,050] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:43:54,052] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:43:54,060] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.389 seconds
+[2023-07-03 16:44:24,263] {processor.py:153} INFO - Started process (PID=264) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:44:24,265] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:44:24,266] {logging_mixin.py:115} INFO - [2023-07-03 16:44:24,266] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:44:24,624] {logging_mixin.py:115} INFO - [2023-07-03 16:44:24,623] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:44:24,625] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:44:24,632] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.374 seconds
+[2023-07-03 16:44:54,827] {processor.py:153} INFO - Started process (PID=298) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:44:54,828] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:44:54,830] {logging_mixin.py:115} INFO - [2023-07-03 16:44:54,830] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:44:55,218] {logging_mixin.py:115} INFO - [2023-07-03 16:44:55,211] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:44:55,219] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:44:55,226] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.405 seconds
+[2023-07-03 16:45:25,408] {processor.py:153} INFO - Started process (PID=333) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:45:25,409] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:45:25,410] {logging_mixin.py:115} INFO - [2023-07-03 16:45:25,410] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:45:25,872] {logging_mixin.py:115} INFO - [2023-07-03 16:45:25,870] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:45:25,873] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:45:25,881] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.476 seconds
+[2023-07-03 16:45:56,070] {processor.py:153} INFO - Started process (PID=356) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:45:56,071] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:45:56,073] {logging_mixin.py:115} INFO - [2023-07-03 16:45:56,073] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:45:56,438] {logging_mixin.py:115} INFO - [2023-07-03 16:45:56,436] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:45:56,438] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:45:56,445] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.379 seconds
+[2023-07-03 16:46:26,675] {processor.py:153} INFO - Started process (PID=390) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:46:26,677] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:46:26,678] {logging_mixin.py:115} INFO - [2023-07-03 16:46:26,678] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:46:27,061] {logging_mixin.py:115} INFO - [2023-07-03 16:46:27,059] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:46:27,061] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:46:27,069] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.400 seconds
+[2023-07-03 16:46:57,274] {processor.py:153} INFO - Started process (PID=424) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:46:57,276] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:46:57,277] {logging_mixin.py:115} INFO - [2023-07-03 16:46:57,277] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:46:57,629] {logging_mixin.py:115} INFO - [2023-07-03 16:46:57,627] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:46:57,630] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:46:57,637] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.368 seconds
+[2023-07-03 16:47:27,834] {processor.py:153} INFO - Started process (PID=448) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:47:27,835] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:47:27,836] {logging_mixin.py:115} INFO - [2023-07-03 16:47:27,836] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:47:28,269] {logging_mixin.py:115} INFO - [2023-07-03 16:47:28,266] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:47:28,270] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:47:28,281] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.452 seconds
+[2023-07-03 16:47:58,519] {processor.py:153} INFO - Started process (PID=486) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:47:58,522] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:47:58,523] {logging_mixin.py:115} INFO - [2023-07-03 16:47:58,523] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:47:58,910] {logging_mixin.py:115} INFO - [2023-07-03 16:47:58,908] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:47:58,910] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:47:58,917] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.402 seconds
+[2023-07-03 16:48:29,805] {processor.py:153} INFO - Started process (PID=525) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:48:29,807] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:48:29,808] {logging_mixin.py:115} INFO - [2023-07-03 16:48:29,808] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:48:30,152] {logging_mixin.py:115} INFO - [2023-07-03 16:48:30,150] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:48:30,153] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:48:30,160] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.360 seconds
+[2023-07-03 16:49:01,044] {processor.py:153} INFO - Started process (PID=563) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:49:01,047] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:49:01,048] {logging_mixin.py:115} INFO - [2023-07-03 16:49:01,048] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:49:01,393] {logging_mixin.py:115} INFO - [2023-07-03 16:49:01,392] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:49:01,394] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:49:01,401] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.362 seconds
+[2023-07-03 16:49:32,318] {processor.py:153} INFO - Started process (PID=602) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:49:32,319] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:49:32,321] {logging_mixin.py:115} INFO - [2023-07-03 16:49:32,321] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:49:32,670] {logging_mixin.py:115} INFO - [2023-07-03 16:49:32,669] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:49:32,671] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:49:32,678] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.366 seconds
+[2023-07-03 16:50:03,543] {processor.py:153} INFO - Started process (PID=631) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:50:03,546] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:50:03,548] {logging_mixin.py:115} INFO - [2023-07-03 16:50:03,548] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:50:03,900] {logging_mixin.py:115} INFO - [2023-07-03 16:50:03,898] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:50:03,901] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:50:03,908] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.372 seconds
+[2023-07-03 16:50:34,789] {processor.py:153} INFO - Started process (PID=668) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:50:34,791] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:50:34,792] {logging_mixin.py:115} INFO - [2023-07-03 16:50:34,792] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:50:35,159] {logging_mixin.py:115} INFO - [2023-07-03 16:50:35,158] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:50:35,160] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:50:35,167] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.383 seconds
+[2023-07-03 16:51:06,009] {processor.py:153} INFO - Started process (PID=706) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:51:06,011] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:51:06,012] {logging_mixin.py:115} INFO - [2023-07-03 16:51:06,012] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:51:06,491] {logging_mixin.py:115} INFO - [2023-07-03 16:51:06,489] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:51:06,492] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:51:06,499] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.495 seconds
+[2023-07-03 16:51:37,267] {processor.py:153} INFO - Started process (PID=744) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:51:37,269] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:51:37,269] {logging_mixin.py:115} INFO - [2023-07-03 16:51:37,269] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:51:37,609] {logging_mixin.py:115} INFO - [2023-07-03 16:51:37,607] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:51:37,609] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:51:37,616] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.353 seconds
+[2023-07-03 16:52:07,857] {processor.py:153} INFO - Started process (PID=782) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:52:07,859] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:52:07,860] {logging_mixin.py:115} INFO - [2023-07-03 16:52:07,860] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:52:08,220] {logging_mixin.py:115} INFO - [2023-07-03 16:52:08,218] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:52:08,221] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:52:08,229] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.377 seconds
+[2023-07-03 16:52:39,188] {processor.py:153} INFO - Started process (PID=821) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:52:39,192] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:52:39,193] {logging_mixin.py:115} INFO - [2023-07-03 16:52:39,193] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:52:39,563] {logging_mixin.py:115} INFO - [2023-07-03 16:52:39,562] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:52:39,565] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:52:39,572] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.390 seconds
+[2023-07-03 16:53:10,533] {processor.py:153} INFO - Started process (PID=868) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:53:10,536] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:53:10,538] {logging_mixin.py:115} INFO - [2023-07-03 16:53:10,538] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:53:11,007] {logging_mixin.py:115} INFO - [2023-07-03 16:53:11,005] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:53:11,008] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:53:11,016] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.491 seconds
+[2023-07-03 16:53:41,742] {processor.py:153} INFO - Started process (PID=911) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:53:41,743] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:53:41,744] {logging_mixin.py:115} INFO - [2023-07-03 16:53:41,744] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:53:42,142] {logging_mixin.py:115} INFO - [2023-07-03 16:53:42,139] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:53:42,143] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:53:42,153] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.416 seconds
+[2023-07-03 16:54:12,953] {processor.py:153} INFO - Started process (PID=949) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:54:12,955] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:54:12,956] {logging_mixin.py:115} INFO - [2023-07-03 16:54:12,956] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:54:13,337] {logging_mixin.py:115} INFO - [2023-07-03 16:54:13,335] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:54:13,339] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:54:13,347] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.402 seconds
+[2023-07-03 16:54:44,127] {processor.py:153} INFO - Started process (PID=979) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:54:44,129] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:54:44,130] {logging_mixin.py:115} INFO - [2023-07-03 16:54:44,130] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:54:44,755] {logging_mixin.py:115} INFO - [2023-07-03 16:54:44,752] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:54:44,756] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:54:44,766] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.643 seconds
+[2023-07-03 16:55:15,143] {processor.py:153} INFO - Started process (PID=1031) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:55:15,145] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:55:15,147] {logging_mixin.py:115} INFO - [2023-07-03 16:55:15,147] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:55:15,613] {logging_mixin.py:115} INFO - [2023-07-03 16:55:15,611] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:55:15,614] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:55:15,622] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.485 seconds
+[2023-07-03 16:55:46,367] {processor.py:153} INFO - Started process (PID=1079) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:55:46,369] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:55:46,370] {logging_mixin.py:115} INFO - [2023-07-03 16:55:46,370] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:55:46,730] {logging_mixin.py:115} INFO - [2023-07-03 16:55:46,728] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:55:46,731] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:55:46,737] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.375 seconds
+[2023-07-03 16:56:17,694] {processor.py:153} INFO - Started process (PID=1121) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:56:17,695] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:56:17,697] {logging_mixin.py:115} INFO - [2023-07-03 16:56:17,696] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:56:18,144] {logging_mixin.py:115} INFO - [2023-07-03 16:56:18,142] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:56:18,145] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:56:18,152] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.463 seconds
+[2023-07-03 16:56:48,393] {processor.py:153} INFO - Started process (PID=1162) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:56:48,395] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:56:48,396] {logging_mixin.py:115} INFO - [2023-07-03 16:56:48,396] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:56:48,898] {logging_mixin.py:115} INFO - [2023-07-03 16:56:48,896] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:56:48,899] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:56:48,906] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.519 seconds
+[2023-07-03 16:57:19,653] {processor.py:153} INFO - Started process (PID=1194) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:57:19,655] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:57:19,656] {logging_mixin.py:115} INFO - [2023-07-03 16:57:19,656] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:57:20,109] {logging_mixin.py:115} INFO - [2023-07-03 16:57:20,107] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:57:20,110] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:57:20,118] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.470 seconds
+[2023-07-03 16:57:50,454] {processor.py:153} INFO - Started process (PID=1237) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:57:50,456] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:57:50,457] {logging_mixin.py:115} INFO - [2023-07-03 16:57:50,457] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:57:50,888] {logging_mixin.py:115} INFO - [2023-07-03 16:57:50,886] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:57:50,889] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:57:50,896] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.448 seconds
+[2023-07-03 16:58:21,645] {processor.py:153} INFO - Started process (PID=1275) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:58:21,647] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:58:21,649] {logging_mixin.py:115} INFO - [2023-07-03 16:58:21,648] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:58:22,027] {logging_mixin.py:115} INFO - [2023-07-03 16:58:22,025] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:58:22,027] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:58:22,035] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.397 seconds
+[2023-07-03 16:58:52,942] {processor.py:153} INFO - Started process (PID=1317) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:58:52,943] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:58:52,945] {logging_mixin.py:115} INFO - [2023-07-03 16:58:52,945] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:58:53,351] {logging_mixin.py:115} INFO - [2023-07-03 16:58:53,350] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:58:53,352] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:58:53,359] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.423 seconds
+[2023-07-03 16:59:23,578] {processor.py:153} INFO - Started process (PID=1346) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:59:23,581] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:59:23,583] {logging_mixin.py:115} INFO - [2023-07-03 16:59:23,583] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:59:23,968] {logging_mixin.py:115} INFO - [2023-07-03 16:59:23,966] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:59:23,969] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:59:23,976] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.404 seconds
+[2023-07-03 16:59:54,283] {processor.py:153} INFO - Started process (PID=1389) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:59:54,286] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 16:59:54,287] {logging_mixin.py:115} INFO - [2023-07-03 16:59:54,287] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:59:54,674] {logging_mixin.py:115} INFO - [2023-07-03 16:59:54,672] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 16:59:54,675] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 16:59:54,681] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.405 seconds
+[2023-07-03 17:00:25,597] {processor.py:153} INFO - Started process (PID=1437) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:00:25,600] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:00:25,601] {logging_mixin.py:115} INFO - [2023-07-03 17:00:25,601] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:00:26,028] {logging_mixin.py:115} INFO - [2023-07-03 17:00:26,026] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:00:26,029] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:00:26,036] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.445 seconds
+[2023-07-03 17:00:56,825] {processor.py:153} INFO - Started process (PID=1478) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:00:56,827] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:00:56,829] {logging_mixin.py:115} INFO - [2023-07-03 17:00:56,829] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:00:57,256] {logging_mixin.py:115} INFO - [2023-07-03 17:00:57,253] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:00:57,257] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:00:57,266] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.446 seconds
+[2023-07-03 17:01:28,087] {processor.py:153} INFO - Started process (PID=1526) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:01:28,089] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:01:28,091] {logging_mixin.py:115} INFO - [2023-07-03 17:01:28,091] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:01:28,552] {logging_mixin.py:115} INFO - [2023-07-03 17:01:28,550] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:01:28,554] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:01:28,561] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.479 seconds
+[2023-07-03 17:01:59,501] {processor.py:153} INFO - Started process (PID=1568) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:01:59,503] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:01:59,504] {logging_mixin.py:115} INFO - [2023-07-03 17:01:59,504] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:01:59,912] {logging_mixin.py:115} INFO - [2023-07-03 17:01:59,910] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:01:59,913] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:01:59,920] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.425 seconds
+[2023-07-03 17:02:30,889] {processor.py:153} INFO - Started process (PID=1618) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:02:30,892] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:02:30,893] {logging_mixin.py:115} INFO - [2023-07-03 17:02:30,893] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:02:31,308] {logging_mixin.py:115} INFO - [2023-07-03 17:02:31,306] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:02:31,308] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:02:31,316] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.433 seconds
+[2023-07-03 17:03:02,261] {processor.py:153} INFO - Started process (PID=1665) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:03:02,263] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:03:02,264] {logging_mixin.py:115} INFO - [2023-07-03 17:03:02,264] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:03:02,641] {logging_mixin.py:115} INFO - [2023-07-03 17:03:02,639] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:03:02,641] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:03:02,648] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.393 seconds
+[2023-07-03 17:03:32,954] {processor.py:153} INFO - Started process (PID=1707) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:03:32,956] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:03:32,959] {logging_mixin.py:115} INFO - [2023-07-03 17:03:32,959] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:03:33,389] {logging_mixin.py:115} INFO - [2023-07-03 17:03:33,386] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:03:33,392] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:03:33,404] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.456 seconds
+[2023-07-03 17:04:04,255] {processor.py:153} INFO - Started process (PID=1752) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:04:04,257] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:04:04,258] {logging_mixin.py:115} INFO - [2023-07-03 17:04:04,258] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:04:04,735] {logging_mixin.py:115} INFO - [2023-07-03 17:04:04,731] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:04:04,737] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:04:04,750] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.498 seconds
+[2023-07-03 17:04:35,481] {processor.py:153} INFO - Started process (PID=1786) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:04:35,484] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:04:35,485] {logging_mixin.py:115} INFO - [2023-07-03 17:04:35,485] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:04:35,933] {logging_mixin.py:115} INFO - [2023-07-03 17:04:35,931] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:04:35,934] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:04:35,941] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.466 seconds
+[2023-07-03 17:05:06,189] {processor.py:153} INFO - Started process (PID=1828) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:05:06,192] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:05:06,193] {logging_mixin.py:115} INFO - [2023-07-03 17:05:06,193] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:05:06,577] {logging_mixin.py:115} INFO - [2023-07-03 17:05:06,575] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:05:06,578] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:05:06,585] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.401 seconds
+[2023-07-03 17:05:37,379] {processor.py:153} INFO - Started process (PID=1867) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:05:37,382] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:05:37,383] {logging_mixin.py:115} INFO - [2023-07-03 17:05:37,383] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:05:37,799] {logging_mixin.py:115} INFO - [2023-07-03 17:05:37,797] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:05:37,799] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:05:37,806] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.431 seconds
+[2023-07-03 17:06:08,751] {processor.py:153} INFO - Started process (PID=1914) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:06:08,753] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:06:08,755] {logging_mixin.py:115} INFO - [2023-07-03 17:06:08,755] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:06:09,149] {logging_mixin.py:115} INFO - [2023-07-03 17:06:09,147] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:06:09,150] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:06:09,157] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.413 seconds
+[2023-07-03 17:06:39,999] {processor.py:153} INFO - Started process (PID=1949) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:06:40,001] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:06:40,002] {logging_mixin.py:115} INFO - [2023-07-03 17:06:40,002] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:06:40,457] {logging_mixin.py:115} INFO - [2023-07-03 17:06:40,455] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:06:40,458] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:06:40,465] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.471 seconds
+[2023-07-03 17:07:11,336] {processor.py:153} INFO - Started process (PID=1993) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:07:11,339] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:07:11,340] {logging_mixin.py:115} INFO - [2023-07-03 17:07:11,340] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:07:11,904] {logging_mixin.py:115} INFO - [2023-07-03 17:07:11,902] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:07:11,905] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:07:11,913] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.582 seconds
+[2023-07-03 17:07:42,701] {processor.py:153} INFO - Started process (PID=2047) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:07:42,704] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:07:42,705] {logging_mixin.py:115} INFO - [2023-07-03 17:07:42,705] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:07:43,196] {logging_mixin.py:115} INFO - [2023-07-03 17:07:43,194] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:07:43,197] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:07:43,204] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.512 seconds
+[2023-07-03 17:08:14,087] {processor.py:153} INFO - Started process (PID=2093) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:08:14,090] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:08:14,091] {logging_mixin.py:115} INFO - [2023-07-03 17:08:14,091] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:08:14,444] {logging_mixin.py:115} INFO - [2023-07-03 17:08:14,442] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:08:14,445] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:08:14,452] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.376 seconds
+[2023-07-03 17:08:45,335] {processor.py:153} INFO - Started process (PID=2132) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:08:45,337] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:08:45,338] {logging_mixin.py:115} INFO - [2023-07-03 17:08:45,338] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:08:45,717] {logging_mixin.py:115} INFO - [2023-07-03 17:08:45,716] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:08:45,719] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:08:45,725] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.398 seconds
+[2023-07-03 17:09:16,583] {processor.py:153} INFO - Started process (PID=2161) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:09:16,585] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:09:16,586] {logging_mixin.py:115} INFO - [2023-07-03 17:09:16,586] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:09:17,060] {logging_mixin.py:115} INFO - [2023-07-03 17:09:17,056] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:09:17,061] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:09:17,069] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.496 seconds
+[2023-07-03 17:09:47,377] {processor.py:153} INFO - Started process (PID=2204) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:09:47,380] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:09:47,381] {logging_mixin.py:115} INFO - [2023-07-03 17:09:47,381] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:09:47,773] {logging_mixin.py:115} INFO - [2023-07-03 17:09:47,771] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:09:47,774] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:09:47,781] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.417 seconds
+[2023-07-03 17:10:18,632] {processor.py:153} INFO - Started process (PID=2247) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:10:18,633] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:10:18,634] {logging_mixin.py:115} INFO - [2023-07-03 17:10:18,634] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:10:19,045] {logging_mixin.py:115} INFO - [2023-07-03 17:10:19,042] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:10:19,046] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:10:19,053] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.432 seconds
+[2023-07-03 17:10:49,789] {processor.py:153} INFO - Started process (PID=2286) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:10:49,791] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:10:49,792] {logging_mixin.py:115} INFO - [2023-07-03 17:10:49,792] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:10:50,137] {logging_mixin.py:115} INFO - [2023-07-03 17:10:50,135] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:10:50,138] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:10:50,145] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.365 seconds
+[2023-07-03 17:11:21,019] {processor.py:153} INFO - Started process (PID=2325) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:11:21,021] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:11:21,022] {logging_mixin.py:115} INFO - [2023-07-03 17:11:21,022] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:11:21,639] {logging_mixin.py:115} INFO - [2023-07-03 17:11:21,633] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:11:21,641] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:11:21,661] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.650 seconds
+[2023-07-03 17:11:52,339] {processor.py:153} INFO - Started process (PID=2360) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:11:52,340] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:11:52,342] {logging_mixin.py:115} INFO - [2023-07-03 17:11:52,342] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:11:52,792] {logging_mixin.py:115} INFO - [2023-07-03 17:11:52,790] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:11:52,792] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:11:52,799] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.471 seconds
+[2023-07-03 17:12:23,009] {processor.py:153} INFO - Started process (PID=2397) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:12:23,012] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:12:23,013] {logging_mixin.py:115} INFO - [2023-07-03 17:12:23,013] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:12:23,390] {logging_mixin.py:115} INFO - [2023-07-03 17:12:23,388] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:12:23,390] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:12:23,397] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.401 seconds
+[2023-07-03 17:12:54,283] {processor.py:153} INFO - Started process (PID=2435) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:12:54,285] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:12:54,286] {logging_mixin.py:115} INFO - [2023-07-03 17:12:54,286] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:12:54,702] {logging_mixin.py:115} INFO - [2023-07-03 17:12:54,700] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:12:54,703] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:12:54,710] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.430 seconds
+[2023-07-03 17:13:25,492] {processor.py:153} INFO - Started process (PID=2480) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:13:25,494] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:13:25,495] {logging_mixin.py:115} INFO - [2023-07-03 17:13:25,495] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:13:25,905] {logging_mixin.py:115} INFO - [2023-07-03 17:13:25,903] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:13:25,906] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:13:25,913] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.425 seconds
+[2023-07-03 17:13:56,707] {processor.py:153} INFO - Started process (PID=2509) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:13:56,708] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:13:56,709] {logging_mixin.py:115} INFO - [2023-07-03 17:13:56,709] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:13:57,090] {logging_mixin.py:115} INFO - [2023-07-03 17:13:57,088] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:13:57,091] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:13:57,098] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.396 seconds
+[2023-07-03 17:14:28,007] {processor.py:153} INFO - Started process (PID=2548) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:14:28,009] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:14:28,010] {logging_mixin.py:115} INFO - [2023-07-03 17:14:28,010] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:14:28,541] {logging_mixin.py:115} INFO - [2023-07-03 17:14:28,538] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:14:28,542] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:14:28,550] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.549 seconds
+[2023-07-03 17:14:59,319] {processor.py:153} INFO - Started process (PID=2589) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:14:59,321] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:14:59,322] {logging_mixin.py:115} INFO - [2023-07-03 17:14:59,322] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:14:59,705] {logging_mixin.py:115} INFO - [2023-07-03 17:14:59,703] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:14:59,706] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:14:59,713] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.400 seconds
+[2023-07-03 17:15:30,607] {processor.py:153} INFO - Started process (PID=2627) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:15:30,609] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:15:30,610] {logging_mixin.py:115} INFO - [2023-07-03 17:15:30,610] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:15:31,035] {logging_mixin.py:115} INFO - [2023-07-03 17:15:31,033] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:15:31,035] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:15:31,042] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.440 seconds
+[2023-07-03 17:47:54,376] {processor.py:153} INFO - Started process (PID=168) to work on /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:47:54,379] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag_etl_taskflow.py for tasks to queue
+[2023-07-03 17:47:54,381] {logging_mixin.py:115} INFO - [2023-07-03 17:47:54,381] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:47:55,171] {logging_mixin.py:115} INFO - [2023-07-03 17:47:55,168] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/dag_etl_taskflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 14, in <module>
+    raw_key = Variable.get('RAW_KEY')
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 138, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable RAW_KEY does not exist'
+[2023-07-03 17:47:55,172] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_etl_taskflow.py
+[2023-07-03 17:47:55,180] {processor.py:161} INFO - Processing /opt/airflow/dags/dag_etl_taskflow.py took 0.809 seconds
