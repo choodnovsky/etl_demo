@@ -27,7 +27,7 @@ default_args = {
 with DAG(
         dag_id='dag_etl',
         description='стартует, когда в бакет попадает csv файл',
-        start_date=datetime(2023, 5, 4, 0),
+        start_date=datetime(2023, 8, 17, 0),
         schedule_interval='@daily',
         default_args=default_args
 ) as dag:

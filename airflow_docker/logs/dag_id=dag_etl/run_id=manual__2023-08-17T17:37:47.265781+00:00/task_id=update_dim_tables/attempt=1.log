@@ -1,0 +1,42 @@
+[2023-08-17 17:37:54,315] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: dag_etl.update_dim_tables manual__2023-08-17T17:37:47.265781+00:00 [queued]>
+[2023-08-17 17:37:54,322] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: dag_etl.update_dim_tables manual__2023-08-17T17:37:47.265781+00:00 [queued]>
+[2023-08-17 17:37:54,322] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-17 17:37:54,322] {taskinstance.py:1377} INFO - Starting attempt 1 of 6
+[2023-08-17 17:37:54,322] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-17 17:37:54,331] {taskinstance.py:1397} INFO - Executing <Task(PostgresOperator): update_dim_tables> on 2023-08-17 17:37:47.265781+00:00
+[2023-08-17 17:37:54,335] {standard_task_runner.py:52} INFO - Started process 336 to run task
+[2023-08-17 17:37:54,339] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dag_etl', 'update_dim_tables', 'manual__2023-08-17T17:37:47.265781+00:00', '--job-id', '62', '--raw', '--subdir', 'DAGS_FOLDER/dag_etl_taskflow.py', '--cfg-path', '/tmp/tmp_s_rr8nk', '--error-file', '/tmp/tmp8fc5aqmy']
+[2023-08-17 17:37:54,340] {standard_task_runner.py:80} INFO - Job 62: Subtask update_dim_tables
+[2023-08-17 17:37:54,401] {task_command.py:371} INFO - Running <TaskInstance: dag_etl.update_dim_tables manual__2023-08-17T17:37:47.265781+00:00 [running]> on host 1ea22a5e1d7f
+[2023-08-17 17:37:54,466] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Victor
+AIRFLOW_CTX_DAG_ID=dag_etl
+AIRFLOW_CTX_TASK_ID=update_dim_tables
+AIRFLOW_CTX_EXECUTION_DATE=2023-08-17T17:37:47.265781+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-08-17T17:37:47.265781+00:00
+[2023-08-17 17:37:54,477] {base.py:68} INFO - Using connection ID '***_conn' for task execution.
+[2023-08-17 17:37:54,487] {dbapi.py:231} INFO - Running statement: 
+            SET search_path TO dds;    
+            
+            --// Обновляем таблицы в dds сырыми таблицами из nds //--
+            INSERT INTO dim_branch (branch)
+            (SELECT branch FROM nds.dim_branch WHERE branch NOT IN (SELECT branch FROM dim_branch));
+            INSERT INTO dim_city (city)
+            (SELECT city FROM nds.dim_city WHERE city NOT IN (SELECT city FROM dim_city));
+            INSERT INTO dim_customer_type (customer_type)
+            (SELECT customer_type FROM nds.dim_customer_type WHERE customer_type NOT IN (SELECT customer_type FROM dim_customer_type));
+            INSERT INTO dim_gender (gender)
+            (SELECT gender FROM nds.dim_gender WHERE gender NOT IN (SELECT gender FROM dim_gender));
+            INSERT INTO dim_product_line (product_line)
+            (SELECT product_line FROM nds.dim_product_line WHERE product_line NOT IN (SELECT product_line FROM dim_product_line));
+            INSERT INTO dim_payment (payment)
+            (SELECT payment FROM nds.dim_payment WHERE payment NOT IN (SELECT payment FROM dim_payment));
+             
+            , parameters: None
+[2023-08-17 17:37:54,491] {dbapi.py:239} INFO - Rows affected: 0
+[2023-08-17 17:37:54,506] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=dag_etl, task_id=update_dim_tables, execution_date=20230817T173747, start_date=20230817T173754, end_date=20230817T173754
+[2023-08-17 17:37:54,551] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-08-17 17:37:54,591] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

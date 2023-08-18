@@ -1,0 +1,47 @@
+[2023-08-17 17:35:32,630] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: dag_etl.extract_from_s3 manual__2023-08-17T17:35:29.380157+00:00 [queued]>
+[2023-08-17 17:35:32,638] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: dag_etl.extract_from_s3 manual__2023-08-17T17:35:29.380157+00:00 [queued]>
+[2023-08-17 17:35:32,638] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-17 17:35:32,639] {taskinstance.py:1377} INFO - Starting attempt 1 of 6
+[2023-08-17 17:35:32,639] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-17 17:35:32,649] {taskinstance.py:1397} INFO - Executing <Task(_PythonDecoratedOperator): extract_from_s3> on 2023-08-17 17:35:29.380157+00:00
+[2023-08-17 17:35:32,653] {standard_task_runner.py:52} INFO - Started process 192 to run task
+[2023-08-17 17:35:32,657] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'dag_etl', 'extract_from_s3', 'manual__2023-08-17T17:35:29.380157+00:00', '--job-id', '50', '--raw', '--subdir', 'DAGS_FOLDER/dag_etl_taskflow.py', '--cfg-path', '/tmp/tmpw9gsem7e', '--error-file', '/tmp/tmpdfr8jip8']
+[2023-08-17 17:35:32,658] {standard_task_runner.py:80} INFO - Job 50: Subtask extract_from_s3
+[2023-08-17 17:35:32,724] {task_command.py:371} INFO - Running <TaskInstance: dag_etl.extract_from_s3 manual__2023-08-17T17:35:29.380157+00:00 [running]> on host 1ea22a5e1d7f
+[2023-08-17 17:35:32,794] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Victor
+AIRFLOW_CTX_DAG_ID=dag_etl
+AIRFLOW_CTX_TASK_ID=extract_from_s3
+AIRFLOW_CTX_EXECUTION_DATE=2023-08-17T17:35:29.380157+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-08-17T17:35:29.380157+00:00
+[2023-08-17 17:35:32,796] {s3.py:857} INFO - Downloading source S3 file from Bucket raw with path raw.csv
+[2023-08-17 17:35:32,807] {base.py:68} INFO - Using connection ID 'minio_conn' for task execution.
+[2023-08-17 17:35:32,808] {base_aws.py:210} INFO - Credentials retrieved from extra_config
+[2023-08-17 17:35:33,070] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 179, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_etl_taskflow.py", line 202, in extract_from_s3
+    file_name = hook.download_file(bucket_key, bucket_name, local_path)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 63, in wrapper
+    return func(*bound_args.args, **bound_args.kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 91, in wrapper
+    return func(*bound_args.args, **bound_args.kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 869, in download_file
+    with NamedTemporaryFile(dir=local_path, prefix='airflow_tmp_', delete=False) as local_tmp_file:
+  File "/usr/local/lib/python3.7/tempfile.py", line 547, in NamedTemporaryFile
+    (fd, name) = _mkstemp_inner(dir, prefix, suffix, flags, output_type)
+  File "/usr/local/lib/python3.7/tempfile.py", line 258, in _mkstemp_inner
+    fd = _os.open(file, flags, 0o600)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/airflow/data/airflow_tmp_8p2stjy_'
+[2023-08-17 17:35:33,083] {taskinstance.py:1420} INFO - Marking task as UP_FOR_RETRY. dag_id=dag_etl, task_id=extract_from_s3, execution_date=20230817T173529, start_date=20230817T173532, end_date=20230817T173533
+[2023-08-17 17:35:33,091] {standard_task_runner.py:97} ERROR - Failed to execute job 50 for task extract_from_s3 ([Errno 2] No such file or directory: '/home/airflow/data/airflow_tmp_8p2stjy_'; 192)
+[2023-08-17 17:35:33,109] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-08-17 17:35:33,149] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
